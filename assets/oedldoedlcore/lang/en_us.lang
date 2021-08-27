@@ -1,0 +1,286 @@
+#CONFIG CATEGORIES
+#------------------------------------------------------------------------------------------------------#
+#main title
+core.config.oedldoedl.main.title=<Oedldoedl Project Config>
+#category core
+config.oedldoedl.category.core.name=Core
+config.oedldoedl.category.core.comment=Configure [OEDLDOEDL CORE] Feautures
+#category resources
+config.oedldoedl.category.resources.name=Resources
+config.oedldoedl.category.resources.comment=Configure [OEDLDOEDL RESOURCES] Feautures
+#category gear
+config.oedldoedl.category.gear.name=Gear
+config.oedldoedl.category.components.comment=Configure [OEDLDOEDL GEAR] Feautures
+
+#CONFIG CORE
+#------------------------------------------------------------------------------------------------------#
+#category core - misc
+config.oedldoedl.item_information.core.name=Developer References
+config.oedldoedl.item_information.core.comment=Enable or Disable Reference Tooltips on Items (especially made for Oedldoedl Projects)
+config.oedldoedl.potion_information.core.name=Potion Tooltips
+config.oedldoedl.potion_information.core.comment=Enable or Disable Potion Tooltips on Items
+config.oedldoedl.potion_effects.core.name=Potion Effects
+config.oedldoedl.potion_effects.core.comment=Enable or Disable Potion Effects from Items
+config.oedldoedl.ccl_textures.core.name=CCL Textures
+config.oedldoedl.ccl_textures.core.comment=Enable or Disable CodeCickenLib and Avaritias custom item render (Halo Textures and Pulse)
+config.oedldoedl.oredict_entries.core.name=Default Oredict Entries
+config.oedldoedl.oredict_entries.core.comment=Enable or Disable all default Oredict Entries (added by this Mod)
+config.oedldoedl.furnace_recipes.core.name=Default Furnace Recipes
+config.oedldoedl.furnace_recipes.core.comment=Enable or Disable all default Furnace Recipes (added by this Mod)
+#category core - world gen
+config.oedldoedl.oedldoedl_ore_gen.core.name=Oedldoedl Ore World Gen
+config.oedldoedl.oedldoedl_ore_gen.core.comment=Enable or Disable Oedldoedl Ore World Generation
+config.oedldoedl.salt_ore_gen.core.name=Salt Ore World Gen
+config.oedldoedl.salt_ore_gen.core.comment=Enable or Disable Salt Ore World Generation
+config.oedldoedl.gremorium_gem_ore_gen.core.name=Gremorium Gem Ore World Gen
+config.oedldoedl.gremorium_gem_ore_gen.core.comment=Enable or Disable Gremorium Gem Ore World Generation
+config.oedldoedl.himejimarium_gem_ore_gen.core.name=Himejimarium Gem Ore World Gen
+config.oedldoedl.himejimarium_gem_ore_gen.core.comment=Enable or Disable Himejimarium Gem Ore World Generation
+config.oedldoedl.toujourium_gem_ore_gen.core.name=Toujourium Gem Ore World Gen
+config.oedldoedl.toujourium_gem_ore_gen.core.comment=Enable or Disable Toujourium Gem Ore World Generation
+config.oedldoedl.argentorium_gem_ore_gen.core.name=Argentorium Gem Ore World Gen
+config.oedldoedl.argentorium_gem_ore_gen.core.comment=Enable or Disable Argentorium Gem Ore World Generation
+config.oedldoedl.quartarium_gem_ore_gen.core.name=Quartarium Gem Ore World Gen
+config.oedldoedl.quartarium_gem_ore_gen.core.comment=Enable or Disable Quartarium Gem Ore World Generation
+#category core - baubles
+config.oedldoedl.bauble_slot_any.core.name=Bauble Slot Any
+config.oedldoedl.bauble_slot_any.core.comment=Enable or Disable Bauble Slot Restriction (for Baubles added by this Mod)
+config.oedldoedl.bauble_effects.core.name=Bauble Effects
+config.oedldoedl.bauble_effects.core.comment=Enable or Disable Potion Effects on Baubles (for Baubles added by this Mod)
+config.oedldoedl.bauble_flight.core.name=Bauble Flight
+config.oedldoedl.bauble_flight.core.comment=Enable or Disable the Ability to Flight from Amulets (for Baubles added by this Mod)
+config.oedldoedl.bauble_render.core.name=Bauble Render
+config.oedldoedl.bauble_render.core.comment=Enable or Disable the Rendering of Baubles when worn (for Baubles added by this Mod)
+
+#CONFIG RESOURCES
+#------------------------------------------------------------------------------------------------------#
+//blocks
+#category resources - star blocks
+config.oedldoedl.star_base_block.resources.name=Star Base Block
+config.oedldoedl.star_base_block.resources.comment=Enable or Disable the Star Base Block
+config.oedldoedl.oedldoedl_star_block.resources.name=Oedldoedl Star Block
+config.oedldoedl.oedldoedl_star_block.resources.comment=Enable or Disable the Oedldoedl Star Block
+config.oedldoedl.infinity_star_block.resources.name=Infinity Star
+config.oedldoedl.infinity_star_block.resources.comment=Enable or Disable the infinity Star Block
+#category resources - ingot blocks
+config.oedldoedl.ingot_base_block.resources.name=Ingot Base Block
+config.oedldoedl.ingot_base_block.resources.comment=Enable or Disable the Ingot Base Block
+config.oedldoedl.oedldoedl_block.resources.name=Oedldoedl Block
+config.oedldoedl.oedldoedl_block.resources.comment=Enable or Disable the Oedldoedl Block
+config.oedldoedl.bedrockium_block.resources.name=Bedrockium Block
+config.oedldoedl.bedrockium_block.resources.comment=Enable or Disable the Bedrockium Block
+config.oedldoedl.drunkium_block.resources.name=Drunkium Block
+config.oedldoedl.drunkium_block.resources.comment=Enable or Disable the Drunkium Block
+config.oedldoedl.sadistium_block.resources.name=Sadistium Block
+config.oedldoedl.sadistium_block.resources.comment=Enable or Disable the Sadistium Block
+config.oedldoedl.uselessium_block.resources.name=Useless Block
+config.oedldoedl.uselessium_block.resources.comment=Enable or Disable the Uselessium Block
+config.oedldoedl.gremorium_block.resources.name=Gremorium Block
+config.oedldoedl.gremorium_block.resources.comment=Enable or Disable the Gremorium Block
+config.oedldoedl.himejimarium_block.resources.name=Himejimarium Block
+config.oedldoedl.himejimarium_block.resources.comment=Enable or Disable the Himejimarium Block
+config.oedldoedl.toujourium_block.resources.name=Toujourium Block
+config.oedldoedl.toujourium_block.resources.comment=Enable or Disable the Toujourium Block
+config.oedldoedl.argentorium_block.resources.name=Argentorium Block
+config.oedldoedl.argentorium_block.resources.comment=Enable or Disable the Argentorium Block
+config.oedldoedl.quartarium_block.resources.name=Quartarium Block
+config.oedldoedl.quartarium_block.resources.comment=Enable or Disable the Quartarium Block
+#category resources - gem blocks
+config.oedldoedl.gem_base_block.resources.name=Gem Base Block
+#category resources - ore blocks
+config.oedldoedl.oedldoedl_ore.resources.name=Oedldoedl Ore
+config.oedldoedl.oedldoedl_ore.resources.comment=Enable or Disable the Oedldoedl Ore (World Gen included)
+config.oedldoedl.salt_ore.resources.name=Salt Ore
+config.oedldoedl.salt_ore.resources.comment=Enable or Disable the Salt Ore (World Gen included)
+config.oedldoedl.gremorium_gem_ore.resources.name=Gremorium Gem Ore
+config.oedldoedl.gremorium_gem_ore.resources.comment=Enable or Disable the Gremorium Gem Ore (World Gen included)
+config.oedldoedl.himejimarium_gem_ore.resources.name=Himejimarium Gem Ore
+config.oedldoedl.himejimarium_gem_ore.resources.comment=Enable or Disable the Himejimarium Gem Ore (World Gen included)
+config.oedldoedl.toujourium_gem_ore.resources.name=Toujourium Gem Ore
+config.oedldoedl.toujourium_gem_ore.resources.comment=Enable or Disable the Toujourium Gem Ore (World Gen included)
+config.oedldoedl.argentorium_gem_ore.resources.name=Argentorium Gem Ore
+config.oedldoedl.argentorium_gem_ore.resources.comment=Enable or Disable the Argentorium Gem Ore (World Gen included)
+config.oedldoedl.quartarium_gem_ore.resources.name=Quartarium Gem Ore
+config.oedldoedl.quartarium_gem_ore.resources.comment=Enable or Disable the Quartarium Gem Ore (World Gen included)
+
+//items
+#category resources - star items
+config.oedldoedl.star_base.resources.name=Star Base
+config.oedldoedl.star_base.resources.comment=Enable or Disable the Star Base
+config.oedldoedl.oedldoedl_star.resources.name=Oedldoedl Star
+config.oedldoedl.oedldoedl_star.resources.comment=Enable or Disable the Oedldoedl Star
+config.oedldoedl.infinity_star.resources.name=Infinity Star
+config.oedldoedl.infinity_star.resources.comment=Enable or Disable the infinity Star
+#category resources - ingot items
+config.oedldoedl.ingot_base.resources.name=Ingot Base
+config.oedldoedl.ingot_base.resources.comment=Enable or Disable the Ingot Base
+config.oedldoedl.oedldoedl_ingot.resources.name=Oedldoedl Ingot
+config.oedldoedl.oedldoedl_ingot.resources.comment=Enable or Disable the Oedldoedl Ingot
+config.oedldoedl.bedrockium_ingot.resources.name=Bedrockium Ingot
+config.oedldoedl.bedrockium_ingot.resources.comment=Enable or Disable the Bedrockium Ingot
+config.oedldoedl.drunkium_ingot.resources.name=Drunkium Ingot
+config.oedldoedl.drunkium_ingot.resources.comment=Enable or Disable the Drunkium Ingot
+config.oedldoedl.sadistium_ingot.resources.name=Sadistium Ingot
+config.oedldoedl.sadistium_ingot.resources.comment=Enable or Disable the Sadistium Ingot
+config.oedldoedl.uselessium_ingot.resources.name=Uselessium Ingot
+config.oedldoedl.uselessium_ingot.resources.comment=Enable or Disable the Uselessium Ingot
+config.oedldoedl.gremorium_ingot.resources.name=Gremorium Ingot
+config.oedldoedl.gremorium_ingot.resources.comment=Enable or Disable the Gremorium Ingot
+config.oedldoedl.himejimarium_ingot.resources.name=Himejimarium Ingot
+config.oedldoedl.himejimarium_ingot.resources.comment=Enable or Disable the Himejimarium Ingot
+config.oedldoedl.toujourium_ingot.resources.name=Toujourium Ingot
+config.oedldoedl.toujourium_ingot.resources.comment=Enable or Disable the Toujourium Ingot
+config.oedldoedl.argentorium_ingot.resources.name=Argentorium Ingot
+config.oedldoedl.argentorium_ingot.resources.comment=Enable or Disable the Argentorium Ingot
+config.oedldoedl.quartarium_ingot.resources.name=Quartarium Ingot
+config.oedldoedl.quartarium_ingot.resources.comment=Enable or Disable the Quartarium Ingot
+config.oedldoedl.chaos_ingot.resources.name=Chaos Ingot
+config.oedldoedl.chaos_ingot.resources.comment=Enable or Disable the Chaos Ingot
+#category resources - gem items
+config.oedldoedl.gem_base.resources.name=Gem Base
+config.oedldoedl.gem_base.resources.comment=Enable or Disable the Gem Base
+config.oedldoedl.oedldoedl_gem.resources.name=Oedldoedl Gem
+config.oedldoedl.oedldoedl_gem.resources.comment=Enable or Disable the Oedldoedl Gem
+config.oedldoedl.timofium_gem.resources.name=Timofium Gem
+config.oedldoedl.timofium_gem.resources.comment=Enable or Disable the Timofium Gem
+config.oedldoedl.flofinium_gem.resources.name=Flofinium Gem
+config.oedldoedl.flofinium_gem.resources.comment=Enable or Disable the Flofinium Gem
+config.oedldoedl.laarsium_gem.resources.name=Laarsium Gem
+config.oedldoedl.laarsium_gem.resources.comment=Enable or Disable the Laarsium Gem
+config.oedldoedl.klaarsium_gem.resources.name=Klaarsium Gem
+config.oedldoedl.klaarsium_gem.resources.comment=Enable or Disable the Klaarsium Gem
+config.oedldoedl.sharanium_gem.resources.name=Sharanium Gem
+config.oedldoedl.sharanium_gem.resources.comment=Enable or Disable the Sharanium Gem
+config.oedldoedl.makerium_gem.resources.name=Makerium Gem
+config.oedldoedl.makerium_gem.resources.comment=Enable or Disable the Makerium Gem
+config.oedldoedl.inderium_gem.resources.name=Inderium Gem
+config.oedldoedl.inderium_gem.resources.comment=Enable or Disable the Inderium Gem
+config.oedldoedl.pumarium_gem.resources.name=Pumarium Gem
+config.oedldoedl.pumarium_gem.resources.comment=Enable or Disable the Pumarium Gem
+config.oedldoedl.callaxium_gem.resources.name=Callaxium Gem
+config.oedldoedl.callaxium_gem.resources.comment=Enable or Disable the Callaxium Gem
+config.oedldoedl.skorpium_gem.resources.name=Skorpium Gem
+config.oedldoedl.skorpium_gem.resources.comment=Enable or Disable the Skorpium Gem
+config.oedldoedl.stupidium_gem.resources.name=Stupidium Gem
+config.oedldoedl.stupidium_gem.resources.comment=Enable or Disable the Stupidium Gem
+config.oedldoedl.gremorium_gem.resources.name=Gremorium Gem
+config.oedldoedl.gremorium_gem.resources.comment=Enable or Disable the Gremorium Gem
+config.oedldoedl.himejimarium_gem.resources.name=Himejimarium Gem
+config.oedldoedl.himejimarium_gem.resources.comment=Enable or Disable the Himejimarium Gem
+config.oedldoedl.toujourium_gem.resources.name=Toujourium Gem
+config.oedldoedl.toujourium_gem.resources.comment=Enable or Disable the Toujourium Gem
+config.oedldoedl.argentorium_gem.resources.name=Argentorium Gem
+config.oedldoedl.argentorium_gem.resources.comment=Enable or Disable the Argentorium Gem
+config.oedldoedl.quartarium_gem.resources.name=Quartarium Gem
+config.oedldoedl.quartarium_gem.resources.comment=Enable or Disable the Quartarium Gem
+#category resources - shard items
+config.oedldoedl.shard_base.resources.name=Shard Base
+config.oedldoedl.shard_base.resources.comment=Enable or Disable the Shard Base
+config.oedldoedl.oedldoedl_shard.resources.name=Oedldoedl Shard
+config.oedldoedl.oedldoedl_shard.resources.comment=Enable or Disable the Oedldoedl Shard
+config.oedldoedl.infinity_shard.resources.name=Infinity Shard
+config.oedldoedl.infinity_shard.resources.comment=Enable or Disable the Infinity Shard
+#category resources - nugget items
+config.oedldoedl.nugget_base.resources.name=Nugget Base
+config.oedldoedl.nugget_base.resources.comment=Enable or Disable the Nugget Base
+config.oedldoedl.oedldoedl_nugget.resources.name=Oedldoedl Nugget
+config.oedldoedl.oedldoedl_nugget.resources.comment=Enable or Disable the Oedldoedl Nugget
+config.oedldoedl.bedrockium_nugget.resources.name=Bedrockium Nugget
+config.oedldoedl.bedrockium_nugget.resources.comment=Enable or Disable the Bedrockium Nugget
+config.oedldoedl.drunkium_nugget.resources.name=Drunkium Nugget
+config.oedldoedl.drunkium_nugget.resources.comment=Enable or Disable the Drunkium Nugget
+config.oedldoedl.sadistium_nugget.resources.name=Sadistium Nugget
+config.oedldoedl.sadistium_nugget.resources.comment=Enable or Disable the Sadistium Nugget
+config.oedldoedl.uselessium_nugget.resources.name=Uselessium Nugget
+config.oedldoedl.uselessium_nugget.resources.comment=Enable or Disable the Uselessium Nugget
+config.oedldoedl.gremorium_nugget.resources.name=Gremorium Nugget
+config.oedldoedl.gremorium_nugget.resources.comment=Enable or Disable the Gremorium Nugget
+config.oedldoedl.himejimarium_nugget.resources.name=Himejimarium Nugget
+config.oedldoedl.himejimarium_nugget.resources.comment=Enable or Disable the Himejimarium Nugget
+config.oedldoedl.toujourium_nugget.resources.name=Toujourium Nugget
+config.oedldoedl.toujourium_nugget.resources.comment=Enable or Disable the Toujourium Nugget
+config.oedldoedl.argentorium_nugget.resources.name=Argentorium Nugget
+config.oedldoedl.argentorium_nugget.resources.comment=Enable or Disable the Argentorium Nugget
+config.oedldoedl.quartarium_nugget.resources.name=Quartarium Nugget
+config.oedldoedl.quartarium_nugget.resources.comment=Enable or Disable the Quartarium Nugget
+#category resources - dust items
+config.oedldoedl.dust_base.resources.name=Dust Base
+config.oedldoedl.dust_base.resources.comment=Enable or Disable the Dust Base
+config.oedldoedl.oedldoedl_dust.resources.name=Oedldoedl Dust
+config.oedldoedl.oedldoedl_dust.resources.comment=Enable or Disable the Oedldoedl Dust
+config.oedldoedl.salt_dust.resources.name=Salt Dust
+config.oedldoedl.salt_dust.resources.comment=Enable or Disable the Salt Dust
+#category resources - singularity items
+config.oedldoedl.singularity_base.resources.name=Singularity Base
+config.oedldoedl.singularity_base.resources.comment=Enable or Disable the Singularity Base
+config.oedldoedl.oedldoedl_singularity.resources.name=Oedldoedl Singularity
+config.oedldoedl.oedldoedl_singularity.resources.comment=Enable or Disable the Oedldoedl Singularity
+config.oedldoedl.gremorium_singularity.resources.name=Gremorium Singularity
+config.oedldoedl.gremorium_singularity.resources.comment=Enable or Disable the Gremorium Singularity
+config.oedldoedl.himejimarium_singularity.resources.name=Himejimarium Singularity
+config.oedldoedl.himejimarium_singularity.resources.comment=Enable or Disable the Himejimarium Singularity
+config.oedldoedl.toujourium_singularity.resources.name=Toujourium Singularity
+config.oedldoedl.toujourium_singularity.resources.comment=Enable or Disable the Toujourium Singularity
+config.oedldoedl.argentorium_singularity.resources.name=Argentorium Singularity
+config.oedldoedl.argentorium_singularity.resources.comment=Enable or Disable the Argentorium Singularity
+config.oedldoedl.quartarium_singularity.resources.name=Quartarium Singularity
+config.oedldoedl.quartarium_singularity.resources.comment=Enable or Disable the Quartarium Singularity
+
+#CONFIG GEAR
+#------------------------------------------------------------------------------------------------------#
+//items
+#category gear - armor items
+config.oedldoedl.oedldoedl_helmet.gear.name=Oedldoedl Helmet
+config.oedldoedl.oedldoedl_helmet.gear.comment=Enable or Disable the Oedldoedl Helmet
+config.oedldoedl.oedldoedl_chestplate.gear.name=Oedldoedl Chestplate
+config.oedldoedl.oedldoedl_chestplate.gear.comment=Enable or Disable the Oedldoedl Chestplate
+config.oedldoedl.oedldoedl_leggings.gear.name=Oedldoedl Leggings
+config.oedldoedl.oedldoedl_leggings.gear.comment=Enable or Disable the Oedldoedl Leggings
+config.oedldoedl.oedldoedl_boots.gear.name=Oedldoedl Boots
+config.oedldoedl.oedldoedl_boots.gear.comment=Enable or Disable the Oedldoedl Boots
+#category gear - tool items
+config.oedldoedl.oedldoedl_sword.gear.name=Oedldoedl Sword
+config.oedldoedl.oedldoedl_sword.gear.comment=Enable or Disable the Oedldoedl Sword
+config.oedldoedl.oedldoedl_shovel.gear.name=Oedldoedl Shovel
+config.oedldoedl.oedldoedl_shovel.gear.comment=Enable or Disable the Oedldoedl Shovel
+config.oedldoedl.oedldoedl_pickaxe.gear.name=Oedldoedl Pickaxe
+config.oedldoedl.oedldoedl_pickaxe.gear.comment=Enable or Disable the Oedldoedl Pickaxe
+config.oedldoedl.oedldoedl_axe.gear.name=Oedldoedl Axe
+config.oedldoedl.oedldoedl_axe.gear.comment=Enable or Disable the Oedldoedl Axe
+config.oedldoedl.oedldoedl_hoe.gear.name=Oedldoedl Hoe
+config.oedldoedl.oedldoedl_hoe.gear.comment=Enable or Disable the Oedldoedl Hoe
+#category gear - bauble items
+config.oedldoedl.oedldoedl_ring.gear.name=Oedldoedl Ring
+config.oedldoedl.oedldoedl_ring.gear.comment=Enable or Disable the Oedldoedl Ring
+config.oedldoedl.gremorium_amulet.gear.name=Gremorium Amulet
+config.oedldoedl.gremorium_amulet.gear.comment=Enable or Disable the Gremorium Amulet
+config.oedldoedl.himejimarium_amulet.gear.name=Himejimarium Amulet
+config.oedldoedl.himejimarium_amulet.gear.comment=Enable or Disable the Himejimarium Amulet
+config.oedldoedl.toujourium_amulet.gear.name=Toujourium Amulet
+config.oedldoedl.toujourium_amulet.gear.comment=Enable or Disable the Toujourium Amulet
+config.oedldoedl.argentorium_amulet.gear.name=Argentorium Amulet
+config.oedldoedl.argentorium_amulet.gear.comment=Enable or Disable the Argentorium Amulet
+config.oedldoedl.quartarium_amulet.gear.name=Quartarium Amulet
+config.oedldoedl.quartarium_amulet.gear.comment=Enable or Disable the Quartarium Amulet
+config.oedldoedl.bunny_ears.gear.name=Bunny Ears
+config.oedldoedl.bunny_ears.gear.comment=Enable or Disable the Cat Ears
+config.oedldoedl.cat_ears.gear.name=Cat Ears
+config.oedldoedl.cat_ears.gear.comment=Enable or Disable the Cat Ears
+
+#MISC
+#------------------------------------------------------------------------------------------------------#
+//generel tips
+core.oedldoedl.stats.tip=Stats:
+core.oedldoedl.effects.tip=Effects:
+core.oedldoedl.given.effects.tip=Given Effects:
+core.oedldoedl.bauble.effects.tip=Given Effects when worn as Bauble:
+
+//keys
+#generel
+core.oedldoedl.key.press.info=Hold
+#shift
+core.oedldoedl.key.shift.info=for Info
+core.oedldoedl.key.shift=Shift
+#control effects
+core.oedldoedl.key.control.effects=for Effects
+core.oedldoedl.key.control=Ctrl
