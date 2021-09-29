@@ -19,7 +19,7 @@ repositories
    
 }
 
-version = "1.12.2-1.1.0.15"
+version = "1.12.2-1.2.0.17"
 group = "com.thep2wking.oedldoedl.core"
 archivesBaseName = "OedldoedlCore"
 sourceCompatibility = targetCompatibility = '1.8'
