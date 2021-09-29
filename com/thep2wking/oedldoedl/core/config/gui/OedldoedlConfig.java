@@ -40,10 +40,12 @@ public class OedldoedlConfig
 	    
 	    CoreConst.ITEM_INFORMATION = config.get(CoreConst.CATEGORY, CoreConst.ITEM_INFORMATION_NAME, false, CoreConst.ITEM_INFORMATION_COMMENT).getBoolean();
 	    CoreConst.POTION_INFORMATION = config.get(CoreConst.CATEGORY, CoreConst.POTION_INFORMATION_NAME, true, CoreConst.POTION_INFORMATION_COMMENT).getBoolean();
+	    CoreConst.ORIGIN_INFORMATION = config.get(CoreConst.CATEGORY, CoreConst.ORIGIN_INFORMATION_NAME, true, CoreConst.ORIGIN_INFORMATION_COMMENT).getBoolean();
 	    CoreConst.POTION_EFFECTS = config.get(CoreConst.CATEGORY, CoreConst.POTION_EFFECTS_NAME, true, CoreConst.POTION_EFFECTS_COMMENT).getBoolean();
 	    CoreConst.CCL_TEXTURES = config.get(CoreConst.CATEGORY, CoreConst.CCL_TEXTURES_NAME, true, CoreConst.CCL_TEXTURES_COMMENT).getBoolean();
 	    CoreConst.OREDICT_ENTRIES = config.get(CoreConst.CATEGORY, CoreConst.OREDICT_ENTRIES_NAME, true, CoreConst.OREDICT_ENTRIES_COMMENT).getBoolean();   
 	    CoreConst.FURNACE_RECIPES = config.get(CoreConst.CATEGORY, CoreConst.FURNACE_RECIPES_NAME, true, CoreConst.FURNACE_RECIPES_COMMENT).getBoolean();
+	    CoreConst.CRAFTING_RECIPES = config.get(CoreConst.CATEGORY, CoreConst.CRAFTING_RECIPES_NAME, true, CoreConst.CRAFTING_RECIPES_COMMENT).getBoolean();
 	    
   		if (Loader.isModLoaded("oedldoedlresources")) 
   		{   

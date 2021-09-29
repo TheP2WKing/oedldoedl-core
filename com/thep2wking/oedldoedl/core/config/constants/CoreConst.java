@@ -16,6 +16,10 @@ public class CoreConst
 	public static boolean POTION_INFORMATION = true;
 	public static final String POTION_INFORMATION_NAME = I18n.func_135052_a("config.oedldoedl.potion_information.core.name");
 	public static final String POTION_INFORMATION_COMMENT = I18n.func_135052_a("config.oedldoedl.potion_information.core.comment");
+	
+	public static boolean ORIGIN_INFORMATION = true;
+	public static final String ORIGIN_INFORMATION_NAME = I18n.func_135052_a("config.oedldoedl.origin_information.core.name");
+	public static final String ORIGIN_INFORMATION_COMMENT = I18n.func_135052_a("config.oedldoedl.origin_information.core.comment");
 
 	public static boolean POTION_EFFECTS = true;
 	public static final String POTION_EFFECTS_NAME = I18n.func_135052_a("config.oedldoedl.potion_effects.core.name");
@@ -32,6 +36,10 @@ public class CoreConst
 	public static boolean FURNACE_RECIPES = true;
 	public static final String FURNACE_RECIPES_NAME = I18n.func_135052_a("config.oedldoedl.furnace_recipes.core.name");
 	public static final String FURNACE_RECIPES_COMMENT = I18n.func_135052_a("config.oedldoedl.furnace_recipes.core.comment");
+	
+	public static boolean CRAFTING_RECIPES = true;
+	public static final String CRAFTING_RECIPES_NAME = I18n.func_135052_a("config.oedldoedl.crafting_recipes.core.name");
+	public static final String CRAFTING_RECIPES_COMMENT = I18n.func_135052_a("config.oedldoedl.crafting_recipes.core.comment");
 	
 	//category core - world gen
 	public static boolean OEDLDOEDL_ORE_GEN = true;

@@ -4,8 +4,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.thep2wking.oedldoedl.core.config.gui.OedldoedlConfig;
+import com.thep2wking.oedldoedl.core.util.handler.RegistryHandler;
 import com.thep2wking.oedldoedl.core.util.proxy.CommonProxy;
+import com.thep2wking.oedldoedl.core.util.tabs.TabOedldoedlCore;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
@@ -30,12 +33,15 @@ public class OedldoedlCore
 	
     @Instance
     public static OedldoedlCore instance;
+    
+    public static final CreativeTabs TAB = new TabOedldoedlCore("tab_oedldoedl_core");
 	
 	@EventHandler
 	public static void preInt(FMLPreInitializationEvent event)
 	{
 		proxy.preInit(event);
 		logger.info("Starting FML Pre-Initialization");
+		RegistryHandler.preInitRegistries(event);
 		config = new OedldoedlConfig(event);
 		MinecraftForge.EVENT_BUS.register(config);
 	}

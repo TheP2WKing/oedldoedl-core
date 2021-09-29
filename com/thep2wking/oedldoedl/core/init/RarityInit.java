@@ -24,7 +24,7 @@ public class RarityInit
 	public static EnumRarity WHITE = EnumHelper.addRarity("WHITE", TextFormatting.WHITE, "color.white");
 	public static EnumRarity YELLOW = EnumHelper.addRarity("YELLOW", TextFormatting.YELLOW, "color.yellow");
 	
-	//special
+	//formats
 	public static EnumRarity BOLD = EnumHelper.addRarity("BOLD", TextFormatting.BOLD, "format.bold");
 	public static EnumRarity ITALIC = EnumHelper.addRarity("ITALIC", TextFormatting.ITALIC, "format.italic");
 	public static EnumRarity OBFUSCATED = EnumHelper.addRarity("OBFUSCATED", TextFormatting.OBFUSCATED, "format.obfuscated");
