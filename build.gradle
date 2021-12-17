@@ -19,7 +19,7 @@ repositories
    
 }
 
-version = "1.12.2-1.2.0.17"
+version = "1.12.2-2.1.0"
 group = "com.thep2wking.oedldoedl.core"
 archivesBaseName = "OedldoedlCore"
 sourceCompatibility = targetCompatibility = '1.8'
@@ -56,10 +56,5 @@ processResources
     from(sourceSets.main.resources.srcDirs) 
     {
         exclude 'mcmod.info'
-    }
-
-    jar 
-    {
-	    classifier = 'universal'
     }
 }
