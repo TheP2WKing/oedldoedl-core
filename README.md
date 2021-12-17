@@ -3,6 +3,6 @@
 [![name](https://img.shields.io/static/v1?message=%20mantained%20yes&logo=github&style=for-the-badge&labelColor=green&color=1e1e1e&logoColor=black&label)](https://github.com/TheP2WKing/oedldoedl-core)
 
 # Oedldoedl Core
-A mod made for TheP2WKings own Oedldoedl Projects!
+A Mod made for TheP2WKings Oedldoedl Projects!
 
-# About
+## About
