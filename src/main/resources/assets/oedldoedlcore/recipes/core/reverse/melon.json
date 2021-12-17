@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+        {
+            "type": "forge:ore_dict",
+            "ore": "cropMelon"
+        }
+    ],
+    
+    "result": 
+    {
+        "item": "minecraft:melon",
+        "count": 9
+    }
+}

@@ -1,0 +1,29 @@
+{   
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "ABA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockGold"
+        },
+        "B":
+        {
+            "item": "minecraft:apple"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:golden_apple",
+        "data": 1
+    }
+}

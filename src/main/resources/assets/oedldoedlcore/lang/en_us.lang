@@ -1,0 +1,57 @@
+#NAMES
+#------------------------------------------------------------------------------------------------------#
+//items
+item.oedldoedlcore:icon_core.name=Icon Core
+item.oedldoedlcore:icon_resources.name=Icon Resources
+item.oedldoedlcore:icon_gear.name=Icon Gear
+item.oedldoedlcore:icon_construct.name=Icon Construct
+item.oedldoedlcore:icon_music.name=Icon Music
+item.oedldoedlcore:icon_integration.name=Icon Integration
+
+
+#MISC
+#------------------------------------------------------------------------------------------------------#
+//generel tips
+core.oedldoedl.by.tip=Created by TheP2WKing
+
+core.oedldoedl.true.tip=True
+core.oedldoedl.false.tip=False
+
+core.oedldoedl.stats.tip=Stats:
+core.oedldoedl.appear.tip=Appears in:
+
+core.oedldoedl.mod.tip=Mod:
+core.oedldoedl.version.tip=Version:
+core.oedldoedl.installed.tip=Installed:
+
+core.oedldoedl.effects.tip=Effects:
+core.oedldoedl.given.effects.tip=Given Effects:
+core.oedldoedl.bauble.effects.tip=Given Effects when worn as Bauble:
+core.oedldoedl.helmet.effects.tip=Given Effects when worn as Helmet:
+core.oedldoedl.chestplate.effects.tip=Given Effects when worn as Chestplate:
+core.oedldoedl.leggings.effects.tip=Given Effects when worn as Leggings:
+core.oedldoedl.boots.effects.tip=Given Effects when worn as Boots:
+core.oedldoedl.full.effects.tip=Given Effects when worn as full Armor Set:
+
+core.oedldoedl.core.name.tip=Oedldoedl Core
+core.oedldoedl.resources.name.tip=Oedldoedl Resources
+core.oedldoedl.gear.name.tip=Oedldoedl Gear
+core.oedldoedl.construct.name.tip=Oedldoedl Construct
+core.oedldoedl.music.name.tip=Oedldoedl Music
+core.oedldoedl.integration.name.tip=Oedldoedl Integration
+
+//keys
+#generel
+core.oedldoedl.key.press.info=Hold
+#shift info
+core.oedldoedl.key.shift.info=for Info
+core.oedldoedl.key.shift=Shift
+#control effects
+core.oedldoedl.key.control.effects=for Effects
+core.oedldoedl.key.control=Ctrl
+#alt effects
+core.oedldoedl.key.alt.origin=for Origin
+core.oedldoedl.key.alt=Alt
+
+//creative tab
+itemGroup.tab_oedldoedl_core=§dOedldoedl Project: Core

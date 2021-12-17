@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+        {
+            "item": "minecraft:brick_block"
+        }
+    ],
+    
+    "result": 
+    {
+        "item": "minecraft:brick",
+        "count": 4
+    }
+}

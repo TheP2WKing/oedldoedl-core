@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+        {
+            "type": "forge:ore_dict",
+            "ore": "bookshelf"
+        }
+    ],
+    
+    "result": 
+    {
+        "item": "minecraft:book",
+        "count": 3
+    }
+}

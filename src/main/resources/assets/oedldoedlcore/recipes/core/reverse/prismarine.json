@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockPrismarine"
+        }
+    ],
+    
+    "result": 
+    {
+        "item": "minecraft:prismarine_shard",
+        "count": 4
+    }
+}
