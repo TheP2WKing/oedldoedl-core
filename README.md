@@ -5,5 +5,5 @@
 # Oedldoedl Core
 A Mod made for TheP2WKings Oedldoedl Projects!
 
-## About
+## Overview
 This Mod is the foundation of my own Mod series called "Oedldoedl". My Modpack projects often include a lot of mods and customization of recipes and features. There are many items and ideas i wanted to have in this projects but not currently available. So i stated to create a set of mods to integrate my ideas into different other popular Mods. The sub Mods are separated intro different themes, so that the installation is modular and wanted parts can be installed easily.
