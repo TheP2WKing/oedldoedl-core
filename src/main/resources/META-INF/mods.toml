@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+[[mods]]
+modId="oedldoedlresources"
+version="1.16.5-3.0.0"
+displayName="Oedldoedl Resources"
+displayURL="https://www.curseforge.com/members/thep2wking_twitch/projects"
+logoFile="oedldoedlresources.png"
+authors="TheP2WKing"
+description='''Oedldoedl Resources Project'''
+
+[[dependencies.oedldoedlresources]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2.20,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlresources]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlresources]]
+    modId="oedldoedlcore"
+    mandatory=true
+    versionRange="[1.16.5-3.0.0.30,)"
+    ordering="AFTER"
+    side="BOTH"
