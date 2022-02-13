@@ -13,7 +13,19 @@ public class ModTags
 {
 	public static class BLocks
 	{
-		public static final Tags.IOptionalNamedTag<Block> FORGE_STONE = createForgeTag("dirt");
+		@SuppressWarnings("unused")
+		private static Tags.IOptionalNamedTag<Block> createTag(String name)
+		{
+			return BlockTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
+		}
+		
+		private static Tags.IOptionalNamedTag<Block> createForgeTag(String name)
+		{
+			return BlockTags.createOptional(new ResourceLocation("forge", name));
+		}
+		
+		//blocks
+		public static final Tags.IOptionalNamedTag<Block> FORGE_DIRT = createForgeTag("dirt");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_BRICKS = createForgeTag("bricks");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_NETHER_BRICKS = createForgeTag("nether_bricks");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_PURPUR_BLOCKS = createForgeTag("purpur_blocks");
@@ -30,29 +42,25 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Block> FORGE_FURNACE = createForgeTag("furnace");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_SAPLING = createForgeTag("sapling");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_WOOL = createForgeTag("wool");
-
-		@SuppressWarnings("unused")
-		private static Tags.IOptionalNamedTag<Block> createTag(String name)
-		{
-			return BlockTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
-		}
-		
-
-		private static Tags.IOptionalNamedTag<Block> createForgeTag(String name)
-		{
-			return BlockTags.createOptional(new ResourceLocation("forge", name));
-		}
-		
-		@SuppressWarnings("unused")
-		private static Tags.IOptionalNamedTag<Block> createMCTag(String name)
-		{
-			return BlockTags.createOptional(new ResourceLocation("minecraft", name));
-		}
 	}
 	
 	public static class Items
 	{
-		public static final Tags.IOptionalNamedTag<Item> FORGE_STONE = createForgeTag("dirt");
+		private static IOptionalNamedTag<Item> createTag(String name)
+		{
+			return ItemTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
+		}
+		
+		//icons
+		public static final Tags.IOptionalNamedTag<Item> OEDLDOEDL_ICONS = createTag("icon");
+		
+		private static IOptionalNamedTag<Item> createForgeTag(String name)
+		{
+			return ItemTags.createOptional(new ResourceLocation("forge", name));
+		}
+		
+		//blockitems
+		public static final Tags.IOptionalNamedTag<Item> FORGE_DIRT = createForgeTag("dirt");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_BRICKS = createForgeTag("bricks");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_NETHER_BRICKS = createForgeTag("nether_bricks");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_PURPUR_BLOCKS = createForgeTag("purpur_blocks");
@@ -64,12 +72,15 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CONCRETE = createForgeTag("concrete");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_ORES_NETHERITE = createForgeTag("ores/netherite");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CHESTS_SHULKER = createForgeTag("chests/shulker");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_CRAFTING_TABLES = createForgeTag("crafting_tables");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_WORKBENCH = createForgeTag("workbench");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_WOOL = createForgeTag("wool");
+		
+		//items
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GEMS_COAL = createForgeTag("gems/coal");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GEMS_CHARCOAL = createForgeTag("gems/charcoal");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_DUSTS_GUNPOWDER = createForgeTag("dusts/gunpowder");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_DUSTS_BLAZE = createForgeTag("dusts/blaze");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_CRAFTING_TABLES = createForgeTag("crafting_tables");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_WORKBENCH = createForgeTag("workbench");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_SAPLING = createForgeTag("sapling");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GEMS_FLINT = createForgeTag("gems/flint");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CLAYBALLS = createForgeTag("clayballs");
@@ -82,27 +93,10 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_MELON = createForgeTag("crops/melon");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_CHORUS_FRUIT = createForgeTag("crops/chorus_fruit");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_SWEET_BERRIES = createForgeTag("crops/sweet_berries");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_WOOL = createForgeTag("wool");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_SNOWBALLS = createForgeTag("snowballs");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_SUGAR = createForgeTag("sugar");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_BOOKS = createForgeTag("books");
-
-		
-		@SuppressWarnings("unused")
-		private static IOptionalNamedTag<Item> createTag(String name)
-		{
-			return ItemTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
-		}
-		
-		private static IOptionalNamedTag<Item> createForgeTag(String name)
-		{
-			return ItemTags.createOptional(new ResourceLocation("forge", name));
-		}
-		
-		@SuppressWarnings("unused")
-		private static IOptionalNamedTag<Item> createMCTag(String name)
-		{
-			return ItemTags.createOptional(new ResourceLocation("minecraft", name));
-		}
+		public static final Tags.IOptionalNamedTag<Item> FORGE_TOOLS_WRENCH = createForgeTag("tools/wrench");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_TOOLS = createForgeTag("tools");
 	}
 }
