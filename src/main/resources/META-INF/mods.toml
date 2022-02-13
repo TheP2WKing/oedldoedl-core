@@ -2,29 +2,37 @@ modLoader="javafml"
 loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
-modId="oedldoedlresources"
-version="1.16.5-3.0.0"
-displayName="Oedldoedl Resources"
-displayURL="https://www.curseforge.com/members/thep2wking_twitch/projects"
-logoFile="oedldoedlresources.png"
+modId="oedldoedlcore"
+version="1.16.5-3.5.0"
+displayName="Oedldoedl Series: Core"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core"
+logoFile="oedldoedlcore.png"
 authors="TheP2WKing"
-description='''Oedldoedl Resources Project'''
+description='''
+[Oedldoedl Core Project]
 
-[[dependencies.oedldoedlresources]]
+Provides:
+    - Tooltips
+    - Information
+    - Additional Recipes
+    - Additional Tags
+    - Vanilla Texture Fixes
+    - Easier Creative Items Access
+    - Survival Usable Wrenches
+    - Additional JEI Descriptions
+    - Additional JEI Catalysts
+    - High Configurability
+    - Common Modding Utilities
+'''
+[[dependencies.oedldoedlcore]]
     modId="forge"
     mandatory=true
-    versionRange="[36.2.20,)"
+    versionRange="[36.2,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.oedldoedlresources]]
+[[dependencies.oedldoedlcore]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5,)"
     ordering="NONE"
-    side="BOTH"
-[[dependencies.oedldoedlresources]]
-    modId="oedldoedlcore"
-    mandatory=true
-    versionRange="[1.16.5-3.0.0.30,)"
-    ordering="AFTER"
     side="BOTH"
