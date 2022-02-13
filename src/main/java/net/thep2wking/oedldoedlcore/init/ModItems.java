@@ -1,37 +1,49 @@
 package net.thep2wking.oedldoedlcore.init;
 
+import java.util.HashSet;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.config.CoreConfigLogging;
-import net.thep2wking.oedldoedlcore.content.items.ConstructIconItem;
-import net.thep2wking.oedldoedlcore.content.items.CoreIconItem;
-import net.thep2wking.oedldoedlcore.content.items.GearIconItem;
-import net.thep2wking.oedldoedlcore.content.items.IntegrationIconItem;
-import net.thep2wking.oedldoedlcore.content.items.MusicIconItem;
-import net.thep2wking.oedldoedlcore.content.items.ResourcesIconItem;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
+import net.thep2wking.oedldoedlcore.content.item.icon.CoreModIconItem;
+import net.thep2wking.oedldoedlcore.content.item.icon.SubModIconItem;
+import net.thep2wking.oedldoedlcore.content.item.misc.DebugWrenchItem;
+import net.thep2wking.oedldoedlcore.util.ModItemGroups;
+import net.thep2wking.oedldoedlcore.util.ModItemTier;
+import net.thep2wking.oedldoedlcore.util.ModRarities;
+import net.thep2wking.oedldoedlcore.util.TipLines;
 
 public class ModItems 
 {
+	//deferred register
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OedldoedlCore.MODID);
 	
-	public static final RegistryObject<Item> ITEM_CORE_ICON= ITEMS.register("core_icon", () -> new CoreIconItem(new Item.Properties()));
-	public static final RegistryObject<Item> ITEM_RESOURCES_ICON = ITEMS.register("resources_icon", () -> new ResourcesIconItem(new Item.Properties()));
-	public static final RegistryObject<Item> ITEM_GEAR_ICON = ITEMS.register("gear_icon", () -> new GearIconItem(new Item.Properties()));
-	public static final RegistryObject<Item> ITEM_CONSTRUCT_ICON = ITEMS.register("construct_icon", () -> new ConstructIconItem(new Item.Properties()));
-	public static final RegistryObject<Item> ITEM_MUSIC_ICON = ITEMS.register("music_icon", () -> new MusicIconItem(new Item.Properties()));
-	public static final RegistryObject<Item> ITEM_INTEGRATION_ICON = ITEMS.register("integration_icon", () -> new IntegrationIconItem(new Item.Properties()));
+	//icons
+	public static final RegistryObject<Item> CORE_ICON = ITEMS.register("core_icon", 
+			() -> new CoreModIconItem(ModRarities.YELLOW, false, true, TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	public static final RegistryObject<Item> RESOURCES_ICON = ITEMS.register("resources_icon", 
+			() -> new SubModIconItem(ModRarities.YELLOW, false, true, "oedldoedlresources", TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	public static final RegistryObject<Item> GEAR_ICON = ITEMS.register("gear_icon", 
+			() -> new SubModIconItem(ModRarities.YELLOW, false, true, "oedldoedlgear", TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	public static final RegistryObject<Item> CONSTRUCT_ICON = ITEMS.register("construct_icon", 
+			() -> new SubModIconItem(ModRarities.YELLOW, false, true, "oedldoedlconstruct", TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	public static final RegistryObject<Item> MUSIC_CON = ITEMS.register("music_icon",  
+			() -> new SubModIconItem(ModRarities.YELLOW, false, true, "oedldoedlmusic", TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	public static final RegistryObject<Item> INTEGRATION_ICON = ITEMS.register("integration_icon", 
+			() -> new SubModIconItem(ModRarities.YELLOW, false, true, "oedldoedlintegration", TipLines.DISABLED, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
+	
+	//misc
+	public static final RegistryObject<Item> DEBUG_WRENCH = ITEMS.register("debug_wrench", 
+			() -> new DebugWrenchItem(ModItemTier.DEBUG_WRENCH, 1f, -2f, new HashSet<>(), ModRarities.LIGHT_PURPLE, false, true, TipLines.TWO, false, new Item.Properties().group(ModItemGroups.TAB_CORE)));
 	
 	public static void register(IEventBus enevtBus)
 	{
 		ITEMS.register(enevtBus);
 		
-    	if (CoreConfigLogging.general.get())
-    	{
-    		OedldoedlCore.LOGGER.info("Items Registerd!");
-    	}
+		if (CoreConfig.general_logging.get()) {OedldoedlCore.LOGGER.info("Registerd Items for " + OedldoedlCore.MODID + "!");}
 	}
 }
