@@ -1,9 +1,12 @@
-buildscript {
-    repositories {
+buildscript 
+{
+    repositories 
+    {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
-    dependencies {
+    dependencies 
+    {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
@@ -11,7 +14,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-3.5.0'
+version = '1.16.5-3.9.0'
 group = 'net.thep2wking.oedldoedlcore'
 archivesBaseName = 'oedldoedlcore'
 
@@ -19,49 +22,61 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
-repositories {
+repositories 
+{
     maven { url 'https://dvs1.progwml6.com/files/maven/' }
     maven { url "https://maven.tterrag.com" }
 
     flatDir { dir 'libs' }
 }
 
-minecraft {
+minecraft 
+{
     mappings channel: 'snapshot', version: '20210309-1.16.5'
-    runs {
-        client {
+    runs 
+    {
+        client 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            mods {
-                oedldoedlcore {
+            mods 
+            {
+                oedldoedlcore 
+                {
                     source sourceSets.main
                 }
             }
         }
 
-        server {
+        server 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            mods {
-                oedldoedlcore {
+            mods 
+            {
+                oedldoedlcore 
+                {
                     source sourceSets.main
                 }
             }
         }
 
-        data {
+        data 
+        {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
             args '--mod', 'oedldoedlcore', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
-            mods {
-                oedldoedlcore {
+            mods 
+            {
+                oedldoedlcore 
+                {
                     source sourceSets.main
                 }
             }
@@ -71,34 +86,45 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-repositories {
-    maven {
+repositories 
+{
+    maven 
+    {
         url "https://www.cursemaven.com"
-        content {
+        content 
+        {
             includeGroup "curse.maven"
         }
     }
 }
 
-dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.19'
+dependencies 
+{
+    //forge
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.31'
 
-    compileOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145:api')
+    //mod dev utils
     runtimeOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145')
-    runtimeOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
+    runtimeOnly fg.deobf("curse.maven:jei-integration-265917:3202331")
+    runtimeOnly fg.deobf("curse.maven:configured-457570:3546348")
+    runtimeOnly fg.deobf("curse.maven:worldedit-225608:3283693")
 
-    implementation fg.deobf("curse.maven:jei-integration-265917:3202331")
-    implementation fg.deobf("curse.maven:configured-457570:3546348")
+    //integration
+    compileOnly fg.deobf('mezz.jei:jei-1.16.5:7.7.1.145:api')
+    compileOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.16:1.16-3.1.4-22")
 }
 
-jar {
-    manifest {
-        attributes([
+jar 
+{
+    manifest 
+    {
+        attributes
+        ([
             "Specification-Title": "oedldoedlcore",
             "Specification-Vendor": "oedldoedlcoresareus",
-            "Specification-Version": "1.16.5-3.5.0",
+            "Specification-Version": "1.16.5-3.9.0",
             "Implementation-Title": "OedldoedlCore",
-            "Implementation-Version": "1.16.5-3.5.0",
+            "Implementation-Version": "1.16.5-3.9.0",
             "Implementation-Vendor" :"oedldoedlcoresareus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
@@ -107,14 +133,19 @@ jar {
 
 jar.finalizedBy('reobfJar') 
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
+publishing 
+{
+    publications
+    {
+        mavenJava(MavenPublication) 
+        {
             artifact jar
         }
     }
-    repositories {
-        maven {
+    repositories 
+    {
+        maven 
+        {
             url "file:///${project.projectDir}/mcmodsrepo"
         }
     }
