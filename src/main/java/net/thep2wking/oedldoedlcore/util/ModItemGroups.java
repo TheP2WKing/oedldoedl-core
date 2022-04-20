@@ -7,26 +7,20 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 
-public class ModItemGroups
-{
-	public static final ItemGroup TAB_CREATIVE = new ItemGroup("creative.tab") 
-	{	
+public class ModItemGroups {
+	public static final ItemGroup TAB_CREATIVE = new ItemGroup("creative.tab") {
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public ItemStack createIcon()
-		{
+		public ItemStack createIcon() {
 			return new ItemStack(Items.COMMAND_BLOCK.getItem());
 		}
-		
+
 		@Override
-		public void fill(NonNullList<ItemStack> items) 
-		{
-			if (CoreConfig.unobtainable_items_creative_tab.get())
-			{
+		public void fill(NonNullList<ItemStack> items) {
+			if (CoreConfig.unobtainable_items_creative_tab.get()) {
 				items.add(new ItemStack(Items.COMMAND_BLOCK.getItem()));
 				items.add(new ItemStack(Items.CHAIN_COMMAND_BLOCK.getItem()));
 				items.add(new ItemStack(Items.REPEATING_COMMAND_BLOCK.getItem()));
@@ -46,21 +40,18 @@ public class ModItemGroups
 			}
 		}
 	};
-	
-	public static final ItemGroup TAB_CORE = new ItemGroup("oedldoedlcore.tab") 
-	{	
+
+	public static final ItemGroup TAB_CORE = new ItemGroup("oedldoedlcore.tab") {
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public ItemStack createIcon()
-		{
+		public ItemStack createIcon() {
 			return new ItemStack(ModItems.CORE_ICON.get());
 		}
-		
+
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public ResourceLocation getBackgroundImage() 
-		{
-			return new ResourceLocation(OedldoedlCore.MODID, "textures/gui/container/tab_oedldoedl_base.png");
+		public ResourceLocation getBackgroundImage() {
+			return ModReferences.TAB_DARK_BASE_RL;
 		};
 	};
-}	
+}

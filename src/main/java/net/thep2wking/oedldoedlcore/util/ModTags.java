@@ -9,28 +9,24 @@ import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.Tags.IOptionalNamedTag;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
-public class ModTags 
-{
-	public static class BLocks
-	{
+public class ModTags {
+	public static class BLocks {
 		@SuppressWarnings("unused")
-		private static Tags.IOptionalNamedTag<Block> createTag(String name)
-		{
+		private static Tags.IOptionalNamedTag<Block> createTag(String name) {
 			return BlockTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
 		}
-		
-		private static Tags.IOptionalNamedTag<Block> createForgeTag(String name)
-		{
+
+		private static Tags.IOptionalNamedTag<Block> createForgeTag(String name) {
 			return BlockTags.createOptional(new ResourceLocation("forge", name));
 		}
-		
-		//blocks
+
+		// blocks
 		public static final Tags.IOptionalNamedTag<Block> FORGE_DIRT = createForgeTag("dirt");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_BRICKS = createForgeTag("bricks");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_NETHER_BRICKS = createForgeTag("nether_bricks");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_PURPUR_BLOCKS = createForgeTag("purpur_blocks");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_ICE = createForgeTag("ice");
-		public static final Tags.IOptionalNamedTag<Block> FORGE_SOULSAND = createForgeTag("soulsand");
+		public static final Tags.IOptionalNamedTag<Block> FORGE_SOUL_SAND = createForgeTag("soul_sand");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_BASALT = createForgeTag("basalt");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_GLOWSTONE = createForgeTag("glowstone");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_TERRACOTTA = createForgeTag("terracotta");
@@ -43,29 +39,26 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Block> FORGE_SAPLING = createForgeTag("sapling");
 		public static final Tags.IOptionalNamedTag<Block> FORGE_WOOL = createForgeTag("wool");
 	}
-	
-	public static class Items
-	{
-		private static IOptionalNamedTag<Item> createTag(String name)
-		{
+
+	public static class Items {
+		private static IOptionalNamedTag<Item> createTag(String name) {
 			return ItemTags.createOptional(new ResourceLocation(OedldoedlCore.MODID, name));
 		}
-		
-		//icons
+
+		// icons
 		public static final Tags.IOptionalNamedTag<Item> OEDLDOEDL_ICONS = createTag("icon");
-		
-		private static IOptionalNamedTag<Item> createForgeTag(String name)
-		{
+
+		private static IOptionalNamedTag<Item> createForgeTag(String name) {
 			return ItemTags.createOptional(new ResourceLocation("forge", name));
 		}
-		
-		//blockitems
+
+		// blockitems
 		public static final Tags.IOptionalNamedTag<Item> FORGE_DIRT = createForgeTag("dirt");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_BRICKS = createForgeTag("bricks");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_NETHER_BRICKS = createForgeTag("nether_bricks");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_PURPUR_BLOCKS = createForgeTag("purpur_blocks");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_ICE = createForgeTag("ice");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_SOULSAND = createForgeTag("soulsand");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_SOUL_SAND = createForgeTag("soul_sand");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_BASALT = createForgeTag("basalt");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GLOWSTONE = createForgeTag("glowstone");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_TERRACOTTA = createForgeTag("terracotta");
@@ -75,8 +68,8 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CRAFTING_TABLES = createForgeTag("crafting_tables");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_WORKBENCH = createForgeTag("workbench");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_WOOL = createForgeTag("wool");
-		
-		//items
+
+		// items
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GEMS_COAL = createForgeTag("gems/coal");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_GEMS_CHARCOAL = createForgeTag("gems/charcoal");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_DUSTS_GUNPOWDER = createForgeTag("dusts/gunpowder");
@@ -91,8 +84,10 @@ public class ModTags
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_CACTUS = createForgeTag("crops/cactus");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_APPLE = createForgeTag("crops/apple");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_MELON = createForgeTag("crops/melon");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_CHORUS_FRUIT = createForgeTag("crops/chorus_fruit");
-		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_SWEET_BERRIES = createForgeTag("crops/sweet_berries");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_CHORUS_FRUIT = createForgeTag(
+				"crops/chorus_fruit");
+		public static final Tags.IOptionalNamedTag<Item> FORGE_CROPS_SWEET_BERRIES = createForgeTag(
+				"crops/sweet_berries");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_SNOWBALLS = createForgeTag("snowballs");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_SUGAR = createForgeTag("sugar");
 		public static final Tags.IOptionalNamedTag<Item> FORGE_BOOKS = createForgeTag("books");

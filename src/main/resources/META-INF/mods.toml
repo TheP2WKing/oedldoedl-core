@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
 modId="oedldoedlcore"
-version="1.16.5-3.5.0"
+version="1.16.5-3.9.0"
 displayName="Oedldoedl Series: Core"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core"
 logoFile="oedldoedlcore.png"
@@ -20,7 +20,6 @@ Provides:
     - Easier Creative Items Access
     - Survival Usable Wrenches
     - Additional JEI Descriptions
-    - Additional JEI Catalysts
     - High Configurability
     - Common Modding Utilities
 '''
@@ -35,4 +34,10 @@ Provides:
     mandatory=true
     versionRange="[1.16.5,)"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.oedldoedlresources]]
+    modId="theoneprobe"
+    mandatory=false
+    versionRange="[1.16-3.1.4,)"
+    ordering="AFTER"
     side="BOTH"

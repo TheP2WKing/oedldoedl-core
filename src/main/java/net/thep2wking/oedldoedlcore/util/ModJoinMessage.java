@@ -12,18 +12,16 @@ import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 @Mod.EventBusSubscriber
-public class ModJoinMessage 
-{	
+public class ModJoinMessage {
 	@SubscribeEvent
-	public static void onPlayerWorldJoin(PlayerLoggedInEvent event)
-	{
+	public static void onPlayerWorldJoin(PlayerLoggedInEvent event) {
 		IFormattableTextComponent message = new StringTextComponent("[")
-		.appendSibling(new StringTextComponent(OedldoedlCore.NAME + " v" + OedldoedlCore.VERSION).mergeStyle(TextFormatting.GREEN))
-		.appendSibling(new StringTextComponent("] "))
-		.appendSibling(new TranslationTextComponent("message.oedldoedlcore.join"));
+				.appendSibling(new StringTextComponent(OedldoedlCore.NAME + " v" + OedldoedlCore.VERSION)
+						.mergeStyle(TextFormatting.GREEN))
+				.appendSibling(new StringTextComponent("] "))
+				.appendSibling(new TranslationTextComponent("message.oedldoedlcore.join"));
 
-		if (CoreConfig.join_messages.get())
-		{
+		if (CoreConfig.join_messages.get()) {
 			event.getPlayer().sendMessage(message, Util.DUMMY_UUID);
 		}
 	}

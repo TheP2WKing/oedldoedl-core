@@ -3,9 +3,11 @@ package net.thep2wking.oedldoedlcore.util;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.text.TextFormatting;
 
-public class ModRarities 
-{
-	//color
+/**
+ * @author TheP2WKing
+ */
+public class ModRarities {
+	// color
 	public static final Rarity AQUA = Rarity.RARE;
 	public static final Rarity BLACK = Rarity.create("black", TextFormatting.BLACK);
 	public static final Rarity BLUE = Rarity.create("blue", TextFormatting.BLUE);
@@ -22,14 +24,14 @@ public class ModRarities
 	public static final Rarity RED = Rarity.create("red", TextFormatting.RED);
 	public static final Rarity WHITE = Rarity.COMMON;
 	public static final Rarity YELLOW = Rarity.UNCOMMON;
-	
-	//font
+
+	// font
 	public static final Rarity BOLD = Rarity.create("bold", TextFormatting.BOLD);
 	public static final Rarity ITALIC = Rarity.create("italic", TextFormatting.ITALIC);
 	public static final Rarity OBFUSCATED = Rarity.create("obfuscated", TextFormatting.OBFUSCATED);
 	public static final Rarity STRIKETHROUGH = Rarity.create("strikethrough", TextFormatting.STRIKETHROUGH);
 	public static final Rarity UNDERLINE = Rarity.create("underline", TextFormatting.UNDERLINE);
-	
-	//reset
+
+	// reset
 	public static final Rarity RESET = Rarity.create("reset", TextFormatting.RESET);
 }
