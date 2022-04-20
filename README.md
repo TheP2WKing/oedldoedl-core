@@ -4,8 +4,10 @@
 
 # Oedldoedl Core
 A Mod made for TheP2WKings Oedldoedl Projects!
-
+The Core Module of a mod series called "Oedldoedl"
 Made with ❤️
 
 ## Overview
-This Mod is the foundation of my own Mod series called "Oedldoedl". My Modpack projects often include a lot of mods and customization of recipes and features. There are many items and ideas i wanted to have in this projects but not currently available. So i stated to create a set of mods to integrate my ideas into different other popular Mods. The sub Mods are separated intro different themes, so that the installation is modular and wanted parts can be installed easily.
+A library or API or what you want to call it for all oedldoedl mods. This mod adds minor tweaks and to the vanilla gameplay as well as a codebase for other modules. Originally intended to be used with mods like CraftTweaker or KubeJS to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.
+
+My own modpack projects often contain a bunch of mods and offer customization of recipes and other features. There were so many different things that I thought would be useful or just plain funny that didn't exist. Since many mods don't offer these things or haven't been updated over time, I decide to combine some previous ideas and mix them with my own new ones. There are different sub-modules that focus on different parts of the game and follow a specific theme, so the installation can be modular by only installing the parts you want. Note that some mods require multiple modules or other mods to work properly.
