@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven" }
+        maven { url = "https://plugins.gradle.org/m2/" }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+
+version = "1.12.2-1.0.0"
+group = "net.thep2wking.oedldoedlcore"
+archivesBaseName = "oedldoedlcore"
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2847"
+    runDir = "run"
+    mappings = "snapshot_20171003"
+    clientJvmArgs.add("-Xmx4G")
+    clientRunArgs.add("--username=Dev")
+    serverJvmArgs.add("-Xmx4G")
+    makeObfSourceJar = false
+}
+
+repositories {
+    maven {
+        url "https://cursemaven.com"
+    }
+}
+
+dependencies {
+    deobfCompile("curse.maven:jei-238222:4393461")
+    deobfCompile("curse.maven:jei-integration-265917:2951731")
+    deobfCompile("curse.maven:the-one-probe-245211:2667280")
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

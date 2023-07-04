@@ -1,0 +1,15 @@
+[
+    {
+        "modid": "oedldoedlcore",
+        "name": "Oedldoedl Core",
+        "description": "TODO",
+        "version": "${version}",
+        "mcversion": "${mcversion}",
+        "url": "https://github.com/TheP2WKing/oedldoedl-core",
+        "authorList": ["TheP2WKing"],
+        "credits": "TheP2WKing",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
+]
