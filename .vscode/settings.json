@@ -12,5 +12,6 @@
         "editor.insertSpaces": false,
         "editor.tabSize": 4,
         "editor.detectIndentation": true
-    }
+    },
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx16G -Xms100m -Xlog:disable"
 }

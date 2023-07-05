@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.thep2wking.oedldoedlcore.util.OedldoedlCoreRegistry;
+import net.thep2wking.oedldoedlcore.registry.OedldoedlCoreRegistry;
 import net.thep2wking.oedldoedlcore.util.proxy.CommonProxy;
 
 @Mod(modid = OedldoedlCore.MODID, name = OedldoedlCore.NAME, version = OedldoedlCore.VERSION, dependencies = OedldoedlCore.DEPENDENCIES)
