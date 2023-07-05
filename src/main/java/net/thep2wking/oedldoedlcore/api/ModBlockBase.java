@@ -11,6 +11,7 @@ import net.thep2wking.oedldoedlcore.util.IHasModel;
 import net.thep2wking.oedldoedlcore.util.ModToolType;
 
 public class ModBlockBase extends Block implements IHasModel {
+        public final String modid;
     public final String name;
     public final CreativeTabs tab;
     public final SoundType sound;
@@ -20,9 +21,10 @@ public class ModBlockBase extends Block implements IHasModel {
     public final float resistance;
     public final float lightLevel;
 
-    public ModBlockBase(String name, CreativeTabs tab, Material material, SoundType sound, int harvestLevel,
-            ModToolType toolType, float hardness, float resistance, float lightLevel) {
+    public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound,
+            int harvestLevel, ModToolType toolType, float hardness, float resistance, float lightLevel) {
         super(material);
+        this.modid = modid;
         this.name = name;
         this.tab = tab;
         this.sound = sound;
@@ -31,8 +33,8 @@ public class ModBlockBase extends Block implements IHasModel {
         this.hardness = hardness;
         this.resistance = resistance;
         this.lightLevel = lightLevel;
-        setUnlocalizedName(OedldoedlCore.MODID + "." + this.name);
-        setRegistryName(OedldoedlCore.PREFIX + this.name);
+        setUnlocalizedName(this.modid + "." + this.name);
+        setRegistryName(this.modid + ":" + this.name);
         setSoundType(this.sound);
         setHarvestLevel(this.toolType.getToolType(), this.harvestLevel);
         setHardness(this.hardness);

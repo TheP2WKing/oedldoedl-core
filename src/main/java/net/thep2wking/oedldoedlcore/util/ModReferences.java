@@ -8,6 +8,22 @@ public class ModReferences {
 	public static final String BASE_MODID = "oedldoedl";
 	public static final String BASE_NAME = "Oedldoedl";
 
+	public static final String MODID_CORE = BASE_MODID + " " + "core";
+	public static final String MODID_RESOURCES = BASE_MODID + " " + "resources";
+	public static final String MODID_GEAR = BASE_MODID + " " + "gear";
+	public static final String MODID_CURIOSITY = BASE_MODID + " " + "curiosity";
+	public static final String MODID_CONSTRUCT = BASE_MODID + " " + "construct";
+	public static final String MODID_MUSIC = BASE_MODID + " " + "music";
+	public static final String MODID_INTEGRATION = BASE_MODID + " " + "integration";
+
+	public static final String NAME_CORE = BASE_NAME + " " + "Core";
+	public static final String NAME_RESOURCES = BASE_NAME + " " + "Resources";
+	public static final String NAME_GEAR = BASE_NAME + " " + "Gear";
+	public static final String NAME_CURIOSITY = BASE_NAME + " " + "Curiosity";
+	public static final String NAME_CONSTRUCT = BASE_NAME + " " + "Construct";
+	public static final String NAME_MUSIC = BASE_NAME + " " + "Music";
+	public static final String NAME_INTEGRATION = BASE_NAME + " " + "Integration";
+
 	// creative tab resource locations
 	public static final ResourceLocation CREATIVE_TAB_LIGHT = new ResourceLocation("minecraft",
 			"textures/gui/container/creative_inventory/tab_items.png");

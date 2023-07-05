@@ -16,19 +16,19 @@ import net.thep2wking.oedldoedlcore.api.ModItemBase;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
 public class SubModIconItem extends ModItemBase {
-	private final String modName;
+	private final String moduleName;
 
-	public SubModIconItem(String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, String modName, int tooltipLines,
-			int annotationLines) {
-		super(name, tab, rarity, hasEffect, tooltipLines, annotationLines);
-		this.modName = modName;
+	public SubModIconItem(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
+			String moduleName, int tooltipLines, int annotationLines) {
+		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
+		this.moduleName = moduleName;
 		this.setMaxStackSize(1);
 	}
 
-		@Override
+	@Override
 	@SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		if (ModTooltips.showAnnotationTip() && Loader.isModLoaded(modName)) {
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		if (ModTooltips.showAnnotationTip() && Loader.isModLoaded(moduleName)) {
 			ModTooltips.addAnnotation(tooltip, this.getUnlocalizedName(), 1);
 			ModTooltips.addAnnotation(tooltip, this.getUnlocalizedName(), 2);
 			ModTooltips.addAnnotation(tooltip, this.getUnlocalizedName(), 3);

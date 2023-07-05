@@ -18,6 +18,7 @@ import net.thep2wking.oedldoedlcore.util.IHasModel;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
 public class ModItemBase extends Item implements IHasModel {
+    public final String modid;
     public final String name;
     public final CreativeTabs tab;
     public final EnumRarity rarity;
@@ -25,16 +26,17 @@ public class ModItemBase extends Item implements IHasModel {
     public final int tooltipLines;
     public final int annotationLines;
 
-    public ModItemBase(String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines,
-            int annotationLines) {
+    public ModItemBase(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
+            int tooltipLines, int annotationLines) {
+        this.modid = modid;
         this.name = name;
         this.tab = tab;
         this.rarity = rarity;
         this.hasEffect = hasEffect;
         this.tooltipLines = tooltipLines;
         this.annotationLines = annotationLines;
-        setUnlocalizedName(OedldoedlCore.MODID + "." + this.name);
-        setRegistryName(OedldoedlCore.PREFIX + this.name);
+        setUnlocalizedName(this.modid + "." + this.name);
+        setRegistryName(this.modid + ":" + this.name);
         setCreativeTab(this.tab);
         OedldoedlCoreItems.ITEMS.add(this);
     }

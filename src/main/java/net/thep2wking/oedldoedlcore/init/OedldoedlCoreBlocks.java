@@ -6,5 +6,5 @@ import java.util.List;
 import net.minecraft.block.Block;
 
 public class OedldoedlCoreBlocks {
-        public static final List<Block> BLOCKS = new ArrayList<Block>();
+	public static final List<Block> BLOCKS = new ArrayList<Block>();
 }

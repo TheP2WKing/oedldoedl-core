@@ -12,6 +12,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
 public class ModFluidUtil {
+	// fluid base resource locations
 	public static final ResourceLocation LIQUID_STILL_BASE = new ResourceLocation(OedldoedlCore.MODID,
 			"blocks/liquid_still");
 	public static final ResourceLocation LIQUID_FLOW_BASE = new ResourceLocation(OedldoedlCore.MODID,
@@ -22,6 +23,7 @@ public class ModFluidUtil {
 	public static final ResourceLocation MOLTEN_FLOW_BASE = new ResourceLocation(OedldoedlCore.MODID,
 			"blocks/molten_flow");
 
+	// fluid render
 	public static void addRenderForFluid(String fluidName, Block block) {
 		Item fluidItem = Item.getItemFromBlock(block);
 		final ModelResourceLocation modelLocation = new ModelResourceLocation(fluidName, "fluid");

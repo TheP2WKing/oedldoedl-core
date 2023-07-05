@@ -9,42 +9,42 @@ item.oedldoedlcore.core_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-1.0.0
 item.oedldoedlcore.core_icon.annotation4=Author: §eTheP2WKing
 
-item.oedldoedlcore.resources_icon=Oedldoedl Resources Icon
+item.oedldoedlcore.resources_icon.name=Oedldoedl Resources Icon
 item.oedldoedlcore.resources_icon.annotation1=Mod: §eOedldoedl Resources
 item.oedldoedlcore.resources_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.resources_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.resources_icon.annotation5=Mod: §eOedldoedl Resources
 item.oedldoedlcore.resources_icon.annotation6=Installed: §cFalse
 
-item.oedldoedlcore.gear_icon=Oedldoedl Gear Icon
+item.oedldoedlcore.gear_icon.name=Oedldoedl Gear Icon
 item.oedldoedlcore.gear_icon.annotation1=Mod: §eOedldoedl Gear
 item.oedldoedlcore.gear_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.gear_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.gear_icon.annotation5=Mod: §eOedldoedl Gear
 item.oedldoedlcore.gear_icon.annotation6=Installed: §cFalse
 
-item.oedldoedlcore.curiosity_icon=Oedldoedl Curiosity Icon
+item.oedldoedlcore.curiosity_icon.name=Oedldoedl Curiosity Icon
 item.oedldoedlcore.curiosity_icon.annotation1=Mod: §eOedldoedl Curiosity
 item.oedldoedlcore.curiosity_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.curiosity_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.curiosity_icon.annotation5=Mod: §eOedldoedl Curiosity
 item.oedldoedlcore.curiosity_icon.annotation6=Installed: §cFalse
 
-item.oedldoedlcore.construct_icon=Oedldoedl Construct Icon
+item.oedldoedlcore.construct_icon.name=Oedldoedl Construct Icon
 item.oedldoedlcore.construct_icon.annotation1=Mod: §eOedldoedl Construct
 item.oedldoedlcore.construct_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.construct_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.construct_icon.annotation5=Mod: §eOedldoedl Construct
 item.oedldoedlcore.construct_icon.annotation6=Installed: §cFalse
 
-item.oedldoedlcore.music_icon=Oedldoedl Music Icon
+item.oedldoedlcore.music_icon.name=Oedldoedl Music Icon
 item.oedldoedlcore.music_icon.annotation1=Mod: §eOedldoedl Music
 item.oedldoedlcore.music_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.music_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.music_icon.annotation5=Mod: §eOedldoedl Music
 item.oedldoedlcore.music_icon.annotation6=Installed: §cFalse
 
-item.oedldoedlcore.integration_icon=Oedldoedl Integration Icon
+item.oedldoedlcore.integration_icon.name=Oedldoedl Integration Icon
 item.oedldoedlcore.integration_icon.annotation1=Mod: §eOedldoedl Integration
 item.oedldoedlcore.integration_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.integration_icon.annotation4=Author: §eTheP2WKing

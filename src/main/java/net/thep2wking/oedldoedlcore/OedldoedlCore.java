@@ -3,12 +3,17 @@ package net.thep2wking.oedldoedlcore;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.thep2wking.oedldoedlcore.init.OedldoedlCoreItems;
 import net.thep2wking.oedldoedlcore.registry.OedldoedlCoreRegistry;
 import net.thep2wking.oedldoedlcore.util.proxy.CommonProxy;
 
@@ -23,6 +28,16 @@ public class OedldoedlCore {
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ServerProxy";
     public static final Logger LOGGER = LogManager.getLogger(NAME);
+
+	public static OedldoedlCore INSTANCE;
+
+    public static final CreativeTabs TAB = new CreativeTabs(OedldoedlCore.MODID + ".name") {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem() {
+            return new ItemStack(OedldoedlCoreItems.CORE_ICON, 1, 0);
+        }
+    };
 
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
     public static CommonProxy PROXY;
