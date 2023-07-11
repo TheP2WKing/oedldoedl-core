@@ -1,5 +1,6 @@
-# creative tab
+# creative tabs
 itemGroup.oedldoedlcore.name=§dOedldoedl Core
+itemGroup.creative.name=Creative
 
 # icons
 item.oedldoedlcore.core_icon.name=Oedldoedl Core Icon
