@@ -3,7 +3,6 @@ package net.thep2wking.oedldoedlcore.init;
 import net.minecraft.item.Item;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.api.ModItemBase;
-import net.thep2wking.oedldoedlcore.content.DebugWrenchItem;
 import net.thep2wking.oedldoedlcore.content.SubModIconItem;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
@@ -24,6 +23,4 @@ public class ModItems {
 	public static final Item INTEGRATION_ICON = new SubModIconItem(OedldoedlCore.MODID, "integration_icon",
 			OedldoedlCore.TAB, ModRarities.YELLOW, false, ModReferences.MODID_INTEGRATION, 0, 4);
 
-	public static final Item DEBUG_WRENCH = new DebugWrenchItem(OedldoedlCore.MODID, "debug_wrench",
-			OedldoedlCore.TAB, ModRarities.LIGHT_PURPLE, false, 2, 0);
 }

@@ -6,7 +6,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.text.TextFormatting;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 /**
  * @author TheP2WKing
@@ -39,62 +39,62 @@ public class ModTooltips {
 
 	// information
 	public static boolean showInfoTip() {
-		return GuiScreen.isShiftKeyDown() && OedldoedlCoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS;
+		return GuiScreen.isShiftKeyDown() && CoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS;
 	}
 
 	public static boolean showInfoTipKey() {
-		return OedldoedlCoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS
-				&& OedldoedlCoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS_KEY;
+		return CoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS
+				&& CoreConfig.TOOLTIPS.INFORMATION_TOOLTIPS_KEY;
 	}
 
 	public static boolean showAnnotationTip() {
-		return OedldoedlCoreConfig.TOOLTIPS.ANNOTATION_TOOLTIPS;
+		return CoreConfig.TOOLTIPS.ANNOTATION_TOOLTIPS;
 	}
 
 	public static void addAnnotation(List<String> tooltip, String name, int count) {
-		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
+		tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
 				+ I18n.format(name + ".annotation" + count));
 	}
 
 	public static void addInformation(List<String> tooltip, String name, int count) {
-		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.COLORS.INFORMATION_FORMATTING.getColor()
+		tooltip.add(CoreConfig.TOOLTIPS.COLORS.INFORMATION_FORMATTING.getColor()
 				+ I18n.format(name + ".tip" + count));
 	}
 
 	// effects
 	public static boolean showEffectTip() {
-		return GuiScreen.isCtrlKeyDown() && OedldoedlCoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS;
+		return GuiScreen.isCtrlKeyDown() && CoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS;
 	}
 
 	public static boolean showEffectTipKey() {
-		return OedldoedlCoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS && OedldoedlCoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS_KEY;
+		return CoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS && CoreConfig.TOOLTIPS.EFFECTS_TOOLTIPS_KEY;
 	}
 
 	public static void addEffectHeader(List<String> tooltip, String operation) {
 		tooltip.add(
-				OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_ANNOTATION_FORMATTING.getColor() + I18n.format(operation));
+				CoreConfig.TOOLTIPS.COLORS.EFFECTS_ANNOTATION_FORMATTING.getColor() + I18n.format(operation));
 	}
 
 	public static void addPotionEffect(List<String> tooltip, String effectName, boolean isDebuff, int amplifier,
 			int tickDuration) {
-		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
-				+ I18n.format(effectName) + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
+		tooltip.add("- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+				+ I18n.format(effectName) + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
 				+ TextFormatting.ITALIC
 				+ " " + getEffectColor(isDebuff) + TextFormatting.ITALIC + "(" + amplifier + ") (" + tickDuration / 20
 				+ " sec)" + TextFormatting.ITALIC);
 	}
 
 	public static void addCustomEffectInformation(List<String> tooltip, String name, int index) {
-		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+		tooltip.add("- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
 				+ I18n.format(name + ".effects" + index)
-				+ OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
+				+ CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
 				+ TextFormatting.ITALIC);
 	}
 
 	public static TextFormatting getEffectColor(boolean isDebuff) {
 		if (isDebuff) {
-			return OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_NEGATIVE_FORMATTING.getColor();
+			return CoreConfig.TOOLTIPS.COLORS.EFFECTS_NEGATIVE_FORMATTING.getColor();
 		}
-		return OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_POSITIVE_FORMATTING.getColor();
+		return CoreConfig.TOOLTIPS.COLORS.EFFECTS_POSITIVE_FORMATTING.getColor();
 	}
 }

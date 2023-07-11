@@ -15,7 +15,7 @@ import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 @Config(modid = OedldoedlCore.MODID, name = ModReferences.BASE_MODID + "/"
         + OedldoedlCore.MODID, category = OedldoedlCore.MODID)
-public class OedldoedlCoreConfig {
+public class CoreConfig {
     @Config.Name("tooltips")
     public static final Tooltips TOOLTIPS = new Tooltips();
 

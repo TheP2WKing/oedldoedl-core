@@ -51,11 +51,6 @@ item.oedldoedlcore.integration_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.integration_icon.annotation5=Mod: §eOedldoedl Integration
 item.oedldoedlcore.integration_icon.annotation6=Installed: §cFalse
 
-# misc
-item.oedldoedlcore.debug_wrench.name=Debug Wrench
-item.oedldoedlcore.debug_wrench.tip1=Rotate and change blockstates
-item.oedldoedlcore.debug_wrench.tip2=similar to the debug stick.
-
 # join message
 message.oedldoedlcore.join=Thanks for installing!
 

@@ -28,7 +28,5 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.CONSTRUCT_ICON);
 		ModRegistryHelper.registerItem(event, ModItems.MUSIC_ICON);
 		ModRegistryHelper.registerItem(event, ModItems.INTEGRATION_ICON);
-
-		ModRegistryHelper.registerItem(event, ModItems.DEBUG_WRENCH);
 	}
 }

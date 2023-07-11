@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
@@ -52,7 +52,7 @@ public class OedldoedlCore {
 
         @Override
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
-            if (OedldoedlCoreConfig.CONTENT.UNIBTAINABLE_CREATIVE_TAB) {
+            if (CoreConfig.CONTENT.UNIBTAINABLE_CREATIVE_TAB) {
                 list.add(new ItemStack(Blocks.MOB_SPAWNER, 1, 0));
                 list.add(new ItemStack(Blocks.FARMLAND, 1, 0));
                 list.add(new ItemStack(Blocks.BROWN_MUSHROOM_BLOCK, 1, 0));
@@ -119,7 +119,7 @@ public class OedldoedlCore {
     public static class ModJoinMessage {
         @SubscribeEvent
         public static void addJoinMessage(PlayerLoggedInEvent event) {
-            if (OedldoedlCoreConfig.LOGGING.JOIN_MESSAGES) {
+            if (CoreConfig.LOGGING.JOIN_MESSAGES) {
                 event.player.sendMessage(ModReferences.defaultJoinMessage(NAME, MODID, VERSION));
             }
         }
