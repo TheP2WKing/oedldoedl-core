@@ -8,4 +8,7 @@ public class Recipes {
 
 	@Config.Name("Enable Additional Recipes")
 	public boolean ADDITIONAL_RECIPES = true;
+
+	@Config.Name("Enable Additional Oredict")
+	public boolean ADDITIONAL_OREDICT = true;
 }

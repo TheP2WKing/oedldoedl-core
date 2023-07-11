@@ -56,7 +56,7 @@ public class ModLogger {
 		}
 	}
 
-	public static void registeredSoundsLogger(String mod) {
+	public static void registeredSoundEventsLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered sounds for " + mod);
 		}
@@ -65,6 +65,12 @@ public class ModLogger {
 	public static void registeredConditionsLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered conditions for " + mod);
+		}
+	}
+
+	public static void registeredOreDictLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered oredict for " + mod);
 		}
 	}
 

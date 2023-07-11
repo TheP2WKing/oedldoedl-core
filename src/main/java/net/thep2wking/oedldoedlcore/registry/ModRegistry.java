@@ -2,11 +2,13 @@ package net.thep2wking.oedldoedlcore.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.init.ModItems;
+import net.thep2wking.oedldoedlcore.init.ModSounds;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 
@@ -28,5 +30,14 @@ public class ModRegistry {
 		ModRegistryHelper.registerItem(event, ModItems.CONSTRUCT_ICON);
 		ModRegistryHelper.registerItem(event, ModItems.MUSIC_ICON);
 		ModRegistryHelper.registerItem(event, ModItems.INTEGRATION_ICON);
+	}
+
+	@SubscribeEvent
+	public static void onSoundEventRegister(RegistryEvent.Register<SoundEvent> event) {
+		ModLogger.registeredSoundEventsLogger(OedldoedlCore.MODID);
+
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.SMASH_WOOD);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.SMASH_METAL);
+		ModRegistryHelper.registerSoundEvent(event, ModSounds.SMASH_GEM);
 	}
 }

@@ -55,9 +55,9 @@ item.oedldoedlcore.integration_icon.annotation6=Installed: §cFalse
 message.oedldoedlcore.join=Thanks for installing!
 
 # sounds
-oedldoedlcore.smash_wood=Smashbat smashing
-oedldoedlcore.smash_metal=Smashbat smashing
-oedldoedlcore.smash_gem=Smashbat smashing
+sound.oedldoedlcore.smash_wood=Smashbat smashing
+sound.oedldoedlcore.smash_metal=Smashbat smashing
+sound.oedldoedlcore.smash_gem=Smashbat smashing
 
 # jei
 item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye

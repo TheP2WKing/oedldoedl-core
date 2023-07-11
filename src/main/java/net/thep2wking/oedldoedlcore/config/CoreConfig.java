@@ -16,20 +16,20 @@ import net.thep2wking.oedldoedlcore.util.ModReferences;
 @Config(modid = OedldoedlCore.MODID, name = ModReferences.BASE_MODID + "/"
         + OedldoedlCore.MODID, category = OedldoedlCore.MODID)
 public class CoreConfig {
-    @Config.Name("tooltips")
-    public static final Tooltips TOOLTIPS = new Tooltips();
-
-    @Config.Name("recipes")
-    public static final Recipes RECIPES = new Recipes();
-
     @Config.Name("content")
     public static final Content CONTENT = new Content();
+
+    @Config.Name("logging")
+    public static final Logging LOGGING = new Logging();
 
     @Config.Name("properties")
     public static final Properties PROPERTIES = new Properties();
 
-    @Config.Name("logging")
-    public static final Logging LOGGING = new Logging();
+    @Config.Name("recipes")
+    public static final Recipes RECIPES = new Recipes();
+    
+    @Config.Name("tooltips")
+    public static final Tooltips TOOLTIPS = new Tooltips();
 
     @Mod.EventBusSubscriber
     public static class ConfigHolder {

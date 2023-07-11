@@ -1,0 +1,23 @@
+{
+    "smash_wood": {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlcore.smash_wood",
+        "sounds": [
+            "oedldoedlcore:smash_wood"
+        ]
+    },
+    "smash_metal": {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlcore.smash_metal",
+        "sounds": [
+            "oedldoedlcore:smash_metal"
+        ]
+    },
+    "smash_gem": {
+        "category": "ambient",
+        "subtitle": "sound.oedldoedlcore.smash_gem",
+        "sounds": [
+            "oedldoedlcore:smash_gem"
+        ]
+    }
+}
