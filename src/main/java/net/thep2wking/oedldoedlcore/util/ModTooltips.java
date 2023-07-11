@@ -12,7 +12,7 @@ import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
  * @author TheP2WKing
  */
 public class ModTooltips {
-	// keyes
+	// keys
 	public static final String KEY_INFO = "key." + OedldoedlCore.MODID + ".info";
 	public static final String KEY_EFFECTS = "key." + OedldoedlCore.MODID + ".effect";
 

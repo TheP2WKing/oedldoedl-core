@@ -5,9 +5,14 @@ import org.apache.logging.log4j.Logger;
 
 import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModLogger {
+	// logger for all oedldoedl mods
 	public static final Logger LOGGER = LogManager.getLogger(ModReferences.BASE_NAME);
 
+	// init events
 	public static void preInitLogger(String mod) {
 		if (OedldoedlCoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Starting FML Pre-Initialization for " + mod);
@@ -32,6 +37,7 @@ public class ModLogger {
 		}
 	}
 
+	// content registering
 	public static void registeredBlocksLogger(String mod) {
 		if (OedldoedlCoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered blocks for " + mod);

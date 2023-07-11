@@ -15,6 +15,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModItemBlockBase extends ItemBlock {
     public final EnumRarity rarity;
     public final boolean hasEffect;

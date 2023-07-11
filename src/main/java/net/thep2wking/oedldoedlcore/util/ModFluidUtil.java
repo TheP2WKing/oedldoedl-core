@@ -11,6 +11,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModFluidUtil {
 	// fluid base resource locations
 	public static final ResourceLocation LIQUID_STILL_BASE = new ResourceLocation(OedldoedlCore.MODID,

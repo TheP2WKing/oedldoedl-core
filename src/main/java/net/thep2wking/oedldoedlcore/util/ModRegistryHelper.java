@@ -8,7 +8,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModRegistryHelper {
+    // registering
     public static void registerBlock(RegistryEvent.Register<Block> event, Block block) {
         event.getRegistry().register(block);
     }
@@ -28,6 +32,7 @@ public class ModRegistryHelper {
         FluidRegistry.addBucketForFluid(fluid);
     }
 
+    // rendering
     public static void registerItemRender(Item item) {
         ModelLoader.setCustomModelResourceLocation(item, 0,
                 new ModelResourceLocation(item.getRegistryName(), "inventory"));

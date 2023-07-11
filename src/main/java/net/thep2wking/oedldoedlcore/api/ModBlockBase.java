@@ -6,6 +6,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModBlockBase extends Block {
     public final String modid;
     public final String name;

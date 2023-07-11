@@ -7,6 +7,9 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModReferences {
 	// mod names
 	public static final String BASE_MODID = "oedldoedl";

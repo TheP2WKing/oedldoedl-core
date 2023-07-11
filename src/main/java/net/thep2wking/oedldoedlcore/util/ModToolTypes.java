@@ -1,5 +1,8 @@
 package net.thep2wking.oedldoedlcore.util;
 
+/**
+ * @author TheP2WKing
+ */
 public enum ModToolTypes {
     PICKAXE("pickaxe"),
     AXE("axe"),
