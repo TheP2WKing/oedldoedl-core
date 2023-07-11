@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.thep2wking.oedldoedlcore.init.OedldoedlCoreItems;
+import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
 public class ModItemBlockBase extends ItemBlock {
@@ -21,8 +21,7 @@ public class ModItemBlockBase extends ItemBlock {
     public final int tooltipLines;
     public final int annotationLines;
 
-    public ModItemBlockBase(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines,
-            int annotationLines) {
+    public ModItemBlockBase(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
         super(block);
         this.rarity = rarity;
         this.hasEffect = hasEffect;
@@ -31,13 +30,12 @@ public class ModItemBlockBase extends ItemBlock {
         setUnlocalizedName(block.getUnlocalizedName());
         setRegistryName(block.getRegistryName());
         setCreativeTab(block.getCreativeTabToDisplayOn());
-        OedldoedlCoreItems.ITEMS.add(this);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack stack) {
-        if (!stack.isItemEnchanted()) {
+        if (!stack.isItemEnchanted() && OedldoedlCoreConfig.PROPERTIES.COLORFUL_RARITIES) {
             return this.rarity;
         } else if (stack.isItemEnchanted()) {
             switch (this.rarity) {
@@ -57,7 +55,10 @@ public class ModItemBlockBase extends ItemBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack stack) {
-        return this.hasEffect || stack.isItemEnchanted();
+        if (OedldoedlCoreConfig.PROPERTIES.ENCHANTMENT_EFFECTS) {
+            return this.hasEffect || stack.isItemEnchanted();
+        }
+        return stack.isItemEnchanted();
     }
 
     @Override

@@ -6,16 +6,30 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
+import net.thep2wking.oedldoedlcore.config.categories.Content;
 import net.thep2wking.oedldoedlcore.config.categories.Logging;
+import net.thep2wking.oedldoedlcore.config.categories.Properties;
+import net.thep2wking.oedldoedlcore.config.categories.Recipes;
 import net.thep2wking.oedldoedlcore.config.categories.Tooltips;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 
-@Config(modid = OedldoedlCore.MODID, name = OedldoedlCore.MODID, category = OedldoedlCore.MODID)
+@Config(modid = OedldoedlCore.MODID, name = ModReferences.BASE_MODID + "/"
+        + OedldoedlCore.MODID, category = OedldoedlCore.MODID)
 public class OedldoedlCoreConfig {
-    @Config.Name("logging")
-    public static final Logging LOGGING = new Logging();
-
     @Config.Name("tooltips")
     public static final Tooltips TOOLTIPS = new Tooltips();
+
+    @Config.Name("recipes")
+    public static final Recipes RECIPES = new Recipes();
+
+    @Config.Name("content")
+    public static final Content CONTENT = new Content();
+
+    @Config.Name("properties")
+    public static final Properties PROPERTIES = new Properties();
+
+    @Config.Name("logging")
+    public static final Logging LOGGING = new Logging();
 
     @Mod.EventBusSubscriber
     public static class ConfigHolder {

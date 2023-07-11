@@ -12,12 +12,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.init.OedldoedlCoreItems;
-import net.thep2wking.oedldoedlcore.util.IHasModel;
+import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
-public class ModItemBase extends Item implements IHasModel {
+public class ModItemBase extends Item {
     public final String modid;
     public final String name;
     public final CreativeTabs tab;
@@ -38,19 +36,12 @@ public class ModItemBase extends Item implements IHasModel {
         setUnlocalizedName(this.modid + "." + this.name);
         setRegistryName(this.modid + ":" + this.name);
         setCreativeTab(this.tab);
-        OedldoedlCoreItems.ITEMS.add(this);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerModels() {
-        OedldoedlCore.PROXY.registerItemRenderer(this, 0, "inventory");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack stack) {
-        if (!stack.isItemEnchanted()) {
+        if (!stack.isItemEnchanted() && OedldoedlCoreConfig.PROPERTIES.COLORFUL_RARITIES) {
             return this.rarity;
         } else if (stack.isItemEnchanted()) {
             switch (this.rarity) {
@@ -70,7 +61,10 @@ public class ModItemBase extends Item implements IHasModel {
     @Override
     @SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack stack) {
-        return this.hasEffect || stack.isItemEnchanted();
+        if (OedldoedlCoreConfig.PROPERTIES.ENCHANTMENT_EFFECTS) {
+            return this.hasEffect || stack.isItemEnchanted();
+        }
+        return stack.isItemEnchanted();
     }
 
     @Override

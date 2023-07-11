@@ -13,24 +13,24 @@ import net.thep2wking.oedldoedlcore.config.OedldoedlCoreConfig;
  */
 public class ModTooltips {
 	// keyes
-	public static final String KEY_INFO = "key" + OedldoedlCore.MODID + "info";
-	public static final String KEY_EFFECTS = "key" + OedldoedlCore.MODID + "effects";
-	public static final String KEY_ORIGIN = "key" + OedldoedlCore.MODID + "origin";
+	public static final String KEY_INFO = "key." + OedldoedlCore.MODID + ".info";
+	public static final String KEY_EFFECTS = "key." + OedldoedlCore.MODID + ".effect";
 
 	// tooltips
-	public static final String EFFECTS_EFFECTS = "effects" + OedldoedlCore.MODID + "tip";
-	public static final String EFFECTS_GIVEN = "effects" + OedldoedlCore.MODID + "given.tip";
-	public static final String EFFECTS_ENEMY = "effects" + OedldoedlCore.MODID + "enemy.tip";
-	public static final String EFFECTS_INVENTORY = "effects" + OedldoedlCore.MODID + "inventory.tip";
-	public static final String EFFECTS_HAND = "effects" + OedldoedlCore.MODID + "hand.tip";
-	public static final String EFFECTS_WALKING_ON = "effects" + OedldoedlCore.MODID + "walking.tip";
-	public static final String EFFECTS_FLUID = "effects" + OedldoedlCore.MODID + "fluid.tip";
-	public static final String EFFECTS_CURIOS = "effects" + OedldoedlCore.MODID + "bauble.tip";
-	public static final String EFFECTS_HELMET = "effects" + OedldoedlCore.MODID + "helmet.tip";
-	public static final String EFFECTS_CHESTPLATE = "effects" + OedldoedlCore.MODID + "chestplate.tip";
-	public static final String EFFECTS_LEGGINGS = "effects" + OedldoedlCore.MODID + "leggings.tip";
-	public static final String EFFECTS_BOOTS = "effects" + OedldoedlCore.MODID + "boots.tip";
-	public static final String EFFECTS_FULL_ARMOR = "effects" + OedldoedlCore.MODID + "full.tip";
+	public static final String EFFECT_EFFECTS = "effect." + OedldoedlCore.MODID + ".tip";
+	public static final String EFFECT_GIVEN = "effect." + OedldoedlCore.MODID + ".given.tip";
+	public static final String EFFECT_ENEMY = "effect." + OedldoedlCore.MODID + ".enemy.tip";
+	public static final String EFFECT_INVENTORY = "effect." + OedldoedlCore.MODID + ".inventory.tip";
+	public static final String EFFECT_MAIN_HAND = "effect." + OedldoedlCore.MODID + ".mainhand.tip";
+	public static final String EFFECT_OFF_HAND = "effect." + OedldoedlCore.MODID + ".offhand.tip";
+	public static final String EFFECT_WALKING_ON = "effect." + OedldoedlCore.MODID + ".walking.tip";
+	public static final String EFFECT_FLUID = "effect." + OedldoedlCore.MODID + ".fluid.tip";
+	public static final String EFFECT_CURIOS = "effect." + OedldoedlCore.MODID + ".bauble.tip";
+	public static final String EFFECT_HELMET = "effect." + OedldoedlCore.MODID + ".helmet.tip";
+	public static final String EFFECT_CHESTPLATE = "effect." + OedldoedlCore.MODID + ".chestplate.tip";
+	public static final String EFFECT_LEGGINGS = "effect." + OedldoedlCore.MODID + ".leggings.tip";
+	public static final String EFFECT_BOOTS = "effect." + OedldoedlCore.MODID + ".boots.tip";
+	public static final String EFFECT_FULL_ARMOR = "effect." + OedldoedlCore.MODID + ".full.tip";
 
 	// key
 	public static void addKey(List<String> tooltip, String key) {
@@ -52,12 +52,13 @@ public class ModTooltips {
 	}
 
 	public static void addAnnotation(List<String> tooltip, String name, int count) {
-		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.INFORMATION_ANNOTATION_FORMATTING
+		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.COLORS.INFORMATION_ANNOTATION_FORMATTING.getColor()
 				+ I18n.format(name + ".annotation" + count));
 	}
 
 	public static void addInformation(List<String> tooltip, String name, int count) {
-		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.INFORMATION_FORMATTING + I18n.format(name + ".tip" + count));
+		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.COLORS.INFORMATION_FORMATTING.getColor()
+				+ I18n.format(name + ".tip" + count));
 	}
 
 	// effects
@@ -70,36 +71,30 @@ public class ModTooltips {
 	}
 
 	public static void addEffectHeader(List<String> tooltip, String operation) {
-		tooltip.add(OedldoedlCoreConfig.TOOLTIPS.EFFECTS_ANNOTATION_FORMATTING + I18n.format(operation));
+		tooltip.add(
+				OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_ANNOTATION_FORMATTING.getColor() + I18n.format(operation));
 	}
 
 	public static void addPotionEffect(List<String> tooltip, String effectName, boolean isDebuff, int amplifier,
 			int tickDuration) {
-		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.EFFECTS_FORMATTING + TextFormatting.ITALIC
-				+ I18n.format(effectName) + OedldoedlCoreConfig.TOOLTIPS.EFFECTS_FORMATTING + TextFormatting.ITALIC
+		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+				+ I18n.format(effectName) + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
+				+ TextFormatting.ITALIC
 				+ " " + getEffectColor(isDebuff) + TextFormatting.ITALIC + "(" + amplifier + ") (" + tickDuration / 20
 				+ " sec)" + TextFormatting.ITALIC);
 	}
 
 	public static void addCustomEffectInformation(List<String> tooltip, String name, int index) {
-		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.EFFECTS_FORMATTING + TextFormatting.ITALIC
-				+ I18n.format(name + ".effects" + index) + OedldoedlCoreConfig.TOOLTIPS.EFFECTS_FORMATTING
+		tooltip.add("- " + OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+				+ I18n.format(name + ".effects" + index)
+				+ OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
 				+ TextFormatting.ITALIC);
 	}
 
 	public static TextFormatting getEffectColor(boolean isDebuff) {
 		if (isDebuff) {
-			return OedldoedlCoreConfig.TOOLTIPS.EFFECTS_NEGATIVE_FORMATTING;
+			return OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_NEGATIVE_FORMATTING.getColor();
 		}
-		return OedldoedlCoreConfig.TOOLTIPS.EFFECTS_POSITIVE_FORMATTING;
-	}
-
-	// origin
-	public static boolean showOriginTip() {
-		return GuiScreen.isAltKeyDown() && OedldoedlCoreConfig.TOOLTIPS.ORIGIN_TOOLTIPS;
-	}
-
-	public static boolean showOriginTipKey() {
-		return OedldoedlCoreConfig.TOOLTIPS.ORIGIN_TOOLTIPS && OedldoedlCoreConfig.TOOLTIPS.ORIGIN_TOOLTIPS_KEY;
+		return OedldoedlCoreConfig.TOOLTIPS.COLORS.EFFECTS_POSITIVE_FORMATTING.getColor();
 	}
 }

@@ -1,6 +1,6 @@
 package net.thep2wking.oedldoedlcore.util;
 
-public enum ModToolType {
+public enum ModToolTypes {
     PICKAXE("pickaxe"),
     AXE("axe"),
     SHOVEL("shovel"),
@@ -9,7 +9,7 @@ public enum ModToolType {
 
     private String toolType;
 
-    ModToolType(String toolType) {
+    ModToolTypes(String toolType) {
         this.toolType = toolType;
     }
 

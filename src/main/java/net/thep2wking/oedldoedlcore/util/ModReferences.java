@@ -1,6 +1,10 @@
 package net.thep2wking.oedldoedlcore.util;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
 public class ModReferences {
@@ -8,13 +12,13 @@ public class ModReferences {
 	public static final String BASE_MODID = "oedldoedl";
 	public static final String BASE_NAME = "Oedldoedl";
 
-	public static final String MODID_CORE = BASE_MODID + " " + "core";
-	public static final String MODID_RESOURCES = BASE_MODID + " " + "resources";
-	public static final String MODID_GEAR = BASE_MODID + " " + "gear";
-	public static final String MODID_CURIOSITY = BASE_MODID + " " + "curiosity";
-	public static final String MODID_CONSTRUCT = BASE_MODID + " " + "construct";
-	public static final String MODID_MUSIC = BASE_MODID + " " + "music";
-	public static final String MODID_INTEGRATION = BASE_MODID + " " + "integration";
+	public static final String MODID_CORE = BASE_MODID + "core";
+	public static final String MODID_RESOURCES = BASE_MODID + "resources";
+	public static final String MODID_GEAR = BASE_MODID + "gear";
+	public static final String MODID_CURIOSITY = BASE_MODID + "curiosity";
+	public static final String MODID_CONSTRUCT = BASE_MODID + "construct";
+	public static final String MODID_MUSIC = BASE_MODID + "music";
+	public static final String MODID_INTEGRATION = BASE_MODID + "integration";
 
 	public static final String NAME_CORE = BASE_NAME + " " + "Core";
 	public static final String NAME_RESOURCES = BASE_NAME + " " + "Resources";
@@ -30,7 +34,7 @@ public class ModReferences {
 	public static final ResourceLocation CREATIVE_TAB_LIGHT_SEARCH = new ResourceLocation("minecraft",
 			"textures/gui/container/creative_inventory/tab_item_search.png");
 
-	public static final ResourceLocation CREATIVE_TABK_DARK = new ResourceLocation(OedldoedlCore.MODID,
+	public static final ResourceLocation CREATIVE_TAB_DARK = new ResourceLocation(OedldoedlCore.MODID,
 			"textures/gui/container/tab_oedldoedl_base.png");
 	public static final ResourceLocation CREATIVE_TAB_DARK_SEARACH = new ResourceLocation(OedldoedlCore.MODID,
 			"textures/gui/container/tab_oedldoedl_search.png");
@@ -53,4 +57,13 @@ public class ModReferences {
 	public static final String ATTRIBUTE_NAMETAG_DISTANCE = "Oedldoedl Nametag Distance Attribute";
 	public static final String ATTRIBUTE_ENTITY_GRAVITY = "Oedldoedl Entity Gravity Attribute";
 	public static final String ATTRIBUTE_REACH_DISTANCE = "Oedldoedl Reach Distance Attribute";
+
+	// join message
+	public static ITextComponent defaultJoinMessage(String name, String modid, String version) {
+		return new TextComponentString("[")
+				.appendSibling(new TextComponentString(
+						TextFormatting.GREEN + name + " v" + version))
+				.appendSibling(new TextComponentString("] "))
+				.appendSibling(new TextComponentTranslation("message." + modid + ".join"));
+	}
 }

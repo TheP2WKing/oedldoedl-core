@@ -4,25 +4,21 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.init.OedldoedlCoreBlocks;
-import net.thep2wking.oedldoedlcore.util.IHasModel;
-import net.thep2wking.oedldoedlcore.util.ModToolType;
+import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
-public class ModBlockBase extends Block implements IHasModel {
-        public final String modid;
+public class ModBlockBase extends Block {
+    public final String modid;
     public final String name;
     public final CreativeTabs tab;
     public final SoundType sound;
     public final int harvestLevel;
-    public final ModToolType toolType;
+    public final ModToolTypes toolType;
     public final float hardness;
     public final float resistance;
     public final float lightLevel;
 
     public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound,
-            int harvestLevel, ModToolType toolType, float hardness, float resistance, float lightLevel) {
+            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, float lightLevel) {
         super(material);
         this.modid = modid;
         this.name = name;
@@ -41,11 +37,5 @@ public class ModBlockBase extends Block implements IHasModel {
         setResistance(this.resistance);
         setLightLevel(this.lightLevel);
         setCreativeTab(this.tab);
-        OedldoedlCoreBlocks.BLOCKS.add(this);
-    }
-
-    @Override
-    public void registerModels() {
-        OedldoedlCore.PROXY.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 }

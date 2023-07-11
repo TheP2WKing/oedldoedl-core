@@ -1,12 +1,11 @@
-// join message
-message.oedldoedlcore.join=Thanks for installing!
+# creative tab
+itemGroup.oedldoedlcore.name=§dOedldoedl Core
 
-itemGroup.oedldoedlcore.name=Oedldoedl Core
-
+# icons
 item.oedldoedlcore.core_icon.name=Oedldoedl Core Icon
 item.oedldoedlcore.core_icon.annotation1=Mod: §eOedldoedl Core
 item.oedldoedlcore.core_icon.annotation2=Installed: §aTrue
-item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-1.0.0
+item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-3.0.0
 item.oedldoedlcore.core_icon.annotation4=Author: §eTheP2WKing
 
 item.oedldoedlcore.resources_icon.name=Oedldoedl Resources Icon
@@ -50,3 +49,46 @@ item.oedldoedlcore.integration_icon.annotation2=Installed: §aTrue
 item.oedldoedlcore.integration_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.integration_icon.annotation5=Mod: §eOedldoedl Integration
 item.oedldoedlcore.integration_icon.annotation6=Installed: §cFalse
+
+# misc
+item.oedldoedlcore.debug_wrench.name=Debug Wrench
+item.oedldoedlcore.debug_wrench.tip1=Rotate and change blockstates
+item.oedldoedlcore.debug_wrench.tip2=similar to the debug stick.
+
+# join message
+message.oedldoedlcore.join=Thanks for installing!
+
+# sounds
+oedldoedlcore.smash_wood=Smashbat smashing
+oedldoedlcore.smash_metal=Smashbat smashing
+oedldoedlcore.smash_gem=Smashbat smashing
+
+# jei
+item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye
+item.oedldoedlcore.firework_star.jei2=Up to 8 Dyes can be added. A Head, a Gold Nugget, a Feather, or a Fire Charge can be added. Diamond and the Glowstone Dust can be added optional with any of the other ingredients. Any additional Dye adds a fade to color effect to the Firework Star, overwriting any existing fades. Up to 8 Dyes can be added.
+item.oedldoedlcore.firework_rocket.jei=Recipe:\nAny Firework Star + Paper + Gunpowder
+item.oedldoedlcore.firework_rocket.jei2=Adding more Gunpowder increases the duration of the Firework Rocket. Up to 3 Gunpowder can be used. Up to 5 Firework Stars can also be used with three Gunpowder. Up to 7 Firework Stars can be used by using Firework Stars instead of additional Gunpowder. All Firework Stars explode almost simultaneously when the Firework Rocket detonates.
+
+# effect tooltips
+effect.oedldoedlcore.tip=Effects:
+effect.oedldoedlcore.given.tip=Given Effects:
+effect.oedldoedlcore.enemy.tip=Given Effects to Enemies:
+effect.oedldoedlcore.inventory.tip=Given Effects when in Inventory:
+effect.oedldoedlcore.mainhand.tip=Given Effects when in Main Hand:
+effect.oedldoedlcore.offhand.tip=Given Effects when in Off Hand:
+effect.oedldoedlcore.walking.tip=Given Effects when walking over:
+effect.oedldoedlcore.fluid.tip=Given Effects when in Fluid:
+effect.oedldoedlcore.curios.tip=Given Effects when worn as Curios:
+effect.oedldoedlcore.helmet.tip=Given Effects when worn as Helmet:
+effect.oedldoedlcore.chestplate.tip=Given Effects when worn as Chestplate:
+effect.oedldoedlcore.leggings.tip=Given Effects when worn as Leggings:
+effect.oedldoedlcore.boots.tip=Given Effects when worn as Boots:
+effect.oedldoedlcore.full.tip=Given Effects when worn as full Armor Set:
+
+# tooltips
+key.oedldoedlcore.info=§7Hold §e§oShift§r§7 for Info
+key.oedldoedlcore.effect=§7Hold §b§oCtrl§r§7 for Effects
+
+# top tooltips
+top.oedldoedlcore.info=§7Hold §e§oSneak§r§7 for Info
+top.oedldoedlcore.effect=§7Hold §b§oSneak§r§7 for Effects
