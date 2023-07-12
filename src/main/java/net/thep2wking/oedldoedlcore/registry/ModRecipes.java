@@ -137,6 +137,9 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("listAllseed", Items.PUMPKIN_SEEDS, 0);
 			ModRecipeHelper.addOreDict("listAllseed", Items.MELON_SEEDS, 0);
 			ModRecipeHelper.addOreDict("listAllseed", Items.BEETROOT_SEEDS, 0);
+
+			ModRecipeHelper.addOreDict("book", Items.BOOK, 0);
+			ModRecipeHelper.addOreDict("book", Items.ENCHANTED_BOOK, 0);
 		}
 	}
 

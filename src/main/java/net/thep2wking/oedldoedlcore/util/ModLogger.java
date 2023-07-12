@@ -79,4 +79,11 @@ public class ModLogger {
 			ModLogger.LOGGER.info("Registered recipes for " + mod);
 		}
 	}
+
+	// integration
+	public static void registeredIntegration(String integration, String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info(integration + " integration loaded for " + mod);
+		}
+	}
 }
