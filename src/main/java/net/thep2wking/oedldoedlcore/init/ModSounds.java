@@ -2,7 +2,7 @@ package net.thep2wking.oedldoedlcore.init;
 
 import net.minecraft.util.SoundEvent;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.api.ModSoundEventBase;
+import net.thep2wking.oedldoedlcore.api.sound.ModSoundEventBase;
 
 public class ModSounds {
 	public static final SoundEvent SMASH_WOOD = new ModSoundEventBase(OedldoedlCore.MODID, "smash_wood");

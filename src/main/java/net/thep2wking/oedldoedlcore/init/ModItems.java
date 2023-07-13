@@ -2,7 +2,7 @@ package net.thep2wking.oedldoedlcore.init;
 
 import net.minecraft.item.Item;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.api.ModItemBase;
+import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.content.item.SubModIconItem;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlcore.util.ModReferences;

@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.api;
+package net.thep2wking.oedldoedlcore.api.sound;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;

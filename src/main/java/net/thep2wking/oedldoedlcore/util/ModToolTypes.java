@@ -8,6 +8,7 @@ public enum ModToolTypes {
     AXE("axe"),
     SHOVEL("shovel"),
     HOE("hoe"),
+    SWORD("sword"),
     ;
 
     private String toolType;

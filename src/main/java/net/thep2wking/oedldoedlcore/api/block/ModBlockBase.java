@@ -1,7 +1,8 @@
-package net.thep2wking.oedldoedlcore.api;
+package net.thep2wking.oedldoedlcore.api.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
@@ -21,7 +22,8 @@ public class ModBlockBase extends Block {
     public final float lightLevel;
 
     public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound,
-            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, float lightLevel) {
+            MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
+            float lightLevel) {
         super(material);
         this.modid = modid;
         this.name = name;

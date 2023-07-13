@@ -1,13 +1,13 @@
-package net.thep2wking.oedldoedlcore.api;
+package net.thep2wking.oedldoedlcore.api.item;
 
 import java.util.List;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,27 +18,21 @@ import net.thep2wking.oedldoedlcore.util.ModTooltips;
 /**
  * @author TheP2WKing
  */
-public class ModItemBase extends Item {
-    public final String modid;
-    public final String name;
-    public final CreativeTabs tab;
+public class ModItemBlockBase extends ItemBlock {
     public final EnumRarity rarity;
     public final boolean hasEffect;
     public final int tooltipLines;
     public final int annotationLines;
 
-    public ModItemBase(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
-            int tooltipLines, int annotationLines) {
-        this.modid = modid;
-        this.name = name;
-        this.tab = tab;
+    public ModItemBlockBase(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+        super(block);
         this.rarity = rarity;
         this.hasEffect = hasEffect;
         this.tooltipLines = tooltipLines;
         this.annotationLines = annotationLines;
-        setUnlocalizedName(this.modid + "." + this.name);
-        setRegistryName(this.modid + ":" + this.name);
-        setCreativeTab(this.tab);
+        setUnlocalizedName(block.getUnlocalizedName());
+        setRegistryName(block.getRegistryName());
+        setCreativeTab(block.getCreativeTabToDisplayOn());
     }
 
     @Override
