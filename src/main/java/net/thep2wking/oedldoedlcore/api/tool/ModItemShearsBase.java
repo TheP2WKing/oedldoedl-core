@@ -28,6 +28,17 @@ public class ModItemShearsBase extends ItemShears {
 	public final int tooltipLines;
 	public final int annotationLines;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param material        {@link ToolMaterial}
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
 	public ModItemShearsBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super();

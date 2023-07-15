@@ -28,6 +28,19 @@ public class ModItemHoeBase extends ItemHoe {
 	public final int tooltipLines;
 	public final int annotationLines;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param material        {@link ToolMaterial}
+	 * @param attackDamage    float
+	 * @param attackSpeed     float
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
 	public ModItemHoeBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(material);

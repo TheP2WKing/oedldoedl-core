@@ -29,6 +29,19 @@ public class ModItemArmorBase extends ItemArmor {
 	public final int tooltipLines;
 	public final int annotationLines;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param material        {@link ArmorMaterial}
+	 * @param renderIndex     int
+	 * @param slot            {@link EntityEquipmentSlot}
+	 * @param rarity          {@link EnumRarity}
+	 * @param rarity          boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
 	public ModItemArmorBase(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
 			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines,
 			int annotationLines) {

@@ -31,7 +31,7 @@ public class OedldoedlCore {
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Core";
     public static final String VERSION = MC_VERSION + "-" + "3.0.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,)";
+    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);after:jei@[4.16.1.1000,);after:theoneprobe@[1.4.28,);after:baubles@[1.5.2,)";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ServerProxy";
 

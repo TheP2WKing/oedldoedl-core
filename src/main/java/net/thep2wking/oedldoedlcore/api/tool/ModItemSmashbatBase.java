@@ -24,6 +24,22 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 		WOOD(), METAL(), GEM();
 	}
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid            String
+	 * @param name             String
+	 * @param tab              {@link CreativeTabs}
+	 * @param material         {@link ToolMaterial}
+	 * @param attackDamage     float
+	 * @param attackSpeed      float
+	 * @param horizontalMotion double
+	 * @param verticalMotion   double
+	 * @param hitSound         {@link HitSound}
+	 * @param rarity           {@link EnumRarity}
+	 * @param hasEffect        boolean
+	 * @param tooltipLines     int
+	 * @param annotationLines  int
+	 */
 	public ModItemSmashbatBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, double horizontalMotion, double verticalMotion, HitSound hitSound, EnumRarity rarity,
 			boolean hasEffect, int tooltipLines, int annotationLines) {

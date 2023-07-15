@@ -7,7 +7,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -22,7 +21,6 @@ import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 public class ModBlockOreBase extends BlockOre {
 	public final String modid;
 	public final String name;
-	public final CreativeTabs tab;
 	public final SoundType sound;
 	public final int harvestLevel;
 	public final ModToolTypes toolType;
@@ -32,13 +30,27 @@ public class ModBlockOreBase extends BlockOre {
 	public final int minXp;
 	public final int maxXp;
 
-	public ModBlockOreBase(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
-			SoundType sound, MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness,
-			float resistance, float lightLevel) {
+	/**
+	 * @author TheP2WKing
+	 * @param modid        String
+	 * @param name         String
+	 * @param minXp        int
+	 * @param maxXp        int
+	 * @param material     {@link Material}
+	 * @param sound        {@link SoundType}
+	 * @param mapColor     {@link MapColor}
+	 * @param harvestLevel int
+	 * @param toolType     {@link ModToolTypes}
+	 * @param hardness     float
+	 * @param resistance   float
+	 * @param lightLevel   float
+	 */
+	public ModBlockOreBase(String modid, String name, int minXp, int maxXp, Material material, SoundType sound,
+			MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
+			float lightLevel) {
 		super();
 		this.modid = modid;
 		this.name = name;
-		this.tab = tab;
 		this.sound = sound;
 		this.harvestLevel = harvestLevel;
 		this.toolType = toolType;
@@ -54,7 +66,6 @@ public class ModBlockOreBase extends BlockOre {
 		setHardness(this.hardness);
 		setResistance(this.resistance);
 		setLightLevel(this.lightLevel);
-		setCreativeTab(this.tab);
 	}
 
 	public int getExperience(Random rand) {

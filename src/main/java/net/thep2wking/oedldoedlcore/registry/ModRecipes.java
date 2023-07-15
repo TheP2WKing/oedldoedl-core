@@ -11,7 +11,7 @@ import net.thep2wking.oedldoedlcore.util.ModRecipeHelper;
 public class ModRecipes {
 	public static void registerOreDict() {
 		if (CoreConfig.RECIPES.ADDITIONAL_OREDICT) {
-			ModLogger.registeredRecipesLogger(OedldoedlCore.MODID);
+			ModLogger.registeredOreDictLogger(OedldoedlCore.MODID);
 
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CORE_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.RESOURCES_ICON, 0);
@@ -144,6 +144,12 @@ public class ModRecipes {
 	}
 
 	public static void registerRecipes() {
-		ModLogger.registeredOreDictLogger(OedldoedlCore.MODID);
+		ModLogger.registeredRecipesLogger(OedldoedlCore.MODID);
+
+		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {
+		}
+
+		if (CoreConfig.RECIPES.CONVERSION_RECIPES) {
+		}
 	}
 }

@@ -26,6 +26,19 @@ import net.thep2wking.oedldoedlcore.util.ModToolTypes;
  * @author TheP2WKing
  */
 public class ModItemPaxelBase extends ModItemToolBase {
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param material        {@link ToolMaterial}
+	 * @param attackDamage    float
+	 * @param attackSpeed     float
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
 	public ModItemPaxelBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines,
 			int annotationLines) {
@@ -52,7 +65,6 @@ public class ModItemPaxelBase extends ModItemToolBase {
 				|| material == Material.REDSTONE_LIGHT;
 		return (float) (faster ? this.efficiency * 1.25 * 2 : super.getDestroySpeed(stack, state) * 1.25);
 	}
-
 
 	@Override
 	public boolean canHarvestBlock(IBlockState blockIn) {

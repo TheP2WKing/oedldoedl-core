@@ -10,6 +10,11 @@ public class ModSoundEventBase extends SoundEvent {
 	public final String modid;
 	public final String name;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid String
+	 * @param name  String
+	 */
 	public ModSoundEventBase(String modid, String name) {
 		super(new ResourceLocation(modid, name));
 		this.modid = modid;

@@ -14,18 +14,18 @@ public class ModFluidBase extends Fluid {
 	public final int density;
 	public final int viscosity;
 	public final int luminosity;
-	public final boolean gaseous;
+	public final boolean isGaseous;
 	public final EnumRarity rarity;
 
 	public ModFluidBase(String modid, String name, ResourceLocation still, ResourceLocation flow, int color,
-			int temperature, int density, int viscosity, int luminosity, boolean gaseous, EnumRarity rarity) {
+			int temperature, int density, int viscosity, int luminosity, boolean isGaseous, EnumRarity rarity) {
 		super(name, still, flow, color);
 		this.modid = modid;
 		this.temperature = temperature;
 		this.density = density;
 		this.viscosity = viscosity;
 		this.luminosity = luminosity;
-		this.gaseous = gaseous;
+		this.isGaseous = isGaseous;
 		this.rarity = rarity;
 		setUnlocalizedName(this.modid + "." + name);
 		setColor(this.color);
@@ -38,6 +38,6 @@ public class ModFluidBase extends Fluid {
 
 	@Override
 	public boolean isGaseous(FluidStack stack) {
-		return this.gaseous;
+		return this.isGaseous;
 	}
 }

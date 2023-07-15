@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlcore.api.tool;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -30,6 +31,20 @@ public class ModItemToolBase extends ItemTool {
 	public final int tooltipLines;
 	public final int annotationLines;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param material        {@link ToolMaterial}
+	 * @param attackDamage    float
+	 * @param attackSpeed     float
+	 * @param effectiveBlocks {@link HashSet}
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
 	public ModItemToolBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, Set<Block> effectiveBlocks, EnumRarity rarity, boolean hasEffect, int tooltipLines,
 			int annotationLines) {

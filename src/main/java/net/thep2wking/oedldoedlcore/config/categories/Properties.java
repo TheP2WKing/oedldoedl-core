@@ -12,6 +12,17 @@ public class Properties {
 	@Config.Name("Blocks Drop Experience")
 	public boolean BLOCKS_DROP_EXPERIENCE = true;
 
+	@Config.Name("baubles")
+	public final Baubles BAUBLES = new Baubles();
+
+	public static class Baubles {
+		@Config.Name("Baubles Use Any Slot")
+		public boolean BAUBLE_USE_ANY_SLOT = false;
+
+		@Config.Name("Baubles Render")
+		public boolean BAUBLE_RENDER= true;
+	}
+
 	@Config.Name("durabilities")
 	public final Durabilities DURABILITIES = new Durabilities();
 

@@ -20,7 +20,7 @@ import net.thep2wking.oedldoedlcore.util.ModTooltips;
 /**
  * @author TheP2WKing
  */
-public class ModRecordItemBase extends ItemRecord {
+public class ModItemRecordBase extends ItemRecord {
 	public final String modid;
 	public final String name;
 	public final CreativeTabs tab;
@@ -29,7 +29,18 @@ public class ModRecordItemBase extends ItemRecord {
 	public final int tooltipLines;
 	public final int annotationLines;
 
-	public ModRecordItemBase(String modid, String name, CreativeTabs tab, SoundEvent sound, EnumRarity rarity,
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param sound           {@link SoundEvent}
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
+	public ModItemRecordBase(String modid, String name, CreativeTabs tab, SoundEvent sound, EnumRarity rarity,
 			boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(name, sound);
 		this.modid = modid;

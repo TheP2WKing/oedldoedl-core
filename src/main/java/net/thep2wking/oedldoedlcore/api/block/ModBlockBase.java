@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 /**
@@ -13,7 +12,6 @@ import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 public class ModBlockBase extends Block {
     public final String modid;
     public final String name;
-    public final CreativeTabs tab;
     public final SoundType sound;
     public final int harvestLevel;
     public final ModToolTypes toolType;
@@ -21,13 +19,24 @@ public class ModBlockBase extends Block {
     public final float resistance;
     public final float lightLevel;
 
-    public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound,
-            MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
-            float lightLevel) {
+    /**
+     * @author TheP2WKing
+     * @param modid        String
+     * @param name         String
+     * @param material     {@link Material}
+     * @param sound        {@link SoundType}
+     * @param mapColor     {@link MapColor}
+     * @param harvestLevel int
+     * @param toolType     {@link ModToolTypes}
+     * @param hardness     float
+     * @param resistance   float
+     * @param lightLevel   float
+     */
+    public ModBlockBase(String modid, String name, Material material, SoundType sound, MapColor mapColor,
+            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, float lightLevel) {
         super(material);
         this.modid = modid;
         this.name = name;
-        this.tab = tab;
         this.sound = sound;
         this.harvestLevel = harvestLevel;
         this.toolType = toolType;
@@ -41,6 +50,5 @@ public class ModBlockBase extends Block {
         setHardness(this.hardness);
         setResistance(this.resistance);
         setLightLevel(this.lightLevel);
-        setCreativeTab(this.tab);
     }
 }

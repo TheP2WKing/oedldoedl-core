@@ -27,6 +27,16 @@ public class ModItemBase extends Item {
     public final int tooltipLines;
     public final int annotationLines;
 
+    /**
+     * @author TheP2WKing
+     * @param modid           String
+     * @param name            String
+     * @param tab             {@link CreativeTabs}
+     * @param rarity          {@link EnumRarity}
+     * @param hasEffect       boolean
+     * @param tooltipLines    int
+     * @param annotationLines int
+     */
     public ModItemBase(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
             int tooltipLines, int annotationLines) {
         this.modid = modid;
