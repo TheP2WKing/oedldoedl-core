@@ -9,6 +9,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
 /**
@@ -42,5 +45,10 @@ public class ModFluidUtil {
 				return modelLocation;
 			}
 		});
+	}
+
+	// fluid bucket itemstck
+	public static ItemStack addFluidBucket(Fluid bucketFluid) {
+		return FluidUtil.getFilledBucket(new FluidStack(bucketFluid, Fluid.BUCKET_VOLUME));
 	}
 }

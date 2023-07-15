@@ -11,6 +11,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.thep2wking.oedldoedlcore.init.ModSounds;
+import net.thep2wking.oedldoedlcore.util.ModHitSound;
 
 /**
  * @author TheP2WKing
@@ -18,11 +19,7 @@ import net.thep2wking.oedldoedlcore.init.ModSounds;
 public class ModItemSmashbatBase extends ModItemToolBase {
 	public final double verticalMotion;
 	public final double horizontalMotion;
-	public final HitSound hitSound;
-
-	public enum HitSound {
-		WOOD(), METAL(), GEM();
-	}
+	public final ModHitSound hitSound;
 
 	/**
 	 * @author TheP2WKing
@@ -41,7 +38,7 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 	 * @param annotationLines  int
 	 */
 	public ModItemSmashbatBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
-			float attackSpeed, double horizontalMotion, double verticalMotion, HitSound hitSound, EnumRarity rarity,
+			float attackSpeed, double horizontalMotion, double verticalMotion, ModHitSound hitSound, EnumRarity rarity,
 			boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, material, attackDamage, attackSpeed, new HashSet<>(), rarity, hasEffect, tooltipLines,
 				annotationLines);
@@ -61,15 +58,15 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-		if (hitSound == HitSound.WOOD && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.WOOD && entity instanceof EntityLiving) {
 			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_WOOD, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
-		if (hitSound == HitSound.METAL && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.METAL && entity instanceof EntityLiving) {
 			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_METAL, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
-		if (hitSound == HitSound.GEM && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.GEM && entity instanceof EntityLiving) {
 			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_GEM, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
