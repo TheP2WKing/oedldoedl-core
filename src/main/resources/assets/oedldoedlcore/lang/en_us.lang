@@ -88,3 +88,8 @@ key.oedldoedlcore.effect=§7Hold §b§oCtrl§r§7 for Effects
 # top tooltips
 top.oedldoedlcore.info=§7Hold §e§oSneak§r§7 for Info
 top.oedldoedlcore.effect=§7Hold §b§oSneak§r§7 for Effects
+
+# overrides
+tile.mushroom.name=Mushroom Block
+tile.melon.name=Melon Block
+item.skull.char.name=Player Head

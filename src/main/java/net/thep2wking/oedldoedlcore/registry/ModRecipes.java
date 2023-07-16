@@ -181,6 +181,10 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("spawnegg", Items.SPAWN_EGG, 0);
 
 			ModRecipeHelper.addOreDict("potion", Items.POTIONITEM, 0);
+
+			ModRecipeHelper.addOreDict("arrow", Items.ARROW, 0);
+			ModRecipeHelper.addOreDict("arrow", Items.TIPPED_ARROW, 0);
+			ModRecipeHelper.addOreDict("arrow", Items.SPECTRAL_ARROW, 0);
 		}
 	}
 
