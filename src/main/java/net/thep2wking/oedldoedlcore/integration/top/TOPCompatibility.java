@@ -13,6 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 public class TOPCompatibility {
@@ -42,7 +43,7 @@ public class TOPCompatibility {
                 @Override
                 public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world,
                         IBlockState blockState, IProbeHitData data) {
-                    if (blockState.getBlock() instanceof ITOPInfoProvider) {
+                    if (blockState.getBlock() instanceof ITOPInfoProvider && CoreConfig.INTEGRATION.THEONEPROBE.TOP_INTEGRATION) {
                         ITOPInfoProvider provider = (ITOPInfoProvider) blockState.getBlock();
                         provider.addProbeInfo(mode, probeInfo, player, world, blockState, data);
                     }

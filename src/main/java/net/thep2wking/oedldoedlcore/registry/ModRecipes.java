@@ -38,15 +38,6 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("commandBlock", Blocks.REPEATING_COMMAND_BLOCK, 0);
 			ModRecipeHelper.addOreDict("commandBlock", Blocks.CHAIN_COMMAND_BLOCK, 0);
 
-			ModRecipeHelper.addOreDict("ore", Blocks.IRON_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.GOLD_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.COAL_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.LAPIS_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.REDSTONE_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.DIAMOND_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.EMERALD_ORE, 0);
-			ModRecipeHelper.addOreDict("ore", Blocks.QUARTZ_ORE, 0);
-
 			ModRecipeHelper.addOreDict("sponge", Blocks.SPONGE, 0);
 			ModRecipeHelper.addOreDict("sponge", Blocks.SPONGE, 1);
 
@@ -105,6 +96,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("concrete", Blocks.CONCRETE, 14);
 			ModRecipeHelper.addOreDict("concrete", Blocks.CONCRETE, 15);
 
+			ModRecipeHelper.addOreDict("bookshelf", Blocks.BOOKSHELF, 0);
+
 			ModRecipeHelper.addOreDict("flower", Blocks.YELLOW_FLOWER, 0);
 			ModRecipeHelper.addOreDict("flower", Blocks.RED_FLOWER, 0);
 			ModRecipeHelper.addOreDict("flower", Blocks.RED_FLOWER, 1);
@@ -125,6 +118,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("gemCoal", Items.COAL, 0);
 			ModRecipeHelper.addOreDict("gemCoal", Items.COAL, 1);
 
+			ModRecipeHelper.addOreDict("gemCharcoal", Items.COAL, 1);
+
 			ModRecipeHelper.addOreDict("gemFlint", Items.FLINT, 0);
 
 			ModRecipeHelper.addOreDict("dustBlaze", Items.BLAZE_POWDER, 0);
@@ -133,6 +128,8 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("snowball", Items.SNOWBALL, 0);
 
+			ModRecipeHelper.addOreDict("dustGunpowder", Items.GUNPOWDER, 0);
+
 			ModRecipeHelper.addOreDict("listAllseed", Items.WHEAT_SEEDS, 0);
 			ModRecipeHelper.addOreDict("listAllseed", Items.PUMPKIN_SEEDS, 0);
 			ModRecipeHelper.addOreDict("listAllseed", Items.MELON_SEEDS, 0);
@@ -140,6 +137,50 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("book", Items.BOOK, 0);
 			ModRecipeHelper.addOreDict("book", Items.ENCHANTED_BOOK, 0);
+
+			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 1);
+			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 2);
+
+			ModRecipeHelper.addOreDict("blockPurpur", Blocks.PURPUR_PILLAR, 0);
+			ModRecipeHelper.addOreDict("blockPurpur", Blocks.PURPUR_BLOCK, 0);
+
+			ModRecipeHelper.addOreDict("chest", Blocks.WHITE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.ORANGE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.MAGENTA_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.LIGHT_BLUE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.YELLOW_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.LIME_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.PINK_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.GRAY_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.SILVER_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.CYAN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.PURPLE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.BLUE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.BROWN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.GREEN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.RED_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chest", Blocks.BLACK_SHULKER_BOX, 0);
+
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.WHITE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.ORANGE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.MAGENTA_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.LIGHT_BLUE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.YELLOW_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.LIME_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.PINK_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.GRAY_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.SILVER_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.CYAN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.PURPLE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.BLUE_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.BROWN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.GREEN_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.RED_SHULKER_BOX, 0);
+			ModRecipeHelper.addOreDict("chestShulker", Blocks.BLACK_SHULKER_BOX, 0);
+
+			ModRecipeHelper.addOreDict("spawnegg", Items.SPAWN_EGG, 0);
+
+			ModRecipeHelper.addOreDict("potion", Items.POTIONITEM, 0);
 		}
 	}
 

@@ -43,7 +43,7 @@ public class OedldoedlCore {
         ModLogger.initLogger(MODID);
         ModRecipes.registerOreDict();
         ModRecipes.registerRecipes();
-        PROXY.Init(event);
+        PROXY.init(event);
     }
 
     @Mod.EventHandler

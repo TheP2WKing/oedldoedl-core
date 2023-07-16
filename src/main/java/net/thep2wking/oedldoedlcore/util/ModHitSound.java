@@ -3,6 +3,9 @@ package net.thep2wking.oedldoedlcore.util;
 import net.minecraft.util.SoundEvent;
 import net.thep2wking.oedldoedlcore.init.ModSounds;
 
+/**
+ * @author TheP2WKing
+ */
 public enum ModHitSound {
 	WOOD("smash_wood", ModSounds.SMASH_WOOD),
 	METAL("smash_metal", ModSounds.SMASH_METAL),
@@ -17,10 +20,12 @@ public enum ModHitSound {
 		this.hitSound = hitSound;
 	}
 
+	// get sound name
 	public String getHitSoundName() {
 		return hitSoundName;
 	}
 
+	// get soundevent
 	public SoundEvent getHitSound() {
 		return hitSound;
 	}

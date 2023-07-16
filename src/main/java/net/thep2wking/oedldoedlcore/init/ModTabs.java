@@ -13,6 +13,7 @@ import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 public class ModTabs {
+	// creative tab for items that are only displayed in jei
 	public static final CreativeTabs CREATIVE = new CreativeTabs("creative.name") {
 		@Override
 		@SideOnly(Side.CLIENT)

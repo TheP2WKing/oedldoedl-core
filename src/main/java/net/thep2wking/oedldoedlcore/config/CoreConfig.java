@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.categories.Content;
+import net.thep2wking.oedldoedlcore.config.categories.Integration;
 import net.thep2wking.oedldoedlcore.config.categories.Logging;
 import net.thep2wking.oedldoedlcore.config.categories.Properties;
 import net.thep2wking.oedldoedlcore.config.categories.Recipes;
@@ -19,6 +20,9 @@ public class CoreConfig {
     @Config.Name("content")
     public static final Content CONTENT = new Content();
 
+    @Config.Name("integration")
+    public static final Integration INTEGRATION = new Integration();
+
     @Config.Name("logging")
     public static final Logging LOGGING = new Logging();
 
@@ -27,7 +31,7 @@ public class CoreConfig {
 
     @Config.Name("recipes")
     public static final Recipes RECIPES = new Recipes();
-    
+
     @Config.Name("tooltips")
     public static final Tooltips TOOLTIPS = new Tooltips();
 

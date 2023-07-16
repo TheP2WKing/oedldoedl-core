@@ -10,6 +10,9 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModTopTooltips {
 	// keys
 	public static final String TOP_INFO = "{*top.oedldoedlcore.info*}";

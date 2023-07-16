@@ -47,7 +47,7 @@ public class ModFluidUtil {
 		});
 	}
 
-	// fluid bucket itemstck
+	// fluid bucket itemstack
 	public static ItemStack addFluidBucket(Fluid bucketFluid) {
 		return FluidUtil.getFilledBucket(new FluidStack(bucketFluid, Fluid.BUCKET_VOLUME));
 	}

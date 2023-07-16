@@ -5,7 +5,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModNBTUtil {
+	// generic nbt item
 	@SuppressWarnings("null")
 	public static ItemStack addNBTItem(Item item, String key, String value) {
 		ItemStack itemStack = new ItemStack(item);
@@ -24,6 +28,7 @@ public class ModNBTUtil {
 		return itemStack;
 	}
 
+	// spawn egg
 	@SuppressWarnings("null")
 	public static ItemStack addSpawnEgg(String entityId) {
 		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
@@ -35,6 +40,7 @@ public class ModNBTUtil {
 		return spawnEgg;
 	}
 
+	// potions
 	@SuppressWarnings("null")
 	public static ItemStack addPotion(String potionId) {
 		ItemStack potion = new ItemStack(Items.POTIONITEM);
@@ -62,6 +68,7 @@ public class ModNBTUtil {
 		return potion;
 	}
 
+	// tipped arrows
 	@SuppressWarnings("null")
 	public static ItemStack addTippedArrow(String potionId) {
 		ItemStack arrow = new ItemStack(Items.TIPPED_ARROW);

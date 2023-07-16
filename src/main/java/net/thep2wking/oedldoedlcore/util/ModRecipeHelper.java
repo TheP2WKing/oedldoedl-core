@@ -10,7 +10,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModRecipeHelper {
+	// shaped and shapeless
 	public static void addShapedRecipe(String modid, String name, @Nonnull ItemStack output, Object... inputs) {
 		GameRegistry.addShapedRecipe(new ResourceLocation(modid, name), null, output, inputs);
 	}
@@ -19,11 +23,13 @@ public class ModRecipeHelper {
 		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null, output);
 	}
 
+	// recipe removal (quick and dirty)
 	public static void removeRecipe(String modid, String name) {
 		GameRegistry.addShapedRecipe(new ResourceLocation(name), null,
 				new ItemStack(Item.getByNameOrId("null")), "A", 'A', "null");
 	}
 
+	// smelting recipes
 	public static void addSmeltingRecipe(@Nonnull ItemStack output, @Nonnull ItemStack input, float xp) {
 		GameRegistry.addSmelting(output, input, xp);
 	}
@@ -36,6 +42,7 @@ public class ModRecipeHelper {
 		}
 	}
 
+	// compressing recipes
 	public static void add9xCompressRecipe(String modid, String name, @Nonnull ItemStack output,
 			@Nonnull ItemStack input) {
 		GameRegistry.addShapedRecipe(new ResourceLocation(modid, name), null, output, "AAA", "AAA",
@@ -72,6 +79,7 @@ public class ModRecipeHelper {
 				new ItemStack(output, 4, meta), Ingredient.fromStacks(input));
 	}
 
+	// oredict
 	public static void addOreDict(String name, Item input, int meta) {
 		OreDictionary.registerOre(name, new ItemStack(input, 1, meta));
 	}

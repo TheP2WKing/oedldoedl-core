@@ -17,6 +17,20 @@ public class ModFluidBase extends Fluid {
 	public final boolean isGaseous;
 	public final EnumRarity rarity;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid       String
+	 * @param name        String
+	 * @param still       {@link ResourceLocation}
+	 * @param flow        {@link ResourceLocation}
+	 * @param color       int
+	 * @param temperature int
+	 * @param density     int
+	 * @param viscosity   int
+	 * @param luminosity  int
+	 * @param isGaseous   boolean
+	 * @param rarity      {@link EnumRarity}
+	 */
 	public ModFluidBase(String modid, String name, ResourceLocation still, ResourceLocation flow, int color,
 			int temperature, int density, int viscosity, int luminosity, boolean isGaseous, EnumRarity rarity) {
 		super(name, still, flow, color);
