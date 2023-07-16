@@ -23,6 +23,7 @@ public class ModItemShearsBase extends ItemShears {
 	public final String modid;
 	public final String name;
 	public final CreativeTabs tab;
+	public final ToolMaterial material;
 	public final EnumRarity rarity;
 	public final boolean hasEffect;
 	public final int tooltipLines;
@@ -45,6 +46,7 @@ public class ModItemShearsBase extends ItemShears {
 		this.modid = modid;
 		this.name = name;
 		this.tab = tab;
+		this.material = material;
 		this.rarity = rarity;
 		this.hasEffect = hasEffect;
 		this.tooltipLines = tooltipLines;
@@ -53,12 +55,24 @@ public class ModItemShearsBase extends ItemShears {
 		setRegistryName(this.modid + ":" + this.name);
 		setCreativeTab(this.tab);
 		setMaxStackSize(1);
-		setMaxDamage((int) (material.getMaxUses() * CoreConfig.PROPERTIES.DURABILITIES.SHEARS_DURABILITY_MULTIPLIER));
+		setMaxDamage(
+				(int) (this.material.getMaxUses() * CoreConfig.PROPERTIES.DURABILITIES.SHEARS_DURABILITY_MULTIPLIER));
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return true;
+	}
+
+	@Override
+	public boolean isRepairable() {
+		return true;
+	}
+
+	@Override
+	@SuppressWarnings("deprecation")
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		return repair.getItem() == this.material.getRepairItem() ? true : super.getIsRepairable(toRepair, repair);
 	}
 
 	@Override

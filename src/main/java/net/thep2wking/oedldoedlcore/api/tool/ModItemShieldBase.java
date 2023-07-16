@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.api.armor;
+package net.thep2wking.oedldoedlcore.api.tool;
 
 import java.util.List;
 
@@ -8,48 +8,35 @@ import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
-/**
- * @author TheP2WKing
- */
-public class ModItemArmorBase extends ItemArmor {
+public class ModItemShieldBase extends ItemShield {
 	public final String modid;
 	public final String name;
 	public final CreativeTabs tab;
+	public final ToolMaterial material;
 	public final EnumRarity rarity;
 	public final boolean hasEffect;
 	public final int tooltipLines;
 	public final int annotationLines;
 
-	/**
-	 * @author TheP2WKing
-	 * @param modid           String
-	 * @param name            String
-	 * @param tab             {@link CreativeTabs}
-	 * @param material        {@link ArmorMaterial}
-	 * @param renderIndex     int
-	 * @param slot            {@link EntityEquipmentSlot}
-	 * @param rarity          {@link EnumRarity}
-	 * @param rarity          boolean
-	 * @param tooltipLines    int
-	 * @param annotationLines int
-	 */
-	public ModItemArmorBase(String modid, String name, CreativeTabs tab, ArmorMaterial material, int renderIndex,
-			EntityEquipmentSlot slot, EnumRarity rarity, boolean hasEffect, int tooltipLines,
-			int annotationLines) {
-		super(material, renderIndex, slot);
+	public ModItemShieldBase(String modid, String name, CreativeTabs tab, ToolMaterial material, EnumRarity rarity,
+			boolean hasEffect, int tooltipLines, int annotationLines) {
 		this.modid = modid;
 		this.name = name;
 		this.tab = tab;
+		this.material = material;
 		this.rarity = rarity;
 		this.hasEffect = hasEffect;
 		this.tooltipLines = tooltipLines;
@@ -57,12 +44,39 @@ public class ModItemArmorBase extends ItemArmor {
 		setUnlocalizedName(this.modid + "." + this.name);
 		setRegistryName(this.modid + ":" + this.name);
 		setCreativeTab(this.tab);
+		setMaxStackSize(1);
+		setMaxDamage(
+				(int) (this.material.getMaxUses() * CoreConfig.PROPERTIES.DURABILITIES.SHIELD_DURABILITY_MULTIPLIER));
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(this, ItemArmor.DISPENSER_BEHAVIOR);
+		addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
+			@Override
+			@SideOnly(Side.CLIENT)
+			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
+				return entityIn != null && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F
+						: 0.0F;
+			}
+		});
 	}
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return true;
+	}
+
+	@Override
+	public boolean isShield(ItemStack stack, @Nullable EntityLivingBase entity) {
+		return true;
+	}
+
+	@Override
+	public boolean isRepairable() {
+		return true;
+	}
+
+	@Override
+	@SuppressWarnings("deprecation")
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		return repair.getItem() == this.material.getRepairItem() ? true : super.getIsRepairable(toRepair, repair);
 	}
 
 	@Override
