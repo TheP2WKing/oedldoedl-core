@@ -92,4 +92,6 @@ top.oedldoedlcore.effect=§7Hold §b§oSneak§r§7 for Effects
 # overrides
 tile.mushroom.name=Mushroom Block
 tile.melon.name=Melon Block
+tile.blockLapis.name=Block of Lapis Lazuli
 item.skull.char.name=Player Head
+item.horsearmorgold.name=Golden Horse Armor
