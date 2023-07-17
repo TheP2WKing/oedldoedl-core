@@ -4,6 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 /**
@@ -50,5 +53,17 @@ public class ModBlockBase extends Block {
         setHardness(this.hardness);
         setResistance(this.resistance);
         setLightLevel(this.lightLevel);
+    }
+
+    private boolean isBeaconBase;
+
+    public Block setBeaconBase() {
+        isBeaconBase = CoreConfig.PROPERTIES.BEACONS.BEACON_BASES;
+        return this;
+    }
+
+    @Override
+    public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon) {
+        return isBeaconBase;
     }
 }

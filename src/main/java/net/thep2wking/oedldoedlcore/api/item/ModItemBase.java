@@ -51,6 +51,18 @@ public class ModItemBase extends Item {
         setCreativeTab(this.tab);
     }
 
+    private boolean isBeaconPayment;
+
+    public Item setBeaconPayment() {
+        isBeaconPayment = CoreConfig.PROPERTIES.BEACONS.BEACON_PAYMENTS;
+        return this;
+    }
+
+    @Override
+    public boolean isBeaconPayment(ItemStack stack) {
+        return isBeaconPayment;
+    }
+
     @Override
     @SideOnly(Side.CLIENT)
     public EnumRarity getRarity(ItemStack stack) {

@@ -9,7 +9,7 @@ import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 public class ModItems {
 	public static final Item CORE_ICON = new ModItemBase(OedldoedlCore.MODID, "core_icon", ModTabs.TAB,
-			ModRarities.YELLOW, false, 0, 4);
+			ModRarities.YELLOW, false, 0, 4).setBeaconPayment();
 	public static final Item RESOURCES_ICON = new SubModIconItem(OedldoedlCore.MODID, "resources_icon",
 			ModTabs.TAB, ModRarities.YELLOW, false, ModReferences.MODID_RESOURCES, 0, 4);
 	public static final Item GEAR_ICON = new SubModIconItem(OedldoedlCore.MODID, "gear_icon", ModTabs.TAB,

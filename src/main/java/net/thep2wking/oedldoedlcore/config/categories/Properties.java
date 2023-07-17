@@ -20,7 +20,18 @@ public class Properties {
 		public boolean BAUBLE_USE_ANY_SLOT = false;
 
 		@Config.Name("Baubles Render")
-		public boolean BAUBLE_RENDER= true;
+		public boolean BAUBLE_RENDER = true;
+	}
+
+	@Config.Name("beacons")
+	public final Beacons BEACONS = new Beacons();
+
+	public static class Beacons {
+		@Config.Name("Beacon Payments")
+		public boolean BEACON_PAYMENTS = true;
+
+		@Config.Name("Beacon Bases")
+		public boolean BEACON_BASES = true;
 	}
 
 	@Config.Name("durabilities")

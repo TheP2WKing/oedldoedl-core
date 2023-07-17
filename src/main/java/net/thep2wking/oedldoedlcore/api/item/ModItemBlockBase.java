@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -35,7 +36,8 @@ public class ModItemBlockBase extends ItemBlock {
      * @param tooltipLines    int
      * @param annotationLines int
      */
-    public ModItemBlockBase(Block block, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+    public ModItemBlockBase(Block block, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines,
+            int annotationLines) {
         super(block);
         this.tab = tab;
         this.rarity = rarity;
@@ -45,6 +47,18 @@ public class ModItemBlockBase extends ItemBlock {
         setUnlocalizedName(block.getUnlocalizedName());
         setRegistryName(block.getRegistryName());
         setCreativeTab(this.tab);
+    }
+
+    private boolean isBeaconPayment;
+
+    public Item setBeaconPayment() {
+        isBeaconPayment = CoreConfig.PROPERTIES.BEACONS.BEACON_PAYMENTS;
+        return this;
+    }
+
+    @Override
+    public boolean isBeaconPayment(ItemStack stack) {
+        return isBeaconPayment;
     }
 
     @Override

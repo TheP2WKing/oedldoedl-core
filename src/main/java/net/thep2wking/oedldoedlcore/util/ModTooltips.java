@@ -77,7 +77,7 @@ public class ModTooltips {
 
 	public static void addPotionEffect(List<String> tooltip, String effectName, boolean isDebuff, int amplifier,
 			int tickDuration) {
-		tooltip.add("- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+		tooltip.add(TextFormatting.WHITE + "- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
 				+ I18n.format(effectName) + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
 				+ TextFormatting.ITALIC
 				+ " " + getEffectColor(isDebuff) + TextFormatting.ITALIC + "(" + amplifier + ") (" + tickDuration / 20
@@ -85,7 +85,7 @@ public class ModTooltips {
 	}
 
 	public static void addCustomEffectInformation(List<String> tooltip, String name, int index) {
-		tooltip.add("- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
+		tooltip.add(TextFormatting.WHITE + "- " + CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor() + TextFormatting.ITALIC
 				+ I18n.format(name + ".effects" + index)
 				+ CoreConfig.TOOLTIPS.COLORS.EFFECTS_FORMATTING.getColor()
 				+ TextFormatting.ITALIC);
