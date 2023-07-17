@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -21,7 +20,6 @@ import net.thep2wking.oedldoedlcore.util.ModTooltips;
  * @author TheP2WKing
  */
 public class ModItemBlockBase extends ItemBlock {
-    public final CreativeTabs tab;
     public final EnumRarity rarity;
     public final boolean hasEffect;
     public final int tooltipLines;
@@ -30,23 +28,20 @@ public class ModItemBlockBase extends ItemBlock {
     /**
      * @author TheP2WKing
      * @param block           {@link Block}
-     * @param tab             {@link CreativeTabs}
      * @param rarity          {@link EnumRarity}
      * @param hasEffect       boolean
      * @param tooltipLines    int
      * @param annotationLines int
      */
-    public ModItemBlockBase(Block block, CreativeTabs tab, EnumRarity rarity, boolean hasEffect, int tooltipLines,
+    public ModItemBlockBase(Block block, EnumRarity rarity, boolean hasEffect, int tooltipLines,
             int annotationLines) {
         super(block);
-        this.tab = tab;
         this.rarity = rarity;
         this.hasEffect = hasEffect;
         this.tooltipLines = tooltipLines;
         this.annotationLines = annotationLines;
         setUnlocalizedName(block.getUnlocalizedName());
         setRegistryName(block.getRegistryName());
-        setCreativeTab(this.tab);
     }
 
     private boolean isBeaconPayment;

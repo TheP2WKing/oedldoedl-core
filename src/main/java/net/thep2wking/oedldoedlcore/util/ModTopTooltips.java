@@ -18,11 +18,17 @@ public class ModTopTooltips {
 	public static final String TOP_INFO = "{*top.oedldoedlcore.info*}";
 	public static final String TOP_EFFECTS = "{*top.oedldoedlcore.effect*}";
 
+	// key
+	public static void addKey(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world,
+			IBlockState blockState, IProbeHitData data, String key) {
+		probeInfo.horizontal(probeInfo.defaultLayoutStyle()).text(TextFormatting.GRAY + "{*" + key + "*}");
+	}
+
 	// effects
 	public static void addEffectHeader(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world,
 			IBlockState blockState, IProbeHitData data, String operation) {
 		probeInfo.horizontal(probeInfo.defaultLayoutStyle())
-				.text(CoreConfig.TOOLTIPS.COLORS.EFFECTS_ANNOTATION_FORMATTING + "{*" + operation + "*}");
+				.text(CoreConfig.TOOLTIPS.COLORS.EFFECTS_ANNOTATION_FORMATTING.getColor() + "{*" + operation + "*}");
 	}
 
 	public static void addPotionEffect(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world,

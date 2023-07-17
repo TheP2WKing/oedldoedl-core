@@ -61,7 +61,7 @@ public class Tooltips {
 	public boolean ANNOTATION_TOOLTIPS = true;
 
 	@Config.Name("Enable Information Tooltips")
-	public boolean INFORMATION_TOOLTIPS = true;
+	public boolean INFORMATION_TOOLTIPS = false;
 
 	@Config.Name("Enable Information Tooltips Key")
 	public boolean INFORMATION_TOOLTIPS_KEY = true;

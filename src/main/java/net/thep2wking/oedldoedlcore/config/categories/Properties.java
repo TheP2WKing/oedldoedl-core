@@ -9,8 +9,8 @@ public class Properties {
 	@Config.Name("Enchantment Effects")
 	public boolean ENCHANTMENT_EFFECTS = true;
 
-	@Config.Name("Blocks Drop Experience")
-	public boolean BLOCKS_DROP_EXPERIENCE = true;
+	@Config.Name("Ores Drop Experience")
+	public boolean ORES_DROP_EXPERIENCE = true;
 
 	@Config.Name("baubles")
 	public final Baubles BAUBLES = new Baubles();
