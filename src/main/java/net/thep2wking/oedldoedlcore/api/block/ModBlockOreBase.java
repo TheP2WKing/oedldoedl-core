@@ -24,6 +24,7 @@ public class ModBlockOreBase extends BlockOre {
 	public final String name;
 	public final CreativeTabs tab;
 	public final SoundType sound;
+	public final MapColor mapColor;
 	public final int harvestLevel;
 	public final ModToolTypes toolType;
 	public final float hardness;
@@ -56,6 +57,7 @@ public class ModBlockOreBase extends BlockOre {
 		this.name = name;
 		this.tab = tab;
 		this.sound = sound;
+		this.mapColor = mapColor;
 		this.harvestLevel = harvestLevel;
 		this.toolType = toolType;
 		this.hardness = hardness;
@@ -72,6 +74,11 @@ public class ModBlockOreBase extends BlockOre {
 		setResistance(this.resistance);
 		setLightLevel(this.lightLevel);
 	}
+
+	@Override
+    public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return mapColor;
+    }
 
 	public int getExperience(Random rand) {
 		if (CoreConfig.PROPERTIES.ORES_DROP_EXPERIENCE) {

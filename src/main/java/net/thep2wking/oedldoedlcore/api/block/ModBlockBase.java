@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -18,6 +19,7 @@ public class ModBlockBase extends Block {
     public final String name;
     public final CreativeTabs tab;
     public final SoundType sound;
+    public final MapColor mapColor;
     public final int harvestLevel;
     public final ModToolTypes toolType;
     public final float hardness;
@@ -45,6 +47,7 @@ public class ModBlockBase extends Block {
         this.name = name;
         this.tab = tab;
         this.sound = sound;
+        this.mapColor = mapColor;
         this.harvestLevel = harvestLevel;
         this.toolType = toolType;
         this.hardness = hardness;
@@ -58,6 +61,11 @@ public class ModBlockBase extends Block {
         setHardness(this.hardness);
         setResistance(this.resistance);
         setLightLevel(this.lightLevel);
+    }
+
+    @Override
+    public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+        return mapColor;
     }
 
     private boolean isBeaconBase;
