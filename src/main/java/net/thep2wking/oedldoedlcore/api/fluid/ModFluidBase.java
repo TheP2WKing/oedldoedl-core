@@ -47,11 +47,15 @@ public class ModFluidBase extends Fluid {
 		setDensity(this.density);
 		setViscosity(this.viscosity);
 		setLuminosity(this.luminosity);
-		setRarity(this.rarity);
 	}
 
 	@Override
 	public boolean isGaseous(FluidStack stack) {
-		return this.isGaseous;
+		return isGaseous;
+	}
+
+	@Override
+	public EnumRarity getRarity() {
+		return rarity;
 	}
 }

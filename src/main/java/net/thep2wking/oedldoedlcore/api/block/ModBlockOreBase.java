@@ -29,7 +29,7 @@ public class ModBlockOreBase extends BlockOre {
 	public final ModToolTypes toolType;
 	public final float hardness;
 	public final float resistance;
-	public final float lightLevel;
+	public final int lightLevel;
 	public final int minXp;
 	public final int maxXp;
 
@@ -47,11 +47,11 @@ public class ModBlockOreBase extends BlockOre {
 	 * @param toolType     {@link ModToolTypes}
 	 * @param hardness     float
 	 * @param resistance   float
-	 * @param lightLevel   float
+	 * @param lightLevel   int
 	 */
 	public ModBlockOreBase(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material, SoundType sound,
 			MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
-			float lightLevel) {
+			int lightLevel) {
 		super();
 		this.modid = modid;
 		this.name = name;
@@ -72,12 +72,16 @@ public class ModBlockOreBase extends BlockOre {
 		setHarvestLevel(this.toolType.getToolType(), this.harvestLevel);
 		setHardness(this.hardness);
 		setResistance(this.resistance);
-		setLightLevel(this.lightLevel);
 	}
 
 	@Override
     public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
         return mapColor;
+    }
+
+	@Override
+    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return lightLevel;
     }
 
 	public int getExperience(Random rand) {

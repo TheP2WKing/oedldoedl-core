@@ -24,7 +24,7 @@ public class ModBlockBase extends Block {
     public final ModToolTypes toolType;
     public final float hardness;
     public final float resistance;
-    public final float lightLevel;
+    public final int lightLevel;
 
     /**
      * @author TheP2WKing
@@ -38,10 +38,10 @@ public class ModBlockBase extends Block {
      * @param toolType     {@link ModToolTypes}
      * @param hardness     float
      * @param resistance   float
-     * @param lightLevel   float
+     * @param lightLevel   int
      */
     public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound, MapColor mapColor,
-            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, float lightLevel) {
+            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, int lightLevel) {
         super(material);
         this.modid = modid;
         this.name = name;
@@ -60,12 +60,16 @@ public class ModBlockBase extends Block {
         setHarvestLevel(this.toolType.getToolType(), this.harvestLevel);
         setHardness(this.hardness);
         setResistance(this.resistance);
-        setLightLevel(this.lightLevel);
     }
 
     @Override
     public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
         return mapColor;
+    }
+
+    @Override
+    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return lightLevel;
     }
 
     private boolean isBeaconBase;
