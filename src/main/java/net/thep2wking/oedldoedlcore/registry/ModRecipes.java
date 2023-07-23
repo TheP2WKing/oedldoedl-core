@@ -135,7 +135,6 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("tnt", Blocks.TNT, 0);
 
 			ModRecipeHelper.addOreDict("gemCoal", Items.COAL, 0);
-			ModRecipeHelper.addOreDict("gemCoal", Items.COAL, 1);
 
 			ModRecipeHelper.addOreDict("gemCharcoal", Items.COAL, 1);
 
