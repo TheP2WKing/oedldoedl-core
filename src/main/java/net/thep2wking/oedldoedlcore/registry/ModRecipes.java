@@ -11,7 +11,7 @@ import net.thep2wking.oedldoedlcore.util.ModRecipeHelper;
 
 public class ModRecipes {
 	public static void registerOreDict() {
-		if (CoreConfig.RECIPES.ADDITIONAL_OREDICT) {
+		if (CoreConfig.RECIPES.DEFAULT_OREDICT) {
 			ModLogger.registeredOreDictLogger(OedldoedlCore.MODID);
 
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CORE_ICON, 0);
@@ -212,7 +212,7 @@ public class ModRecipes {
 	public static void registerRecipes() {
 		ModLogger.registeredRecipesLogger(OedldoedlCore.MODID);
 
-		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {
+		if (CoreConfig.RECIPES.DEFAULT_RECIPES) {
 			ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(Blocks.DEADBUSH, 1, 0), "treeSapling", 0.1f);
 
 			ModRecipeHelper.add4xCompressRecipe(OedldoedlCore.MODID, "additional/brown_mushroom_block",
