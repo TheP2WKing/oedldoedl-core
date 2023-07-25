@@ -2,6 +2,7 @@ package net.thep2wking.oedldoedlcore.api.tool;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -21,9 +22,9 @@ public class ModToolMaterialBase {
 	 * @param meta           int
 	 */
 	@SuppressWarnings("null")
-	public static void addToolMaterial(String modid, String name, int durability, int harvestLevel, float efficiency,
+	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel, float efficiency,
 			float attackDamage, int enchantability, Item repairItem, int meta) {
-		EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
+		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
 				attackDamage, enchantability).setRepairItem(new ItemStack(repairItem, 1, meta));
 	}
 }
