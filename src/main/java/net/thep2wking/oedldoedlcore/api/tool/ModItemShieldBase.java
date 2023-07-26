@@ -48,7 +48,7 @@ public class ModItemShieldBase extends ItemShield {
 		setMaxDamage(
 				(int) (this.material.getMaxUses() * CoreConfig.PROPERTIES.DURABILITIES.SHIELD_DURABILITY_MULTIPLIER));
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(this, ItemArmor.DISPENSER_BEHAVIOR);
-		addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
+		this.addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
 			@Override
 			@SideOnly(Side.CLIENT)
 			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {

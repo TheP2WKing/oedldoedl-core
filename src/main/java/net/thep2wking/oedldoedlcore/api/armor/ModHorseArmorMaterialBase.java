@@ -12,10 +12,10 @@ public class ModHorseArmorMaterialBase {
 	 * @param modid   String
 	 * @param name    String
 	 * @param texture String
-	 * @param armor   int
+	 * @param textureName   int
 	 */
-	public static HorseArmorType addHorseArmorMaterial(String modid, String name, String texture, int armor) {
+	public static HorseArmorType addHorseArmorMaterial(String modid, String name, String textureName, int armor) {
 		return EnumHelper.addHorseArmor(modid + ":horsearmor_" + name,
-				modid + ":" + "textures/models/horsearmor/" + texture + ".png", armor);
+				modid + ":" + "textures/models/horsearmor/" + textureName + ".png", armor);
 	}
 }

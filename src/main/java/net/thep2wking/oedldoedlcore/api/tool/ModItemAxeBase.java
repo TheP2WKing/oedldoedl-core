@@ -43,7 +43,7 @@ public class ModItemAxeBase extends ItemAxe {
 	 */
 	public ModItemAxeBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
 			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
-		super(material);
+		super(material, attackDamage, attackSpeed);
 		this.modid = modid;
 		this.name = name;
 		this.tab = tab;
