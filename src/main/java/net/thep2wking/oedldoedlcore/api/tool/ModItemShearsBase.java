@@ -40,8 +40,8 @@ public class ModItemShearsBase extends ItemShears {
 	 * @param tooltipLines    int
 	 * @param annotationLines int
 	 */
-	public ModItemShearsBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
-			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
+	public ModItemShearsBase(String modid, String name, CreativeTabs tab, ToolMaterial material, EnumRarity rarity,
+			boolean hasEffect, int tooltipLines, int annotationLines) {
 		super();
 		this.modid = modid;
 		this.name = name;

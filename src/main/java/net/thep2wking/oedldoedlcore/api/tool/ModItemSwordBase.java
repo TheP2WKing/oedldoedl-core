@@ -42,8 +42,7 @@ public class ModItemSwordBase extends ItemSword {
 	 * @param annotationLines int
 	 */
 	public ModItemSwordBase(String modid, String name, CreativeTabs tab, ToolMaterial material, float attackDamage,
-			float attackSpeed, EnumRarity rarity, boolean hasEffect, boolean fireImmunity, int tooltipLines,
-			int annotationLines) {
+			float attackSpeed, EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(material);
 		this.modid = modid;
 		this.name = name;
