@@ -9,7 +9,11 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.SoundCategory;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModSounds;
 import net.thep2wking.oedldoedlcore.util.ModHitSound;
 
@@ -45,6 +49,24 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 		this.verticalMotion = verticalMotion;
 		this.horizontalMotion = horizontalMotion;
 		this.hitSound = hitSound;
+	}
+
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemTool setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
 	}
 
 	@Override

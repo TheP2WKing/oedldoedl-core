@@ -14,11 +14,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
@@ -48,6 +51,24 @@ public class ModItemPaxelBase extends ModItemToolBase {
 		setHarvestLevel(ModToolTypes.AXE.getToolType(), material.getHarvestLevel());
 		setHarvestLevel(ModToolTypes.PICKAXE.getToolType(), material.getHarvestLevel());
 		setHarvestLevel(ModToolTypes.SHOVEL.getToolType(), material.getHarvestLevel());
+	}
+
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemTool setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
 	}
 
 	@Override

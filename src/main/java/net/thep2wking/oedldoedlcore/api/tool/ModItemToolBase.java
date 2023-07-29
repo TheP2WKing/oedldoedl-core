@@ -67,6 +67,24 @@ public class ModItemToolBase extends ItemTool {
 		return true;
 	}
 
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemTool setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack stack) {

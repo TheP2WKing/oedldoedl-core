@@ -1,14 +1,22 @@
 package net.thep2wking.oedldoedlcore.api.tool;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.annotation.Nullable;
 
+import com.google.common.collect.LinkedHashMultimap;
+import com.google.common.collect.Multimap;
+
 import net.minecraft.block.BlockDispenser;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemArmor;
@@ -16,9 +24,12 @@ import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
+import net.thep2wking.oedldoedlcore.util.ModLogger;
+import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
 public class ModItemShieldBase extends ItemShield {
@@ -59,8 +70,53 @@ public class ModItemShieldBase extends ItemShield {
 	}
 
 	@Override
+	public String getItemStackDisplayName(ItemStack stack) {
+		return I18n.format("item." + this.modid + "." + this.name + ".name");
+	}
+
+	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return true;
+	}
+
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemShield setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
+	}
+
+	public static final String SHIELD_UUID = "00834b82-88b7-4c66-bd3b-ace379ab5874";
+	private boolean hasAttackDamage;
+	private double damageIn;
+
+	public ItemShield setShieldDamage(double damage) {
+		hasAttackDamage = CoreConfig.PROPERTIES.SHIELD_ATTACK_DAMAGE;
+		damageIn = damage;
+		return this;
+	}
+
+	@Override
+	public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
+		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
+		if (slot == EntityEquipmentSlot.MAINHAND && hasAttackDamage) {
+			attributes.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
+					new AttributeModifier(UUID.fromString(SHIELD_UUID), ModReferences.ATTRIBUTE_ATTACK_DAMAGE, damageIn,
+							AttributeModifierOperation.ADD));
+			return attributes;
+		}
+		return attributes;
 	}
 
 	@Override
@@ -76,7 +132,11 @@ public class ModItemShieldBase extends ItemShield {
 	@Override
 	@SuppressWarnings("deprecation")
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		return repair.getItem() == this.material.getRepairItem() ? true : super.getIsRepairable(toRepair, repair);
+		ModLogger.LOGGER.info(this.material.getRepairItem() + "," + this.material.getRepairItemStack() + ","
+				+ material.getRepairItem() + "," + material.getRepairItemStack() + "," + this.material + "."
+				+ material);
+		return (repair != null && repair.isItemEqual(new ItemStack(this.material.getRepairItem(), 1)))
+				|| super.getIsRepairable(toRepair, repair);
 	}
 
 	@Override

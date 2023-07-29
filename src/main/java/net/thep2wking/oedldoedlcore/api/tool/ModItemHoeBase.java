@@ -23,6 +23,7 @@ public class ModItemHoeBase extends ItemHoe {
 	public final String modid;
 	public final String name;
 	public final CreativeTabs tab;
+	public final ToolMaterial material;
 	public final EnumRarity rarity;
 	public final boolean hasEffect;
 	public final int tooltipLines;
@@ -47,6 +48,7 @@ public class ModItemHoeBase extends ItemHoe {
 		this.modid = modid;
 		this.name = name;
 		this.tab = tab;
+		this.material = material;
 		this.rarity = rarity;
 		this.hasEffect = hasEffect;
 		this.tooltipLines = tooltipLines;
@@ -59,6 +61,29 @@ public class ModItemHoeBase extends ItemHoe {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return true;
+	}
+
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemHoe setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
+	}
+
+	@Override
+	public boolean isRepairable() {
 		return true;
 	}
 

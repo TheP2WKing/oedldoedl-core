@@ -9,6 +9,12 @@ public class Properties {
 	@Config.Name("Enchantment Effects")
 	public boolean ENCHANTMENT_EFFECTS = true;
 
+	@Config.Name("RGB Durability Bars")
+	public boolean RGB_DURABILITY_BARS = true;
+
+	@Config.Name("Shield Attack Damage")
+	public boolean SHIELD_ATTACK_DAMAGE = true;
+
 	@Config.Name("Ores Drop Experience")
 	public boolean ORES_DROP_EXPERIENCE = true;
 

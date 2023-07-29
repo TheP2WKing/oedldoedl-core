@@ -64,15 +64,27 @@ public class ModItemShearsBase extends ItemShears {
 		return true;
 	}
 
-	@Override
-	public boolean isRepairable() {
-		return true;
+	private boolean hasRGBBar;
+	private int colorRGB;
+
+	public ItemShears setRGBBarColor(int color) {
+		hasRGBBar = CoreConfig.PROPERTIES.RGB_DURABILITY_BARS;
+		colorRGB = color;
+		return this;
 	}
 
 	@Override
-	@SuppressWarnings("deprecation")
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		return repair.getItem() == this.material.getRepairItem() ? true : super.getIsRepairable(toRepair, repair);
+	@SideOnly(Side.CLIENT)
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		if (hasRGBBar) {
+			return colorRGB;
+		}
+		return super.getRGBDurabilityForDisplay(stack);
+	}
+
+	@Override
+	public boolean isRepairable() {
+		return true;
 	}
 
 	@Override
