@@ -135,7 +135,7 @@ public class ModItemShieldBase extends ItemShield {
 		ModLogger.LOGGER.info(this.material.getRepairItem() + "," + this.material.getRepairItemStack() + ","
 				+ material.getRepairItem() + "," + material.getRepairItemStack() + "," + this.material + "."
 				+ material);
-		return (repair != null && repair.isItemEqual(new ItemStack(this.material.getRepairItem(), 1)))
+		return (repair != null && repair.isItemEqual(this.material.getRepairItemStack()))
 				|| super.getIsRepairable(toRepair, repair);
 	}
 
