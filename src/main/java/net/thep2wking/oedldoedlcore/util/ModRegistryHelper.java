@@ -2,12 +2,15 @@ package net.thep2wking.oedldoedlcore.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 /**
  * @author TheP2WKing
@@ -35,6 +38,19 @@ public class ModRegistryHelper {
 
     public static void registerSoundEvent(RegistryEvent.Register<SoundEvent> event, SoundEvent soundEvent) {
         event.getRegistry().register(soundEvent);
+    }
+
+    public static void registerEntity(String modid, String name, Object instance, int id,
+            Class<? extends Entity> entity, int trackingRange, int updateFrequency, boolean velocityUpdates) {
+        EntityRegistry.registerModEntity(new ResourceLocation(modid, name), entity, modid + "." + name, id, instance,
+                trackingRange, updateFrequency, velocityUpdates);
+    }
+
+    public static void registerEntityWithSpawnEgg(String modid, String name, Object instance, int id,
+            Class<? extends Entity> entity, int trackingRange, int updateFrequency, boolean velocityUpdates,
+            int colorPrimary, int colorSecondary) {
+        EntityRegistry.registerModEntity(new ResourceLocation(modid, name), entity, modid + "." + name, id, instance,
+                trackingRange, updateFrequency, velocityUpdates, colorPrimary, colorSecondary);
     }
 
     // rendering
