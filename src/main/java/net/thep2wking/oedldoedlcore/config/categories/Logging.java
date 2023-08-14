@@ -8,4 +8,7 @@ public class Logging {
 
 	@Config.Name("Enable Join Messages")
 	public boolean JOIN_MESSAGES = true;
+
+	@Config.Name("Join Message Text")
+	public String JOIN_MESSAGE_TEXT = "Thanks for Installing!";
 }

@@ -19,6 +19,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.GEAR_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CURIOSITY_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CONSTRUCT_ICON, 0);
+			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.EXPLOSIVES_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.MUSIC_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.INTEGRATION_ICON, 0);
 
@@ -206,6 +207,12 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("clay", Blocks.CLAY, 0);
 			ModRecipeHelper.addOreDict("snow", Blocks.SNOW, 0);
+
+			ModRecipeHelper.addOreDict("toolHoe", Items.WOODEN_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", Items.STONE_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", Items.IRON_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", Items.GOLDEN_HOE, 0);
+			ModRecipeHelper.addOreDict("toolHoe", Items.DIAMOND_HOE, 0);
 		}
 	}
 
@@ -259,29 +266,6 @@ public class ModRecipes {
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/saddle", new ItemStack(Items.SADDLE, 1, 0),
 					"AAA",
 					"ABA", " C ", 'A', "leather", 'B', "string", 'C', "ingotIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/iron_horse_armor",
-					new ItemStack(Items.IRON_HORSE_ARMOR, 1, 0), "  A", "AAA", "A A", 'A', "ingotIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/golden_horse_armor",
-					new ItemStack(Items.GOLDEN_HORSE_ARMOR, 1, 0), "  A", "AAA", "A A", 'A', "ingotGold");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/diamond_horse_armor",
-					new ItemStack(Items.DIAMOND_HORSE_ARMOR, 1, 0), "  A", "AAA", "A A", 'A', "gemDiamond");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/chain_helmet",
-					new ItemStack(Items.CHAINMAIL_HELMET, 1, 0), "ABA", "B B", 'A', "ingotIron", 'B', "nuggetIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/chain_chestplate",
-					new ItemStack(Items.CHAINMAIL_CHESTPLATE, 1, 0), "A A", "BAB", "ABA", 'A', "ingotIron", 'B',
-					"nuggetIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/chain_leggings",
-					new ItemStack(Items.CHAINMAIL_LEGGINGS, 1, 0), "ABA", "B B", "A A", 'A', "ingotIron", 'B',
-					"nuggetIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/chain_boots",
-					new ItemStack(Items.CHAINMAIL_BOOTS, 1, 0), "A A", "B B", 'A', "ingotIron", 'B', "nuggetIron");
 
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/paper",
 					new ItemStack(Items.PAPER, 3, 0), "AA", "A ", 'A', "sugarcane");

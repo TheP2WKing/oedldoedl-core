@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
@@ -57,9 +58,11 @@ public class ModItemPickaxeBase extends ItemPickaxe {
 		setMaxStackSize(1);
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return true;
+		return enchantment.type.canEnchantItem(stack.getItem())
+				|| enchantment.canApply(new ItemStack(Items.IRON_PICKAXE));
 	}
 
 	private boolean hasRGBBar;

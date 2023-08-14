@@ -3,6 +3,7 @@ package net.thep2wking.oedldoedlcore.api.tool;
 import java.util.HashSet;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
@@ -49,6 +50,11 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 		this.verticalMotion = verticalMotion;
 		this.horizontalMotion = horizontalMotion;
 		this.hitSound = hitSound;
+	}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return true;
 	}
 
 	private boolean hasRGBBar;

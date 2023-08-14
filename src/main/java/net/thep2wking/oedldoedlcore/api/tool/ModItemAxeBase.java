@@ -7,6 +7,8 @@ import javax.annotation.Nullable;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
@@ -57,8 +59,15 @@ public class ModItemAxeBase extends ItemAxe {
 		setMaxStackSize(1);
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.IRON_AXE));
+	}
+
+	@Override
+	public boolean canDisableShield(ItemStack stack, ItemStack shield, EntityLivingBase entity,
+			EntityLivingBase attacker) {
 		return true;
 	}
 

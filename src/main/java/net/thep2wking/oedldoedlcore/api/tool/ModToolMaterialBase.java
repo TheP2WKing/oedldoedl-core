@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlcore.api.tool;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
@@ -22,8 +23,15 @@ public class ModToolMaterialBase {
 	 * @param meta           int
 	 */
 	@SuppressWarnings("null")
-	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel, float efficiency,
-			float attackDamage, int enchantability, Item repairItem, int meta) {
+	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel,
+			float efficiency, float attackDamage, int enchantability, Item repairItem, int meta) {
+		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
+				attackDamage, enchantability).setRepairItem(new ItemStack(repairItem, 1, meta));
+	}
+
+	@SuppressWarnings("null")
+	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel,
+			float efficiency, float attackDamage, int enchantability, Block repairItem, int meta) {
 		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
 				attackDamage, enchantability).setRepairItem(new ItemStack(repairItem, 1, meta));
 	}

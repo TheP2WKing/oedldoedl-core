@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.api.baubles;
+package net.thep2wking.oedldoedlcore.api.integration.baubles;
 
 import baubles.api.BaubleType;
 import baubles.api.BaublesApi;

@@ -3,9 +3,9 @@ package net.thep2wking.oedldoedlcore.util;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 /**
  * @author TheP2WKing
@@ -20,6 +20,7 @@ public class ModReferences {
 	public static final String MODID_GEAR = BASE_MODID + "gear";
 	public static final String MODID_CURIOSITY = BASE_MODID + "curiosity";
 	public static final String MODID_CONSTRUCT = BASE_MODID + "construct";
+	public static final String MODID_EXPLOSIVES = BASE_MODID + "explosives";
 	public static final String MODID_MUSIC = BASE_MODID + "music";
 	public static final String MODID_INTEGRATION = BASE_MODID + "integration";
 
@@ -28,6 +29,7 @@ public class ModReferences {
 	public static final String NAME_GEAR = BASE_NAME + " " + "Gear";
 	public static final String NAME_CURIOSITY = BASE_NAME + " " + "Curiosity";
 	public static final String NAME_CONSTRUCT = BASE_NAME + " " + "Construct";
+	public static final String NAME_EXPLOSIVES = BASE_NAME + " " + "Explosives";
 	public static final String NAME_MUSIC = BASE_NAME + " " + "Music";
 	public static final String NAME_INTEGRATION = BASE_NAME + " " + "Integration";
 
@@ -67,6 +69,6 @@ public class ModReferences {
 				.appendSibling(new TextComponentString(
 						TextFormatting.GREEN + name + " v" + version))
 				.appendSibling(new TextComponentString("] "))
-				.appendSibling(new TextComponentTranslation("message." + modid + ".join"));
+				.appendSibling(new TextComponentString(CoreConfig.LOGGING.JOIN_MESSAGE_TEXT));
 	}
 }

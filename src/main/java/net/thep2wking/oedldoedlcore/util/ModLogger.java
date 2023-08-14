@@ -62,6 +62,12 @@ public class ModLogger {
 		}
 	}
 
+	public static void registeredEntitiesLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered entities for " + mod);
+		}
+	}
+
 	public static void registeredConditionsLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered conditions for " + mod);

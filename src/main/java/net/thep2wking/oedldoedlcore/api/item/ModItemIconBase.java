@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.content.item;
+package net.thep2wking.oedldoedlcore.api.item;
 
 import java.util.List;
 
@@ -12,14 +12,27 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.thep2wking.oedldoedlcore.api.item.ModItemBase;
 import net.thep2wking.oedldoedlcore.util.ModTooltips;
 
-public class SubModIconItem extends ModItemBase {
-	private final String moduleName;
+/**
+ * @author TheP2WKing
+ */
+public class ModItemIconBase extends ModItemBase {
+	public final String moduleName;
 
-	public SubModIconItem(String modid, String name, CreativeTabs tab, EnumRarity rarity, boolean hasEffect,
-			String moduleName, int tooltipLines, int annotationLines) {
+	/**
+	 * @author TheP2WKing
+	 * @param modid           String
+	 * @param name            String
+	 * @param tab             {@link CreativeTabs}
+	 * @param moduleName      String
+	 * @param rarity          {@link EnumRarity}
+	 * @param hasEffect       boolean
+	 * @param tooltipLines    int
+	 * @param annotationLines int
+	 */
+	public ModItemIconBase(String modid, String name, CreativeTabs tab, String moduleName, EnumRarity rarity,
+			boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		this.moduleName = moduleName;
 		this.setMaxStackSize(1);

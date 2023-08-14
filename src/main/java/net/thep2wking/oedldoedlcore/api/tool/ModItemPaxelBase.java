@@ -9,6 +9,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -47,10 +49,11 @@ public class ModItemPaxelBase extends ModItemToolBase {
 			int annotationLines) {
 		super(modid, name, tab, material, attackDamage, attackSpeed, new HashSet<>(), rarity, hasEffect, tooltipLines,
 				annotationLines);
-		setMaxDamage((int) (material.getMaxUses() * CoreConfig.PROPERTIES.DURABILITIES.PAXEL_DURABILITY_MULTIPLIER));
+		setMaxDamage((int) (material.getMaxUses() * CoreConfig.PROPERTIES.PAXEL_DURABILITY_MULTIPLIER));
 		setHarvestLevel(ModToolTypes.AXE.getToolType(), material.getHarvestLevel());
 		setHarvestLevel(ModToolTypes.PICKAXE.getToolType(), material.getHarvestLevel());
 		setHarvestLevel(ModToolTypes.SHOVEL.getToolType(), material.getHarvestLevel());
+		setHarvestLevel(ModToolTypes.HOE.getToolType(), material.getHarvestLevel());
 	}
 
 	private boolean hasRGBBar;
@@ -69,6 +72,21 @@ public class ModItemPaxelBase extends ModItemToolBase {
 			return colorRGB;
 		}
 		return super.getRGBDurabilityForDisplay(stack);
+	}
+
+	@SuppressWarnings("null")
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.IRON_AXE))
+				|| enchantment.canApply(new ItemStack(Items.IRON_SHOVEL))
+				|| enchantment.canApply(new ItemStack(Items.IRON_PICKAXE))
+				|| enchantment.canApply(new ItemStack(Items.IRON_HOE));
+	}
+
+	@Override
+	public boolean canDisableShield(ItemStack stack, ItemStack shield, EntityLivingBase entity,
+			EntityLivingBase attacker) {
+		return true;
 	}
 
 	@Override

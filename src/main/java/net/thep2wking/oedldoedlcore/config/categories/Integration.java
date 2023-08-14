@@ -14,7 +14,7 @@ public class Integration {
 		public boolean ANVIL_RECIPE_CATALYSTS = true;
 
 		@Config.Name("Hide Player Head")
-		public boolean HIDE_PLAYER_HEAD = false;
+		public boolean HIDE_PLAYER_HEAD = true;
 
 		@Config.Name("Hide Baubles Miners Ring")
 		public boolean HIDE_BAUBLES_MINERS_RING = true;

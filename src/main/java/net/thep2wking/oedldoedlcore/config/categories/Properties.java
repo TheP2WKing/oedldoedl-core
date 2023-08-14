@@ -18,6 +18,10 @@ public class Properties {
 	@Config.Name("Ores Drop Experience")
 	public boolean ORES_DROP_EXPERIENCE = true;
 
+	@Config.Name("Paxel Durability Multiplier")
+	@Config.RangeDouble(min = 0.0, max = 10.0)
+	public double PAXEL_DURABILITY_MULTIPLIER = 3.0;
+
 	@Config.Name("baubles")
 	public final Baubles BAUBLES = new Baubles();
 
@@ -38,22 +42,5 @@ public class Properties {
 
 		@Config.Name("Beacon Bases")
 		public boolean BEACON_BASES = true;
-	}
-
-	@Config.Name("durabilities")
-	public final Durabilities DURABILITIES = new Durabilities();
-
-	public static class Durabilities {
-		@Config.Name("Shears Durability Multiplier")
-		@Config.RangeDouble(min = 0.0, max = 10.0)
-		public double SHEARS_DURABILITY_MULTIPLIER = 0.94957983;
-
-		@Config.Name("Paxel Durability Multiplier")
-		@Config.RangeDouble(min = 0.0, max = 10.0)
-		public double PAXEL_DURABILITY_MULTIPLIER = 3.0;
-
-		@Config.Name("Shield Durability Multiplier")
-		@Config.RangeDouble(min = 0.0, max = 10.0)
-		public double SHIELD_DURABILITY_MULTIPLIER = 3.0;
 	}
 }
