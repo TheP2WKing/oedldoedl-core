@@ -49,6 +49,7 @@ public class ModItemBaubleBase extends ModItemBase implements IBauble, IRenderBa
         super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
         this.baubleType = baubleType;
         this.baubleModel = baubleModel;
+        setMaxStackSize(1);
     }
 
     @Override
@@ -80,6 +81,11 @@ public class ModItemBaubleBase extends ModItemBase implements IBauble, IRenderBa
 
     @Override
     public void onEquipped(ItemStack itemstack, EntityLivingBase player) {
+        player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.75f, 2f);
+    }
+
+    @Override
+    public void onUnequipped(ItemStack itemstack, EntityLivingBase player) {
         player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.75f, 2f);
     }
 
