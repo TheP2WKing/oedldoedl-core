@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -72,7 +71,7 @@ public class ModItemBaubleBase extends ModItemBase implements IBauble, IRenderBa
                 if ((baubles.getStackInSlot(i) == null || baubles.getStackInSlot(i).isEmpty())
                         && baubles.isItemValidForSlot(i, player.getHeldItem(hand), player)) {
                     baubles.setStackInSlot(i, player.getHeldItem(hand).copy());
-                    player.playSound(sound, 0.75f, 1f);
+                    player.playSound(this.sound, 0.75f, 1f);
                     if (!player.capabilities.isCreativeMode) {
                         player.inventory.setInventorySlotContents(player.inventory.currentItem, ItemStack.EMPTY);
                     }
@@ -85,12 +84,12 @@ public class ModItemBaubleBase extends ModItemBase implements IBauble, IRenderBa
 
     @Override
     public void onEquipped(ItemStack itemstack, EntityLivingBase player) {
-        player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.75f, 1f);
+        player.playSound(this.sound, 0.75f, 1f);
     }
 
     @Override
     public void onUnequipped(ItemStack itemstack, EntityLivingBase player) {
-        player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.75f, 1f);
+        player.playSound(this.sound, 0.75f, 1f);
     }
 
     @SideOnly(Side.CLIENT)
