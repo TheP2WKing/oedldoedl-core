@@ -10,7 +10,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * @author TheP2WKing
  */
 @SideOnly(Side.CLIENT)
-public class ModModelBase extends ModelBiped {
+public class ModModelBaubleBase extends ModelBiped {
 	/**
 	 * @author TheP2WKing
 	 * @param modelSize     float
@@ -18,7 +18,7 @@ public class ModModelBase extends ModelBiped {
 	 * @param textureWidth  int
 	 * @param textureHeight int
 	 */
-	public ModModelBase(float modelSize, float modelOffset, int textureWidth, int textureHeight) {
+	public ModModelBaubleBase(float modelSize, float modelOffset, int textureWidth, int textureHeight) {
 		super(modelSize, modelOffset, textureWidth, textureHeight);
 	}
 
@@ -27,7 +27,7 @@ public class ModModelBase extends ModelBiped {
 	 * @param modelSize   float
 	 * @param modelOffset float
 	 */
-	public ModModelBase(float modelSize, float modelOffset) {
+	public ModModelBaubleBase(float modelSize, float modelOffset) {
 		super(modelSize, modelOffset, 128, 128);
 	}
 
