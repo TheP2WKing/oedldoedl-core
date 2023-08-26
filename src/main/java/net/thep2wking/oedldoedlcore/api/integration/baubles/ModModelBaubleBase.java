@@ -31,6 +31,15 @@ public class ModModelBaubleBase extends ModelBiped {
 		super(modelSize, modelOffset, 128, 128);
 	}
 
+	/**
+	 * @author TheP2WKing
+	 * @param modelSize   float
+	 * @param modelOffset float
+	 */
+	public ModModelBaubleBase(float modelSize) {
+		super(modelSize, 0, 128, 128);
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
