@@ -22,17 +22,6 @@ public class Properties {
 	@Config.RangeDouble(min = 0.0, max = 10.0)
 	public double PAXEL_DURABILITY_MULTIPLIER = 3.0;
 
-	@Config.Name("baubles")
-	public final Baubles BAUBLES = new Baubles();
-
-	public static class Baubles {
-		@Config.Name("Baubles Use Any Slot")
-		public boolean BAUBLE_USE_ANY_SLOT = false;
-
-		@Config.Name("Baubles Render")
-		public boolean BAUBLE_RENDER = true;
-	}
-
 	@Config.Name("beacons")
 	public final Beacons BEACONS = new Beacons();
 
