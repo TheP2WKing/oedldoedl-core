@@ -25,7 +25,7 @@ public class ModTooltips {
 	public static final String EFFECT_OFF_HAND = "effect." + OedldoedlCore.MODID + ".offhand.tip";
 	public static final String EFFECT_WALKING_ON = "effect." + OedldoedlCore.MODID + ".walking.tip";
 	public static final String EFFECT_FLUID = "effect." + OedldoedlCore.MODID + ".fluid.tip";
-	public static final String EFFECT_CURIOS = "effect." + OedldoedlCore.MODID + ".bauble.tip";
+	public static final String EFFECT_BAUBLE = "effect." + OedldoedlCore.MODID + ".bauble.tip";
 	public static final String EFFECT_HELMET = "effect." + OedldoedlCore.MODID + ".helmet.tip";
 	public static final String EFFECT_CHESTPLATE = "effect." + OedldoedlCore.MODID + ".chestplate.tip";
 	public static final String EFFECT_LEGGINGS = "effect." + OedldoedlCore.MODID + ".leggings.tip";
