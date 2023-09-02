@@ -213,6 +213,13 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("toolHoe", Items.IRON_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", Items.GOLDEN_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", Items.DIAMOND_HOE, 0);
+
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 0);
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 1);
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 2);
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 3);
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 4);
+			ModRecipeHelper.addOreDict("skull", Blocks.SKULL, 5);
 		}
 	}
 
