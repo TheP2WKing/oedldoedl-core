@@ -47,6 +47,10 @@ public class ModFluidBase extends Fluid {
 		setDensity(this.density);
 		setViscosity(this.viscosity);
 		setLuminosity(this.luminosity);
+		if (((color >> 24) & 0xFF) == 0) {
+			color |= 0xFF << 24;
+		}
+		this.color = color;
 	}
 
 	@Override
@@ -57,5 +61,10 @@ public class ModFluidBase extends Fluid {
 	@Override
 	public EnumRarity getRarity() {
 		return rarity;
+	}
+
+	@Override
+	public int getColor() {
+		return color;
 	}
 }

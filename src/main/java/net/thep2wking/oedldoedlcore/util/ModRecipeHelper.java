@@ -21,7 +21,7 @@ public class ModRecipeHelper {
 	}
 
 	public static void addShapelessRecipe(String modid, String name, @Nonnull ItemStack output, Ingredient... inputs) {
-		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null, output);
+		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null, output, inputs);
 	}
 
 	// recipe removal (quick and dirty)

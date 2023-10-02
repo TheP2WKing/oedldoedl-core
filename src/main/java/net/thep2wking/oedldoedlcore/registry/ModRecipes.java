@@ -135,6 +135,10 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("tnt", Blocks.TNT, 0);
 
+			ModRecipeHelper.addOreDict("cropApple", Items.APPLE, 0);
+			
+			ModRecipeHelper.addOreDict("cropBeetroot", Items.BEETROOT, 0);
+
 			ModRecipeHelper.addOreDict("gemCoal", Items.COAL, 0);
 
 			ModRecipeHelper.addOreDict("gemCharcoal", Items.COAL, 1);
@@ -157,11 +161,34 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("book", Items.BOOK, 0);
 			ModRecipeHelper.addOreDict("book", Items.ENCHANTED_BOOK, 0);
 
+			ModRecipeHelper.addOreDict("listAllsugar", Items.SUGAR, 0);
+
+			ModRecipeHelper.addOreDict("ghastTear", Items.GHAST_TEAR, 0);
+
+			ModRecipeHelper.addOreDict("bonemeal", Items.DYE, 15);
+			ModRecipeHelper.addOreDict("fertilizer", Items.DYE, 15);
+
+			ModRecipeHelper.addOreDict("spiderEye", Items.SPIDER_EYE, 0);
+			ModRecipeHelper.addOreDict("spiderEyeFermented", Items.FERMENTED_SPIDER_EYE, 0);
+
+			ModRecipeHelper.addOreDict("listAllmilk", Items.MILK_BUCKET, 0);
+			ModRecipeHelper.addOreDict("listAllwater", Items.WATER_BUCKET, 0);
+			ModRecipeHelper.addOreDict("listAlllava", Items.LAVA_BUCKET, 0);
+
+			ModRecipeHelper.addOreDict("toolShears", Items.SHEARS, 0);
+
 			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 1);
 			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 2);
 
 			ModRecipeHelper.addOreDict("blockPurpur", Blocks.PURPUR_PILLAR, 0);
 			ModRecipeHelper.addOreDict("blockPurpur", Blocks.PURPUR_BLOCK, 0);
+
+			ModRecipeHelper.addOreDict("blockNetherWart", Blocks.NETHER_WART_BLOCK, 0);
+
+			ModRecipeHelper.addOreDict("piston", Blocks.PISTON, 0);
+			ModRecipeHelper.addOreDict("piston", Blocks.STICKY_PISTON, 0);
+
+			ModRecipeHelper.addOreDict("furnace", Blocks.FURNACE, 0);
 
 			ModRecipeHelper.addOreDict("chest", Blocks.WHITE_SHULKER_BOX, 0);
 			ModRecipeHelper.addOreDict("chest", Blocks.ORANGE_SHULKER_BOX, 0);
@@ -205,8 +232,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("arrow", Items.TIPPED_ARROW, 0);
 			ModRecipeHelper.addOreDict("arrow", Items.SPECTRAL_ARROW, 0);
 
-			ModRecipeHelper.addOreDict("clay", Blocks.CLAY, 0);
-			ModRecipeHelper.addOreDict("snow", Blocks.SNOW, 0);
+			ModRecipeHelper.addOreDict("blockClay", Blocks.CLAY, 0);
+			ModRecipeHelper.addOreDict("blockSnow", Blocks.SNOW, 0);
 
 			ModRecipeHelper.addOreDict("toolHoe", Items.WOODEN_HOE, 0);
 			ModRecipeHelper.addOreDict("toolHoe", Items.STONE_HOE, 0);
@@ -309,7 +336,7 @@ public class ModRecipes {
 					new ItemStack(Blocks.RED_MUSHROOM, 4, 0),
 					"A", 'A', new ItemStack(Blocks.RED_MUSHROOM_BLOCK, 1, 0));
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/clay", new ItemStack(Items.CLAY_BALL, 4, 0),
-					"A", 'A', "clay");
+					"A", 'A', "blockClay");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/glowstone",
 					new ItemStack(Items.GLOWSTONE_DUST, 4, 0),
 					"A", 'A', "glowstone");
@@ -356,7 +383,7 @@ public class ModRecipes {
 					"A", 'A', new ItemStack(Blocks.SNOW_LAYER, 1, 0));
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/snow",
 					new ItemStack(Items.SNOWBALL, 4, 0),
-					"A", 'A', "snow");
+					"A", 'A', "blockSnow");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/wool",
 					new ItemStack(Items.STRING, 4, 0),
 					"A", 'A', "wool");

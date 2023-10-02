@@ -30,10 +30,41 @@ public class ModArmorMaterialBase {
 				enchantability, equipSound, toughness).setRepairItem(new ItemStack(repairItem, 1, meta));
 	}
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid          String
+	 * @param name           String
+	 * @param durability     int
+	 * @param armor          int[]
+	 * @param toughness      float
+	 * @param enchantability int
+	 * @param equipSound     {@link SoundEvent}
+	 * @param repairBlock    {@link Block}
+	 * @param meta           int
+	 */
 	@SuppressWarnings("null")
 	public static ArmorMaterial addArmorMaterial(String modid, String name, int durability, int[] armor,
-			float toughness, int enchantability, SoundEvent equipSound, Block repairItem, int meta) {
+			float toughness, int enchantability, SoundEvent equipSound, Block repairBlock, int meta) {
 		return EnumHelper.addArmorMaterial(modid + ":armor_material_" + name, modid + ":" + name, durability, armor,
-				enchantability, equipSound, toughness).setRepairItem(new ItemStack(repairItem, 1, meta));
+				enchantability, equipSound, toughness).setRepairItem(new ItemStack(repairBlock, 1, meta));
+	}
+
+	/**
+	 * @author TheP2WKing
+	 * @param modid          String
+	 * @param name           String
+	 * @param durability     int
+	 * @param armor          int[]
+	 * @param toughness      float
+	 * @param enchantability int
+	 * @param equipSound     {@link SoundEvent}
+	 * @param repairStack    {@link ItemStack}
+	 * @param meta           int
+	 */
+	@SuppressWarnings("null")
+	public static ArmorMaterial addArmorMaterial(String modid, String name, int durability, int[] armor,
+			float toughness, int enchantability, SoundEvent equipSound, ItemStack repairStack) {
+		return EnumHelper.addArmorMaterial(modid + ":armor_material_" + name, modid + ":" + name, durability, armor,
+				enchantability, equipSound, toughness).setRepairItem(repairStack);
 	}
 }
