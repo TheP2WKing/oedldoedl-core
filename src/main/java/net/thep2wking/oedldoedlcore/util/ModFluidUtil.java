@@ -7,11 +7,15 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
 /**
@@ -30,9 +34,9 @@ public class ModFluidUtil {
 			"blocks/molten_flow");
 
 	// fluid render
-	public static void addRenderForFluid(String fluidName, Block block) {
+	public static void addRenderForFluid(String modid, String name, Block block) {
 		Item fluidItem = Item.getItemFromBlock(block);
-		final ModelResourceLocation modelLocation = new ModelResourceLocation(fluidName, "fluid");
+		final ModelResourceLocation modelLocation = new ModelResourceLocation(modid + ":" + name, "fluid");
 
 		ModelLoader.setCustomMeshDefinition(fluidItem, new ItemMeshDefinition() {
 			public ModelResourceLocation getModelLocation(ItemStack stack) {
@@ -50,5 +54,18 @@ public class ModFluidUtil {
 	// fluid bucket itemstack
 	public static ItemStack addFluidBucket(Fluid bucketFluid) {
 		return FluidUtil.getFilledBucket(new FluidStack(bucketFluid, Fluid.BUCKET_VOLUME));
+	}
+
+	// fluid buckets in creative tab
+	@SuppressWarnings("all")
+	public static void displayForgeBuckets(NonNullList<ItemStack> itemList, String modid) {
+		for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
+			if (bucketFluid.getBlock() != null
+					&& bucketFluid.getBlock().getRegistryName().getResourceDomain().equals(modid)) {
+				ItemStack itemstack = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket,
+						bucketFluid);
+				itemList.add(itemstack);
+			}
+		}
 	}
 }
