@@ -8,6 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
@@ -54,7 +55,7 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return true;
+		return enchantment.canApply(new ItemStack(Items.FLINT_AND_STEEL));
 	}
 
 	private boolean hasRGBBar;
@@ -75,12 +76,16 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 		return super.getRGBDurabilityForDisplay(stack);
 	}
 
-	@Override
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		stack.damageItem(-1, attacker);
+	public void setEntitySmashMotion(EntityLivingBase target) {
 		target.motionX *= horizontalMotion;
 		target.motionY *= verticalMotion;
 		target.motionZ *= horizontalMotion;
+	}
+
+	@Override
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		stack.damageItem(-1, attacker);
+		setEntitySmashMotion(target);
 		return super.hitEntity(stack, target, attacker);
 	}
 
