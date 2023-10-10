@@ -15,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.EnumActionResult;
@@ -27,9 +28,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
-/**
- * @author TheP2WKing
- */
 public class ModItemPaxelBase extends ModItemToolBase {
 	/**
 	 * @author TheP2WKing
@@ -97,26 +95,15 @@ public class ModItemPaxelBase extends ModItemToolBase {
 
 	@Override
 	public float getDestroySpeed(ItemStack stack, IBlockState state) {
-		Material material = state.getMaterial();
-		boolean faster = material == Material.WEB || material == Material.GLASS || material == Material.LEAVES
-				|| material == Material.ANVIL || material == Material.CACTUS || material == Material.VINE
-				|| material == Material.ICE || material == Material.PISTON
-				|| material == Material.REDSTONE_LIGHT;
-		return (float) (faster ? this.efficiency * 1.25 * 2 : super.getDestroySpeed(stack, state) * 1.25);
+		return this.toolMaterial.getEfficiency() * 1.5f;
 	}
 
 	@Override
 	public boolean canHarvestBlock(IBlockState blockIn) {
 		Block block = blockIn.getBlock();
-
 		if (block == Blocks.SNOW_LAYER || block == Blocks.SNOW) {
 			return true;
 		}
-
-		if (block == Blocks.WEB) {
-			return true;
-		}
-
 		if (block == Blocks.OBSIDIAN) {
 			return this.toolMaterial.getHarvestLevel() >= 3;
 		} else if (block == Blocks.DIAMOND_BLOCK || block == Blocks.DIAMOND_ORE) {
@@ -132,12 +119,14 @@ public class ModItemPaxelBase extends ModItemToolBase {
 		} else if (block == Blocks.REDSTONE_ORE || block == Blocks.LIT_REDSTONE_ORE) {
 			return this.toolMaterial.getHarvestLevel() >= 2;
 		}
-
 		Material material = blockIn.getMaterial();
-
 		if (material == Material.ROCK) {
 			return true;
 		} else if (material == Material.IRON) {
+			return true;
+		} else if (material == Material.LEAVES) {
+			return true;
+		} else if (material == Material.WEB) {
 			return true;
 		}
 		return material == Material.ANVIL;

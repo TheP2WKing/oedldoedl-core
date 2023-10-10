@@ -92,15 +92,15 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
 		if (hitSound == ModHitSound.WOOD && entity instanceof EntityLiving) {
-			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_WOOD, SoundCategory.AMBIENT,
+			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_WOOD, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
 		if (hitSound == ModHitSound.METAL && entity instanceof EntityLiving) {
-			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_METAL, SoundCategory.AMBIENT,
+			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_METAL, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
 		if (hitSound == ModHitSound.GEM && entity instanceof EntityLiving) {
-			entity.world.playSound(player, player.getPosition(), ModSounds.SMASH_GEM, SoundCategory.AMBIENT,
+			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_GEM, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
 		return super.onLeftClickEntity(stack, player, entity);
