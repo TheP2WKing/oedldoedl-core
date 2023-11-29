@@ -14,6 +14,8 @@ public class ModReferences {
 	// mod names
 	public static final String BASE_MODID = "oedldoedl";
 	public static final String BASE_NAME = "Oedldoedl";
+	public static final String MINECRAFT_MODID = "minecraft";
+	public static final String MINECRAFT_NAME = "Minecraft";
 
 	public static final String MODID_CORE = BASE_MODID + "core";
 	public static final String MODID_RESOURCES = BASE_MODID + "resources";
@@ -21,6 +23,7 @@ public class ModReferences {
 	public static final String MODID_CURIOSITY = BASE_MODID + "curiosity";
 	public static final String MODID_CONSTRUCT = BASE_MODID + "construct";
 	public static final String MODID_EXPLOSIVES = BASE_MODID + "explosives";
+	public static final String MODID_TECHNOLOGY = BASE_MODID + "technology";
 	public static final String MODID_MUSIC = BASE_MODID + "music";
 	public static final String MODID_INTEGRATION = BASE_MODID + "integration";
 
@@ -30,6 +33,7 @@ public class ModReferences {
 	public static final String NAME_CURIOSITY = BASE_NAME + " " + "Curiosity";
 	public static final String NAME_CONSTRUCT = BASE_NAME + " " + "Construct";
 	public static final String NAME_EXPLOSIVES = BASE_NAME + " " + "Explosives";
+	public static final String NAME_TECHNOLOGY = BASE_NAME + " " + "Technology";
 	public static final String NAME_MUSIC = BASE_NAME + " " + "Music";
 	public static final String NAME_INTEGRATION = BASE_NAME + " " + "Integration";
 

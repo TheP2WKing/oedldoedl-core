@@ -19,6 +19,8 @@ public class ModItems {
 			OedldoedlCore.TAB, ModReferences.MODID_CONSTRUCT, ModRarities.YELLOW, false, 0, 4);
 	public static final Item EXPLOSIVES_ICON = new ModItemIconBase(OedldoedlCore.MODID, "explosives_icon",
 			OedldoedlCore.TAB, ModReferences.MODID_EXPLOSIVES, ModRarities.YELLOW, false, 0, 4);
+	public static final Item TECHNOLOGY_ICON = new ModItemIconBase(OedldoedlCore.MODID, "technology_icon",
+			OedldoedlCore.TAB, ModReferences.MODID_TECHNOLOGY, ModRarities.YELLOW, false, 0, 4);
 	public static final Item MUSIC_ICON = new ModItemIconBase(OedldoedlCore.MODID, "music_icon", OedldoedlCore.TAB,
 			ModReferences.MODID_MUSIC, ModRarities.YELLOW, false, 0, 4);
 	public static final Item INTEGRATION_ICON = new ModItemIconBase(OedldoedlCore.MODID, "integration_icon",

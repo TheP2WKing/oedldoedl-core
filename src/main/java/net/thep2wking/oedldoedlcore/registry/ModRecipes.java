@@ -20,6 +20,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CURIOSITY_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CONSTRUCT_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.EXPLOSIVES_ICON, 0);
+			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.TECHNOLOGY_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.MUSIC_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.INTEGRATION_ICON, 0);
 

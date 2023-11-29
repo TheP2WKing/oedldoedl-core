@@ -44,6 +44,13 @@ item.oedldoedlcore.explosives_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.explosives_icon.annotation5=Mod: §eOedldoedl Explosives
 item.oedldoedlcore.explosives_icon.annotation6=Installed: §cFalse
 
+item.oedldoedlcore.technology_icon.name=Oedldoedl Technology Icon
+item.oedldoedlcore.technology_icon.annotation1=Mod: §eOedldoedl Technology
+item.oedldoedlcore.technology_icon.annotation2=Installed: §aTrue
+item.oedldoedlcore.technology_icon.annotation4=Author: §eTheP2WKing
+item.oedldoedlcore.technology_icon.annotation5=Mod: §eOedldoedl Technology
+item.oedldoedlcore.technology_icon.annotation6=Installed: §cFalse
+
 item.oedldoedlcore.music_icon.name=Oedldoedl Music Icon
 item.oedldoedlcore.music_icon.annotation1=Mod: §eOedldoedl Music
 item.oedldoedlcore.music_icon.annotation2=Installed: §aTrue
