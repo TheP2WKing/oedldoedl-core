@@ -249,10 +249,10 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("skull", Items.SKULL, 4);
 			ModRecipeHelper.addOreDict("skull", Items.SKULL, 5);
 
-			ModRecipeHelper.addOreDict("grass", Blocks.TALLGRASS, 1);
-			ModRecipeHelper.addOreDict("grass", Blocks.TALLGRASS, 2);
-			ModRecipeHelper.addOreDict("grass", Blocks.DOUBLE_PLANT, 2);
-			ModRecipeHelper.addOreDict("grass", Blocks.DOUBLE_PLANT, 3);
+			ModRecipeHelper.addOreDict("grassPlant", Blocks.TALLGRASS, 1);
+			ModRecipeHelper.addOreDict("grassPlant", Blocks.TALLGRASS, 2);
+			ModRecipeHelper.addOreDict("grassPlant", Blocks.DOUBLE_PLANT, 2);
+			ModRecipeHelper.addOreDict("grassPlant", Blocks.DOUBLE_PLANT, 3);
 		}
 	}
 
