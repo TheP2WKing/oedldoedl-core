@@ -22,4 +22,21 @@ public class ModPotionUtil {
 	public static void removeEffect(EntityLivingBase entity, Potion effect) {
 		entity.removePotionEffect(effect);
 	}
+
+	// invert potion effect
+	public static void invertEffect(EntityLivingBase entity, Potion effectIn, Potion effectOut, int duration,
+			int amplifier) {
+		if (entity.isPotionActive(effectIn)) {
+			entity.removePotionEffect(effectIn);
+			entity.addPotionEffect(new PotionEffect(effectOut, duration, amplifier, false, false));
+		}
+	}
+
+	public static void invertEffect(EntityLivingBase entity, Potion effectIn, Potion effectOut, int duration,
+			int amplifier, boolean ambient, boolean particles) {
+		if (entity.isPotionActive(effectIn)) {
+			entity.removePotionEffect(effectIn);
+			entity.addPotionEffect(new PotionEffect(effectOut, duration, amplifier, ambient, particles));
+		}
+	}
 }
