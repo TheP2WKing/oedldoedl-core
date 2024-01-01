@@ -2,7 +2,6 @@ package net.thep2wking.oedldoedlcore.util;
 
 import java.util.UUID;
 
-import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -49,44 +48,70 @@ public class ModArmorHelper {
 		return (!slot.isEmpty()) && (slot.getItem() == boots);
 	}
 
-	public static Multimap<String, AttributeModifier> addKnockbackResistanceModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
+	public static Multimap<String, AttributeModifier> addKnockbackResistanceModifier(
+			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
+			UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
 		if (slot == armor.getEquipmentSlot()) {
-			attributes.putAll(armor.getAttributeModifiers(armor.getEquipmentSlot(), new ItemStack(armor)));
+			addHelmetModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD, helmetUUID);
+			addChestplateModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD,
+					chestplateUUID);
+			addLeggingsModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD,
+					leggingsUUID);
+			addBootsModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
+					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD, bootsUUID);
+			return attributeMap;
+		}
+		return attributeMap;
+	}
+
+	public static Multimap<String, AttributeModifier> addHelmetModifier(
+			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation, UUID UUID) {
+		if (slot == armor.getEquipmentSlot()) {
 			if (slot == EntityEquipmentSlot.HEAD) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(helmetUUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD));
+				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
 			}
+			return attributeMap;
+		}
+		return attributeMap;
+	}
+
+	public static Multimap<String, AttributeModifier> addChestplateModifier(
+			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation, UUID UUID) {
+		if (slot == armor.getEquipmentSlot()) {
 			if (slot == EntityEquipmentSlot.CHEST) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(chestplateUUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD));
+				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
 			}
+			return attributeMap;
+		}
+		return attributeMap;
+	}
+
+	public static Multimap<String, AttributeModifier> addLeggingsModifier(
+			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation, UUID UUID) {
+		if (slot == armor.getEquipmentSlot()) {
 			if (slot == EntityEquipmentSlot.LEGS) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(leggingsUUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD));
+				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
 			}
+			return attributeMap;
+		}
+		return attributeMap;
+	}
+
+	public static Multimap<String, AttributeModifier> addBootsModifier(
+			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation, UUID UUID) {
+		if (slot == armor.getEquipmentSlot()) {
 			if (slot == EntityEquipmentSlot.FEET) {
-				attributes.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName(), new AttributeModifier(bootsUUID, ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD));
+				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
 			}
-			return attributes;
+			return attributeMap;
 		}
-		return attributes;
-	}
-
-	public static Multimap<String, AttributeModifier> putDefaultModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == armor.getEquipmentSlot()) {
-			attributes.putAll(armor.getAttributeModifiers(armor.getEquipmentSlot(), new ItemStack(armor)));
-			return attributes;
-		}
-		return attributes;
-	}
-
-	public static Multimap<String, AttributeModifier> addSlotModifier(ItemArmor armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation, UUID UUID) {
-		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
-		if (slot == armor.getEquipmentSlot()) {
-			if (slot == EntityEquipmentSlot.HEAD) {
-				attributes.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
-			}
-			return attributes;
-		}
-		return attributes;
+		return attributeMap;
 	}
 }
