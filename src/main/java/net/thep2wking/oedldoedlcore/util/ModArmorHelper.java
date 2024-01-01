@@ -49,7 +49,7 @@ public class ModArmorHelper {
 		return (!slot.isEmpty()) && (slot.getItem() == boots);
 	}
 
-	public Multimap<String, AttributeModifier> addKnockbackResistanceModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
+	public static Multimap<String, AttributeModifier> addKnockbackResistanceModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == armor.getEquipmentSlot()) {
 			attributes.putAll(armor.getAttributeModifiers(armor.getEquipmentSlot(), new ItemStack(armor)));
@@ -70,7 +70,7 @@ public class ModArmorHelper {
 		return attributes;
 	}
 
-	public Multimap<String, AttributeModifier> putDefaultModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
+	public static Multimap<String, AttributeModifier> putDefaultModifier(ItemArmor armor, EntityEquipmentSlot slot, UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == armor.getEquipmentSlot()) {
 			attributes.putAll(armor.getAttributeModifiers(armor.getEquipmentSlot(), new ItemStack(armor)));
@@ -79,7 +79,7 @@ public class ModArmorHelper {
 		return attributes;
 	}
 
-	public Multimap<String, AttributeModifier> addSlotModifier(ItemArmor armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation, UUID UUID) {
+	public static Multimap<String, AttributeModifier> addSlotModifier(ItemArmor armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation, UUID UUID) {
 		Multimap<String, AttributeModifier> attributes = LinkedHashMultimap.create();
 		if (slot == armor.getEquipmentSlot()) {
 			if (slot == EntityEquipmentSlot.HEAD) {
