@@ -28,6 +28,7 @@ public class ModItemHorseArmorBase extends ModItemBase {
 			EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
 		super(modid, name, tab, rarity, hasEffect, tooltipLines, annotationLines);
 		this.material = material;
+		setMaxStackSize(1);
 	}
 
 	@Override
