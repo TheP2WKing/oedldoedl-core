@@ -10,7 +10,6 @@ import net.minecraft.nbt.NBTTagCompound;
  */
 public class ModNBTUtil {
 	// generic nbt item
-	@SuppressWarnings("null")
 	public static ItemStack addNBTItem(Item item, String key, String value) {
 		ItemStack itemStack = new ItemStack(item);
 		NBTTagCompound nbttagcompound = itemStack.hasTagCompound() ? itemStack.getTagCompound() : new NBTTagCompound();
@@ -19,7 +18,6 @@ public class ModNBTUtil {
 		return itemStack;
 	}
 
-	@SuppressWarnings("null")
 	public static ItemStack addNBTItem(Item item, String key, int value) {
 		ItemStack itemStack = new ItemStack(item);
 		NBTTagCompound nbttagcompound = itemStack.hasTagCompound() ? itemStack.getTagCompound() : new NBTTagCompound();
@@ -29,7 +27,6 @@ public class ModNBTUtil {
 	}
 
 	// spawn egg
-	@SuppressWarnings("null")
 	public static ItemStack addSpawnEgg(String entityId) {
 		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
 		NBTTagCompound nbttagcompound = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
@@ -41,7 +38,6 @@ public class ModNBTUtil {
 	}
 
 	// potions
-	@SuppressWarnings("null")
 	public static ItemStack addPotion(String potionId) {
 		ItemStack potion = new ItemStack(Items.POTIONITEM);
 		NBTTagCompound nbttagcompound = potion.hasTagCompound() ? potion.getTagCompound() : new NBTTagCompound();
@@ -50,7 +46,6 @@ public class ModNBTUtil {
 		return potion;
 	}
 
-	@SuppressWarnings("null")
 	public static ItemStack addSplashPotion(String potionId) {
 		ItemStack potion = new ItemStack(Items.SPLASH_POTION);
 		NBTTagCompound nbttagcompound = potion.hasTagCompound() ? potion.getTagCompound() : new NBTTagCompound();
@@ -59,7 +54,6 @@ public class ModNBTUtil {
 		return potion;
 	}
 
-	@SuppressWarnings("null")
 	public static ItemStack addLingeringPotion(String potionId) {
 		ItemStack potion = new ItemStack(Items.LINGERING_POTION);
 		NBTTagCompound nbttagcompound = potion.hasTagCompound() ? potion.getTagCompound() : new NBTTagCompound();
@@ -69,7 +63,6 @@ public class ModNBTUtil {
 	}
 
 	// tipped arrows
-	@SuppressWarnings("null")
 	public static ItemStack addTippedArrow(String potionId) {
 		ItemStack arrow = new ItemStack(Items.TIPPED_ARROW);
 		NBTTagCompound nbttagcompound = arrow.hasTagCompound() ? arrow.getTagCompound() : new NBTTagCompound();

@@ -1,8 +1,8 @@
 package net.thep2wking.oedldoedlcore.registry;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -15,8 +15,8 @@ import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 @Mod.EventBusSubscriber
 public class ModRegistry {
 	@SubscribeEvent
-	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-		ModLogger.registeredBlocksLogger(OedldoedlCore.MODID);
+	public static void onModelRegister(ModelRegistryEvent event) {
+		ModRegistryHelper.registerModels(event, OedldoedlCore.MODID);
 	}
 
 	@SubscribeEvent

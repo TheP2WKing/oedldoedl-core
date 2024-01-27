@@ -58,7 +58,6 @@ public class ModItemPickaxeBase extends ItemPickaxe {
 		setMaxStackSize(1);
 	}
 
-	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment.type.canEnchantItem(stack.getItem())

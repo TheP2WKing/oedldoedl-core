@@ -59,7 +59,6 @@ public class ModItemShearsBase extends ItemShears {
 		setMaxDamage(this.material.getMaxUses() - 12);
 	}
 
-	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.SHEARS));

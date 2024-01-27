@@ -72,7 +72,6 @@ public class ModItemPaxelBase extends ModItemToolBase {
 		return super.getRGBDurabilityForDisplay(stack);
 	}
 
-	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.IRON_AXE))

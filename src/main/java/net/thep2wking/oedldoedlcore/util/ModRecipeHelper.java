@@ -35,7 +35,6 @@ public class ModRecipeHelper {
 		GameRegistry.addSmelting(output, input, xp);
 	}
 
-	@SuppressWarnings("null")
 	public static void addOreDictSmeltingRecipe(@Nonnull ItemStack output, @Nonnull String inputOreDict, float xp) {
 		for (@Nonnull
 		ItemStack inputs : OreDictionary.getOres(inputOreDict)) {

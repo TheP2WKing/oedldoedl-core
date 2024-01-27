@@ -14,5 +14,5 @@
         "editor.detectIndentation": true
     },
     "java.jdt.ls.vmargs": " -Xmx10G -Xms256m",
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "disabled"
 }

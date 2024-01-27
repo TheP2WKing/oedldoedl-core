@@ -22,7 +22,6 @@ public class ModToolMaterialBase {
 	 * @param repairItem     {@link Item}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel,
 			float efficiency, float attackDamage, int enchantability, Item repairItem, int meta) {
 		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
@@ -41,7 +40,6 @@ public class ModToolMaterialBase {
 	 * @param repairBlock    {@link Block}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel,
 			float efficiency, float attackDamage, int enchantability, Block repairBlock, int meta) {
 		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,
@@ -60,7 +58,6 @@ public class ModToolMaterialBase {
 	 * @param repairStack    {@link ItemStack}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ToolMaterial addToolMaterial(String modid, String name, int durability, int harvestLevel,
 			float efficiency, float attackDamage, int enchantability, ItemStack repairStack, int meta) {
 		return EnumHelper.addToolMaterial(modid + ":tool_material_" + name, harvestLevel, durability, efficiency,

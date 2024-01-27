@@ -60,7 +60,6 @@ public class ModItemHoeBase extends ItemHoe {
 		setMaxStackSize(1);
 	}
 
-	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.IRON_HOE));

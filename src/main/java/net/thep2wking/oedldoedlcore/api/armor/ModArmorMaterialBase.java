@@ -23,7 +23,6 @@ public class ModArmorMaterialBase {
 	 * @param repairItem     {@link Item}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ArmorMaterial addArmorMaterial(String modid, String name, int durability, int[] armor,
 			float toughness, int enchantability, SoundEvent equipSound, Item repairItem, int meta) {
 		return EnumHelper.addArmorMaterial(modid + ":armor_material_" + name, modid + ":" + name, durability, armor,
@@ -42,7 +41,6 @@ public class ModArmorMaterialBase {
 	 * @param repairBlock    {@link Block}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ArmorMaterial addArmorMaterial(String modid, String name, int durability, int[] armor,
 			float toughness, int enchantability, SoundEvent equipSound, Block repairBlock, int meta) {
 		return EnumHelper.addArmorMaterial(modid + ":armor_material_" + name, modid + ":" + name, durability, armor,
@@ -61,7 +59,6 @@ public class ModArmorMaterialBase {
 	 * @param repairStack    {@link ItemStack}
 	 * @param meta           int
 	 */
-	@SuppressWarnings("null")
 	public static ArmorMaterial addArmorMaterial(String modid, String name, int durability, int[] armor,
 			float toughness, int enchantability, SoundEvent equipSound, ItemStack repairStack) {
 		return EnumHelper.addArmorMaterial(modid + ":armor_material_" + name, modid + ":" + name, durability, armor,

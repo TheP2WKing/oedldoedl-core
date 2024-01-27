@@ -58,7 +58,6 @@ public class ModItemSwordBase extends ItemSword {
 		setMaxStackSize(1);
 	}
 
-	@SuppressWarnings("null")
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
 		return enchantment.type.canEnchantItem(stack.getItem())

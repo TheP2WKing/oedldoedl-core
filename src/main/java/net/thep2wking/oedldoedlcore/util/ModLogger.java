@@ -12,6 +12,10 @@ public class ModLogger {
 	// logger for all oedldoedl mods
 	public static final Logger LOGGER = LogManager.getLogger(ModReferences.BASE_NAME);
 
+	public static void info(String message) {
+		ModLogger.LOGGER.info(message);
+	}
+
 	// init events
 	public static void preInitLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
@@ -95,6 +99,12 @@ public class ModLogger {
 	public static void registeredRendererLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered renderer for " + mod);
+		}
+	}
+
+	public static void registeredModelsLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered models for " + mod);
 		}
 	}
 
