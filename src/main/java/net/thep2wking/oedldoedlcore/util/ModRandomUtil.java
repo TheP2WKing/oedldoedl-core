@@ -7,10 +7,8 @@ import java.util.Random;
  * @author TheP2WKing
  */
 public class ModRandomUtil {
-	public static Random RANDOM = new Random();
-
-	// select random element from list
-	public static <T> T selectRandom(Random r, List<T> list) {
-		return list.get(r.nextInt(list.size()));
+	// select random element from a list
+	public static <T> T selectRandom(Random random, List<T> list) {
+		return list.get(random.nextInt(list.size()));
 	}
 }

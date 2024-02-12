@@ -3,9 +3,12 @@ package net.thep2wking.oedldoedlcore.util;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -59,14 +62,21 @@ public class ModRegistryHelper {
                 trackingRange, updateFrequency, velocityUpdates, colorPrimary, colorSecondary);
     }
 
+    // register entity spawning
+    public static void registerEntitySpawn(Class<? extends EntityLiving> entity, EnumCreatureType creatureType,
+            int weight, int min, int max, Biome... biomes) {
+        EntityRegistry.addSpawn(entity, weight, min, max, creatureType, biomes);
+    }
+
     // register models
     @SideOnly(Side.CLIENT)
-	public static void registerModels(ModelRegistryEvent event, String modId) {
+    public static void registerModels(ModelRegistryEvent event, String modId) {
         ModLogger.registeredModelsLogger(modId);
-		for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
-			if (item.getRegistryName().getResourceDomain().equals(modId)) {
-				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "normal"));
-			}
-		}
-	}
+        for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
+            if (item.getRegistryName().getResourceDomain().equals(modId)) {
+                ModelLoader.setCustomModelResourceLocation(item, 0,
+                        new ModelResourceLocation(item.getRegistryName(), "normal"));
+            }
+        }
+    }
 }

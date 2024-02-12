@@ -12,7 +12,7 @@ public class ModLogger {
 	// logger for all oedldoedl mods
 	public static final Logger LOGGER = LogManager.getLogger(ModReferences.BASE_NAME);
 
-	public static void info(String message) {
+	public static void info(Object message) {
 		ModLogger.LOGGER.info(message);
 	}
 

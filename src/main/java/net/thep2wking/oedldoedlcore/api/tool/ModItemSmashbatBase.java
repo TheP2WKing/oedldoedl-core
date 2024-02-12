@@ -5,7 +5,6 @@ import java.util.HashSet;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -91,15 +90,15 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 
 	@Override
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-		if (hitSound == ModHitSound.WOOD && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.WOOD && entity instanceof EntityLivingBase) {
 			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_WOOD, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
-		if (hitSound == ModHitSound.METAL && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.METAL && entity instanceof EntityLivingBase) {
 			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_METAL, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
-		if (hitSound == ModHitSound.GEM && entity instanceof EntityLiving) {
+		if (hitSound == ModHitSound.GEM && entity instanceof EntityLivingBase) {
 			entity.world.playSound(null, entity.getPosition(), ModSounds.SMASH_GEM, SoundCategory.AMBIENT,
 					1.0f, 1.0f);
 		}
