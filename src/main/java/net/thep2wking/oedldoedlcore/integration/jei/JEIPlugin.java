@@ -1,6 +1,5 @@
 package net.thep2wking.oedldoedlcore.integration.jei;
 
-import baubles.common.items.ItemRing;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
@@ -25,13 +24,13 @@ public class JEIPlugin implements IModPlugin {
 
 		if (CoreConfig.INTEGRATION.JEI.ADDITIONAL_RECIPE_DESCRIPTIONS) {
 			registry.addIngredientInfo(new ItemStack(Items.FIREWORKS), ItemStack.class,
-					I18n.format("item.oedldoedlcore.firework_rocket.jei"));
+					I18n.format("item." + OedldoedlCore.MODID + ".firework_rocket.jei"));
 			registry.addIngredientInfo(new ItemStack(Items.FIREWORKS), ItemStack.class,
-					I18n.format("item.oedldoedlcore.firework_rocket.jei2"));
+					I18n.format("item." + OedldoedlCore.MODID + ".firework_rocket.jei2"));
 			registry.addIngredientInfo(new ItemStack(Items.FIREWORK_CHARGE), ItemStack.class,
-					I18n.format("item.oedldoedlcore.firework_star.jei"));
+					I18n.format("item." + OedldoedlCore.MODID + ".firework_star.jei"));
 			registry.addIngredientInfo(new ItemStack(Items.FIREWORK_CHARGE), ItemStack.class,
-					I18n.format("item.oedldoedlcore.firework_star.jei2"));
+					I18n.format("item." + OedldoedlCore.MODID + ".firework_star.jei2"));
 		}
 
 		if (!CoreConfig.INTEGRATION.JEI.HIDE_PLAYER_HEAD) {
@@ -46,7 +45,7 @@ public class JEIPlugin implements IModPlugin {
 
 		if (CoreConfig.INTEGRATION.JEI.HIDE_BAUBLES_MINERS_RING && Loader.isModLoaded("baubles")) {
 			registry.getJeiHelpers().getIngredientBlacklist()
-					.addIngredientToBlacklist(new ItemStack(ItemRing.RING, 1, 0));
+					.addIngredientToBlacklist(new ItemStack(Item.getByNameOrId("baubles:ring"), 1, 0));
 		}
 
 		if (CoreConfig.INTEGRATION.JEI.HIDE_AE2_FACADES && Loader.isModLoaded("appliedenergistics2")) {
