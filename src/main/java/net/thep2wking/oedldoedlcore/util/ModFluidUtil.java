@@ -16,6 +16,8 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.UniversalBucket;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 
 /**
@@ -34,6 +36,7 @@ public class ModFluidUtil {
 			"blocks/molten_flow");
 
 	// fluid render
+	@SideOnly(Side.CLIENT)
 	public static void addRenderForFluid(String modid, String name, Block block) {
 		Item fluidItem = Item.getItemFromBlock(block);
 		final ModelResourceLocation modelLocation = new ModelResourceLocation(modid + ":" + name, "fluid");
@@ -58,6 +61,7 @@ public class ModFluidUtil {
 
 	// fluid buckets in creative tab
 	@SuppressWarnings("all")
+	@SideOnly(Side.CLIENT)
 	public static void displayForgeBuckets(NonNullList<ItemStack> itemList, String modid) {
 		for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
 			if (bucketFluid.getBlock() != null

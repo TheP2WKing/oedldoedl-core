@@ -4,6 +4,8 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * @author TheP2WKing
@@ -59,11 +61,13 @@ public class ModFluidBase extends Fluid {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity() {
 		return rarity;
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public int getColor() {
 		return color;
 	}
