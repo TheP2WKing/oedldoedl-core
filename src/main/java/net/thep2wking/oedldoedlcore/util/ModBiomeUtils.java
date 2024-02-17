@@ -28,7 +28,7 @@ public class ModBiomeUtils {
 		List<Biome> biomes = new ArrayList<Biome>();
 		List<Biome> biomeList = getBiomesFromRegistry();
 		for (Biome currentBiome : biomeList) {
-			List<SpawnListEntry> spawnList = currentBiome.getSpawnableList(EnumCreatureType.MONSTER);
+			List<SpawnListEntry> spawnList = currentBiome.getSpawnableList(creatureType);
 			for (SpawnListEntry spawnEntry : spawnList) {
 				if (spawnEntry.entityClass == entity) {
 					biomes.add(currentBiome);
