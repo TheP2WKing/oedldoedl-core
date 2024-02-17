@@ -32,9 +32,8 @@ public class ModRenderHelper {
 	}
 
 	// render entity
-	@SuppressWarnings("all")
 	@SideOnly(Side.CLIENT)
-	public static void addEntityRender(Class<? extends Entity> entityClass, IRenderFactory<? super Entity> renderFactory) {
+	public static <T extends Entity> void addEntityRender(Class<T> entityClass, IRenderFactory<? super T> renderFactory) {
 		RenderingRegistry.registerEntityRenderingHandler(entityClass, renderFactory);
 	}
 }
