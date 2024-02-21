@@ -12,7 +12,7 @@ Made with ❤️ and 🥢
 
 ## Overview
 
-A simple library with some useful utilities that make my live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own recipes. Recipes can be disabled and some items easily configured via a config file.
+A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own recipes. Recipes can be disabled and some items easily configured via a config file.
 
 ## About
 
@@ -20,9 +20,14 @@ My own projects often contain a lot of mods and offer customization of recipes a
 
 ## Modules
 
-|                                                                                                           | Name                | Version                           | Overview                                 |
-| --------------------------------------------------------------------------------------------------------- | ------------------- | --------------------------------- | ---------------------------------------- |
-| [![core](logo/logo_core.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core)                | Oedldoedl Core      | v4 for 1.12.2 </br> v3 for 1.16.5 | Mod Foundation, Library and Shared Code  |
-| [![resources](logo/logo_resources.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-resources) | Oedldoedl Resources | v4 for 1.12.2 </br> v3 for 1.16.5 | Basic Resources, Storage Blocks and Ores |
-| [![gear](logo/logo_gear.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear)                | Oedldoedl Gear      | v4 for 1.12.2 </br> v3 for 1.16.5 | Tools, Armor and Equipment               |
-| [![curiosity](logo/logo_curiosity.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-curiosity) | Oedldoedl Curiosity | v4 for 1.12.2 </br> v3 for 1.16.5 | Baubles/ Curios, Cosmetics and Trinkets  |
+|                                                                                                                                                                                   | Name                  | Version                           | Overview                                 |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------- | :-------------------------------- | :--------------------------------------- |
+| [![core](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_core.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core)                      | Oedldoedl Core        | v4 for 1.12.2 </br> v3 for 1.16.5 | Mod Foundation, Library and Shared Code  |
+| [![resources](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_resources.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-resources)       | Oedldoedl Resources   | v4 for 1.12.2 </br> v3 for 1.16.5 | Basic Resources, Storage Blocks and Ores |
+| [![gear](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_gear.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear)                      | Oedldoedl Gear        | v4 for 1.12.2 </br> v3 for 1.16.5 | Tools, Armor and Equipment               |
+| [![curiosity](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_curiosity.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-curiosity)       | Oedldoedl Curiosity   | v4 for 1.12.2 </br> v3 for 1.16.5 | Baubles/ Curios, Cosmetics and Trinkets  |
+| [![construct](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_construct.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-construct)       | Oedldoedl Construct   | v4 for 1.12.2 </br> v3 for 1.16.5 | Tinkers Tools, Modifier and Liquids      |
+| [![explosives](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_explosives.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-explosives)    | Oedldoedl Explosives  | v4 for 1.12.2                     | TNTs, explosives and dynamites           |
+| [![technology](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_technology.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-technology)    | Oedldoedl Technology  | v4 for 1.12.2                     | Matter Overdrive weapons and technology  |
+| [![music](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_music.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-music)                   | Oedldoedl Music       | v4 for 1.12.2 </br> v3 for 1.16.5 | Anime Music Discs and Music Player       |
+| [![integration](https://github.com/TheP2WKing/oedldoedl-core/blob/1.12.2/logo/logo_integration.png?raw=true)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-integration) | Oedldoedl Integration | v4 for 1.12.2                     | Various Mod Integrations                 |

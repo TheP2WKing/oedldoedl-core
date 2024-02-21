@@ -2,13 +2,13 @@
     {
         "modid": "oedldoedlcore",
         "name": "Oedldoedl Core",
-        "description": "A library or API or what you want to call it for all oedldoedl mods. This mod adds minor tweaks and to the vanilla gameplay as well as a codebase for other modules. Originally intended to be used with mods like CraftTweaker or KubeJS to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.",
+        "description": "A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own recipes. Recipes can be disabled and some items easily configured via a config file.",
         "version": "${version}",
         "mcversion": "${mcversion}",
-        "url": "https://github.com/TheP2WKing/oedldoedl-core",
+        "url": "https://github.com/thep2wking/oedldoedl-core",
         "authorList": ["TheP2WKing"],
-        "credits": "TheP2WKing",
-        "logoFile": "assets/oedldoedlcore/textures/gui/logo/core_logo.png",
+        "credits": "Mcjty, diesieben07, TheRealp455w0rd, TurtyWurty, Kaupenjoe, mezz, MrCrayfish, Vazkii and all the other people who helped me to learn modding and creating these mods.",
+        "logoFile": "assets/oedldoedlcore/textures/gui/logo/logo_core.png",
         "dependencies": []
     }
 ]
