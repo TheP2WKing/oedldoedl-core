@@ -1,15 +1,31 @@
 # Oedldoedl Core
 
-[![name](https://img.shields.io/static/v1?message=%20curseforge%20page&logo=curseforge&style=for-the-badge&labelColor=cd603d&color=1e1e1e&logoColor=black&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core)
-[![name](https://img.shields.io/static/v1?message=for%20mc%201.12.2%20|%201.16.5&logo=curseforge&style=for-the-badge&labelColor=cd603d&color=1e1e1e&logoColor=black&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core/files/all)
-[![name](https://img.shields.io/static/v1?message=%20more%20from%20TheP2WKing&logo=curseforge&style=for-the-badge&labelColor=cd603d&color=1e1e1e&logoColor=black&label)](https://www.curseforge.com/members/thep2wking_twitch/projects)
-[![name](https://img.shields.io/static/v1?message=%20mantained%20yes&logo=github&style=for-the-badge&labelColor=green&color=1e1e1e&logoColor=black&label)](https://github.com/TheP2WKing/oedldoedl-core)
+[![curseforge](https://img.shields.io/static/v1?message=%20curseforge&logo=curseforge&style=for-the-badge&labelColor=f16436&color=1a1a1a&logoColor=0d0d0d&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core)
+[![versions](https://img.shields.io/static/v1?message=for%201.12.2%20|%201.16.5&logo=curseforge&style=for-the-badge&labelColor=f16436&color=1a1a1a&logoColor=0d0d0d&label)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core/files/all)
+[![projects](https://img.shields.io/static/v1?message=%20more%20projects&logo=curseforge&style=for-the-badge&labelColor=f16436&color=1a1a1a&logoColor=0d0d0d&label)](https://www.curseforge.com/members/thep2wking/projects)
+[![github](https://img.shields.io/static/v1?message=github&logo=github&style=for-the-badge&labelColor=010409&color=161b22&logoColor=e6edf3&label)](https://github.com/thep2wking/oedldoedl-core)
+[![mantained](https://img.shields.io/static/v1?message=%20mantained&logo=github&style=for-the-badge&labelColor=green&color=161b22&logoColor=0d0d0d&label)](https://github.com/thep2wking/oedldoedl-core)
 
-The Core Module of a mod series called "Oedldoedl"  
-Made with ❤️
+The Core Module of a mod series called "Oedldoedl".  
+Oedldoedl is a series of mods that don't make any sense, do they?  
+Made with ❤️ and 🥢
 
 ## Overview
 
-A library or API or what you want to call it for all oedldoedl mods. This mod adds minor tweaks and to the vanilla gameplay as well as a codebase for other modules. Originally intended to be used with mods like CraftTweaker or KubeJS to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.
+---
 
-My own modpack projects often contain a bunch of mods and offer customization of recipes and other features. There were so many different things that I thought would be useful or just plain funny that didn't exist. Since many mods don't offer these things or haven't been updated over time, I decide to combine some previous ideas and mix them with my own new ones. There are different sub-modules that focus on different parts of the game and follow a specific theme, so the installation can be modular by only installing the parts you want. Note that some mods require multiple modules or other mods to work properly.
+A simple library with some useful utilities that make my live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own basic recipes. Recipes can be disabled and some items easily configured via a config file.
+
+## About
+
+My own projects often contain a lot of mods and offer customization of recipes and other features. There were so many different things that I thought would be useful or just fun that weren't there. Since many mods have not been updated over time, I decided to combine some previous ideas and mixing them with my own new ones. References to games,
+TV series, films and memes and some of my own insiders, something for everyone. There are different sub-modules that focus on different parts of the game. Some are add-ons to existing mods, hat fit the general theme, others are new content and others are just fun for a laugh.
+The installation is modular, so you can install only the parts you want. Note that some mods require multiple modules or other mods to function properly.
+
+## Modules
+
+|         |           |       |
+| ------------- | ------------- | -------------|
+| [![core](logo/logo_core.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-core)| Oedldoedl Core | 1.12.2/ 1.16.5 |
+| [![resources](logo/logo_resources.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-resources)| Oedldoedl Resources | 1.12.2/ 1.16.5 |
+| [![gear](logo/logo_gear.png)](https://www.curseforge.com/minecraft/mc-mods/oedldoedl-gear)| Oedldoedl Gear | 1.12.2/ 1.16.5 |
