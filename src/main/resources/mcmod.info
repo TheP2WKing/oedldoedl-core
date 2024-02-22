@@ -2,7 +2,7 @@
     {
         "modid": "oedldoedlcore",
         "name": "Oedldoedl Core",
-        "description": "A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own recipes. Recipes can be disabled and some items easily configured via a config file.",
+        "description": "A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod does add its own recipes. Recipes can be disabled and some items easily configured via a config file.",
         "version": "${version}",
         "mcversion": "${mcversion}",
         "url": "https://github.com/thep2wking/oedldoedl-core",

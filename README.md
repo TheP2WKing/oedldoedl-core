@@ -12,11 +12,11 @@ Made with ❤️ and 🥢
 
 ## Overview
 
-A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod itself adds its own recipes. Recipes can be disabled and some items easily configured via a config file.
+A simple library with some useful utilities that makes live easier. This mod adds minor tweaks, recipes and ore dictionary entries to the vanilla gameplay. Originally intended to be used with mods like CraftTweaker to add recipes, but the mod does add its own recipes. Recipes can be disabled and some items easily configured via a config file.
 
 ## About
 
-My own projects often contain a lot of mods and offer customization of recipes and other features. There were so many different things that I thought would be useful or just fun that weren't there. Since many mods have not been updated over time, I decided to combine some previous ideas and mixing them with my own new ones. References to games, TV series, films and memes and some of my own insiders, something for everyone. There are different sub-modules that focus on different parts of the game. Some are add-ons to existing mods, hat fit the general theme, others are new content and others are just fun for a laugh. The installation is modular, so you can install only the parts you want. Note that some mods require multiple modules or other mods to function properly.
+My own projects often contain a lot of mods and offer customization of recipes and other features. There were so many different things that I thought would be useful or just fun but weren't available. Since many mods have not been updated over time, I decided to combine some previous ideas and mixing them with my own new ones. References to games, TV series, films and memes and some of my own insiders, something for everyone. There are different sub-modules that focus on different parts of the game. Some are add-ons to existing mods, others add new content and others are just good for a laugh. The installation is modular, so you can install only the parts you want. Note that some mods require multiple modules or other mods to function properly.
 
 ## Modules
 
