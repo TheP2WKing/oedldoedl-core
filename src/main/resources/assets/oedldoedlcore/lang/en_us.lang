@@ -6,7 +6,7 @@ itemGroup.creative.name=Creative
 item.oedldoedlcore.core_icon.name=Oedldoedl Core Icon
 item.oedldoedlcore.core_icon.annotation1=Mod: §eOedldoedl Core
 item.oedldoedlcore.core_icon.annotation2=Installed: §aTrue
-item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-4.0.0
+item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-4.1.0
 item.oedldoedlcore.core_icon.annotation4=Author: §eTheP2WKing
 
 item.oedldoedlcore.resources_icon.name=Oedldoedl Resources Icon
@@ -65,13 +65,41 @@ item.oedldoedlcore.integration_icon.annotation4=Author: §eTheP2WKing
 item.oedldoedlcore.integration_icon.annotation5=Mod: §eOedldoedl Integration
 item.oedldoedlcore.integration_icon.annotation6=Installed: §cFalse
 
-# join message
-message.oedldoedlcore.join=Thanks for installing!
+# spawn eggs
+item.oedldoedlcore.the_killer_bunny_spawn_egg.name=Spawn The Killer Bunny
+item.oedldoedlcore.charged_screeper_spawn_egg.name=Spawn Charged Creeper
+item.oedldoedlcore.rainbow_sheep_spawn_egg.name=Spawn Rainbow Sheep
+
+# items
+item.oedldoedlcore.debug_stick.name=Debug Stick
+item.oedldoedlcore.debug_stick.annotation1=Useable in survival:
+item.oedldoedlcore.debug_stick.annotation2=Yes
+item.oedldoedlcore.debug_stick.annotation3=No
+item.oedldoedlcore.debug_stick.tip1=Change the State or Meta of Blocks.
 
 # sounds
 sound.oedldoedlcore.smash_wood=Smashbat smashing
 sound.oedldoedlcore.smash_metal=Smashbat smashing
 sound.oedldoedlcore.smash_gem=Smashbat smashing
+
+# potions
+oedldoedlcore.slow_falling=Slow Falling
+potion.effect.oedldoedlcore.slow_falling=Potion of Slow Falling
+splash_potion.effect.oedldoedlcore.slow_falling=Splash Potion of Slow Falling
+lingering_potion.effect.oedldoedlcore.slow_falling=Lingering Potion of Slow Falling
+tipped_arrow.effect.oedldoedlcore.slow_falling=Arrow of Slow Falling
+
+oedldoedlcore.dolphin_grace=Dolphin Grace
+potion.effect.oedldoedlcore.dolphin_grace=Potion of Dolphin Grace
+splash_potion.effect.oedldoedlcore.dolphin_grace=Splash Potion of Dolphin Grace
+lingering_potion.effect.oedldoedlcore.dolphin_grace=Lingering Potion of Dolphin Grace
+tipped_arrow.effect.oedldoedlcore.dolphin_grace=Arrow of Dolphin Grace
+
+oedldoedlcore.flight=Flight
+potion.effect.oedldoedlcore.flight=Potion of Flight
+splash_potion.effect.oedldoedlcore.flight=Splash Potion of Flight
+lingering_potion.effect.oedldoedlcore.flight=Lingering Potion of Flight
+tipped_arrow.effect.oedldoedlcore.flight=Arrow of Flight
 
 # jei
 item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye

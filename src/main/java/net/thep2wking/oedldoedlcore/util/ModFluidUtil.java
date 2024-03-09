@@ -19,6 +19,7 @@ import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 /**
  * @author TheP2WKing
@@ -63,12 +64,15 @@ public class ModFluidUtil {
 	@SuppressWarnings("all")
 	@SideOnly(Side.CLIENT)
 	public static void displayForgeBuckets(NonNullList<ItemStack> itemList, String modid) {
-		for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
-			if (bucketFluid.getBlock() != null
-					&& bucketFluid.getBlock().getRegistryName().getResourceDomain().equals(modid)) {
-				ItemStack itemstack = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket,
-						bucketFluid);
-				itemList.add(itemstack);
+		if (CoreConfig.PROPERTIES.CREATIVE.ADD_FORGE_BUCKETS_TO_CREATIVE_TABS) {
+			for (Fluid bucketFluid : FluidRegistry.getBucketFluids()) {
+				if (bucketFluid.getBlock() != null
+						&& bucketFluid.getBlock().getRegistryName().getResourceDomain().equals(modid)) {
+					ItemStack itemstack = UniversalBucket.getFilledBucket(
+							ForgeModContainer.getInstance().universalBucket,
+							bucketFluid);
+					itemList.add(itemstack);
+				}
 			}
 		}
 	}

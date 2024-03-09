@@ -21,7 +21,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.registry.ModRecipes;
+import net.thep2wking.oedldoedlcore.registry.ModRegistry;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
+import net.thep2wking.oedldoedlcore.util.ModNBTUtil;
+import net.thep2wking.oedldoedlcore.util.ModPotionUtil;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 import net.thep2wking.oedldoedlcore.util.proxy.CommonProxy;
 
@@ -31,7 +34,7 @@ public class OedldoedlCore {
     public static final String PREFIX = MODID + ":";
     public static final String MC_VERSION = "1.12.2";
     public static final String NAME = "Oedldoedl Core";
-    public static final String VERSION = MC_VERSION + "-" + "4.0.0";
+    public static final String VERSION = MC_VERSION + "-" + "4.1.0";
     public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2847,);after:jei@[4.16.1.300,);after:theoneprobe@[1.4.28,);after:baubles;after:tconstruct;after:matteroverdrive";
     public static final String CLIENT_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "net.thep2wking.oedldoedlcore.util.proxy.ServerProxy";
@@ -60,6 +63,7 @@ public class OedldoedlCore {
         }
 
         @Override
+        @SideOnly(Side.CLIENT)
         public void displayAllRelevantItems(NonNullList<ItemStack> list) {
             if (CoreConfig.CONTENT.UNIBTAINABLE_CREATIVE_TAB) {
                 list.add(new ItemStack(Blocks.MOB_SPAWNER, 1, 0));
@@ -77,6 +81,7 @@ public class OedldoedlCore {
                 list.add(new ItemStack(Items.FILLED_MAP, 1, 0));
                 list.add(new ItemStack(Items.WRITTEN_BOOK, 1, 0));
                 list.add(new ItemStack(Items.FIREWORKS, 1, 0));
+                list.add(new ItemStack(Items.SPAWN_EGG, 1, 0));
                 list.add(new ItemStack(Items.COMMAND_BLOCK_MINECART, 1, 0));
                 list.add(new ItemStack(Items.KNOWLEDGE_BOOK, 1, 0));
                 super.displayAllRelevantItems(list);
@@ -96,11 +101,35 @@ public class OedldoedlCore {
         public ResourceLocation getBackgroundImage() {
             return ModReferences.CREATIVE_TAB_DARK;
         }
+
+        @Override
+        @SideOnly(Side.CLIENT)
+        public void displayAllRelevantItems(NonNullList<ItemStack> list) {
+            super.displayAllRelevantItems(list);
+            if (CoreConfig.CONTENT.MISSING_SPAWN_EGGS) {
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:ender_dragon"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:giant"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:illusion_illager"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:snowman"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:villager_golem"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:wither"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:creeper", "powered", true)
+                        .setTranslatableName("item." + MODID + ".charged_screeper_spawn_egg.name"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:sheep", "CustomName", "jeb_")
+                        .setTranslatableName("item." + MODID + ".rainbow_sheep_spawn_egg.name"));
+                list.add(ModNBTUtil.addSpawnEgg("minecraft:rabbit", "RabbitType", 99)
+                        .setTranslatableName("item." + MODID + ".the_killer_bunny_spawn_egg.name"));
+            }
+            ModPotionUtil.displayPotions(list, MODID);
+        }
     };
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModLogger.preInitLogger(MODID);
+        if (CoreConfig.CONTENT.MISSING_SPAWN_EGGS) {
+            ModRegistry.registerSpawnEggs();
+        }
         PROXY.preInit(event);
     }
 

@@ -32,4 +32,18 @@ public class Properties {
 		@Config.Name("Beacon Bases")
 		public boolean BEACON_BASES = true;
 	}
+
+	@Config.Name("creative")
+	public final Creative CREATIVE = new Creative();
+
+	public static class Creative {
+		@Config.Name("Add Forge Buckets To Creative Tabs")
+		public boolean ADD_FORGE_BUCKETS_TO_CREATIVE_TABS = true;
+
+		@Config.Name("Add Spawn Eggs To Creative Tabs")
+		public boolean ADD_SPAWN_EGGS_TO_CREATIVE_TABS = false;
+
+		@Config.Name("Add Potions To Creative Tabs")
+		public boolean ADD_POTIONS_TO_CREATIVE_TABS = true;
+	}
 }

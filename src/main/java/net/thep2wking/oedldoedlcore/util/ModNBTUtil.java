@@ -29,11 +29,66 @@ public class ModNBTUtil {
 	// spawn egg
 	public static ItemStack addSpawnEgg(String entityId) {
 		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
-		NBTTagCompound nbttagcompound = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
-		NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-		nbttagcompound1.setString("id", entityId.toString());
-		nbttagcompound.setTag("EntityTag", nbttagcompound1);
-		spawnEgg.setTagCompound(nbttagcompound);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		spawnEgg.setTagCompound(entitytag);
+		return spawnEgg;
+	}
+
+	public static ItemStack addSpawnEgg(String entityId, String key, String value) {
+		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		nbttagcompound.setString(key, value);
+		spawnEgg.setTagCompound(entitytag);
+		return spawnEgg;
+	}
+
+	public static ItemStack addSpawnEgg(String entityId, String key, boolean value) {
+		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		nbttagcompound.setBoolean(key, value);
+		spawnEgg.setTagCompound(entitytag);
+		return spawnEgg;
+	}
+
+	public static ItemStack addSpawnEgg(String entityId, String key, int value) {
+		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		nbttagcompound.setInteger(key, value);
+		spawnEgg.setTagCompound(entitytag);
+		return spawnEgg;
+	}
+
+	public static ItemStack addSpawnEgg(String entityId, String key, float value) {
+		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		nbttagcompound.setFloat(key, value);
+		spawnEgg.setTagCompound(entitytag);
+		return spawnEgg;
+	}
+
+	public static ItemStack addSpawnEgg(String entityId, String key, double value) {
+		ItemStack spawnEgg = new ItemStack(Items.SPAWN_EGG);
+		NBTTagCompound entitytag = spawnEgg.hasTagCompound() ? spawnEgg.getTagCompound() : new NBTTagCompound();
+		NBTTagCompound nbttagcompound = new NBTTagCompound();
+		nbttagcompound.setString("id", entityId.toString());
+		entitytag.setTag("EntityTag", nbttagcompound);
+		nbttagcompound.setDouble(key, value);
+		spawnEgg.setTagCompound(entitytag);
 		return spawnEgg;
 	}
 

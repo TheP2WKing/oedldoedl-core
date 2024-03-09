@@ -108,6 +108,18 @@ public class ModLogger {
 		}
 	}
 
+	public static void registeredPotionsLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered potions for " + mod);
+		}
+	}
+
+	public static void registeredPotionTypesLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered potion types for " + mod);
+		}
+	}
+
 	// integration
 	public static void registeredIntegration(String integration, String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {

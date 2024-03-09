@@ -14,7 +14,7 @@ import net.minecraft.world.biome.Biome.SpawnListEntry;
 /**
  * @author TheP2WKing
  */
-public class ModBiomeUtils {
+public class ModBiomeUtil {
 	public static List<Biome> getBiomesFromRegistry() {
 		List<Biome> biomes = Lists.newArrayList();
 		Iterator<Biome> biomeList = Biome.REGISTRY.iterator();

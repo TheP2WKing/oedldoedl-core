@@ -1,6 +1,5 @@
 package net.thep2wking.oedldoedlcore.api.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -75,18 +74,6 @@ public class ModBlockCropBase extends BlockCrops {
 	@Override
 	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
 		return lightLevel;
-	}
-
-	private boolean isBeaconBase;
-
-	public Block setBeaconBase() {
-		isBeaconBase = true;
-		return this;
-	}
-
-	@Override
-	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon) {
-		return isBeaconBase;
 	}
 
 	@Override

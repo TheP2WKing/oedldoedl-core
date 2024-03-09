@@ -2,10 +2,12 @@ package net.thep2wking.oedldoedlcore.registry;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
+import net.thep2wking.oedldoedlcore.init.ModPotions;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModRecipeHelper;
 
@@ -23,6 +25,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.TECHNOLOGY_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.MUSIC_ICON, 0);
 			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.INTEGRATION_ICON, 0);
+
+			ModRecipeHelper.addOreDict("stickDebug", ModItems.DEBUG_STICK, 0);
 
 			ModRecipeHelper.addOreDict("stone", Blocks.STONE, 1);
 			ModRecipeHelper.addOreDict("stone", Blocks.STONE, 2);
@@ -323,7 +327,7 @@ public class ModRecipes {
 	public static void registerRecipes() {
 		ModLogger.registeredRecipesLogger(OedldoedlCore.MODID);
 
-		if (CoreConfig.RECIPES.DEFAULT_RECIPES) {
+		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {
 			ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(Blocks.DEADBUSH, 1, 0), "treeSapling", 0.1f);
 
 			ModRecipeHelper.add4xCompressRecipe(OedldoedlCore.MODID, "additional/brown_mushroom_block",
@@ -457,6 +461,31 @@ public class ModRecipes {
 					"A", 'A', "wool");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/web",
 					new ItemStack(Items.STRING, 5, 0), "A", 'A', "cobweb");
+		}
+
+		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {
+			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "debug_stick",
+					new ItemStack(ModItems.DEBUG_STICK, 1, 0), "  A", " B ", "A  ", 'A', "dustRedstone", 'B',
+					"stickWood");
+		}
+
+		if (CoreConfig.RECIPES.BREWING_RECIPES) {
+			ModRecipeHelper.addBrewingRecipe(ModPotions.SLOW_FALLING_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Items.FEATHER, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.SLOW_FALLING_LONG, ModPotions.SLOW_FALLING_NORMAL,
+					new ItemStack(Items.REDSTONE, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(ModPotions.DOLPHIN_GRACE_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Items.PRISMARINE_CRYSTALS, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.DOLPHIN_GRACE_LONG, ModPotions.DOLPHIN_GRACE_NORMAL,
+					new ItemStack(Items.REDSTONE, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.DOLPHIN_GRACE_STRONG, ModPotions.DOLPHIN_GRACE_NORMAL,
+					new ItemStack(Items.GLOWSTONE_DUST, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(ModPotions.FLIGHT_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Items.ELYTRA, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.FLIGHT_LONG, ModPotions.FLIGHT_NORMAL,
+					new ItemStack(Items.REDSTONE, 1, 0));
 		}
 	}
 }

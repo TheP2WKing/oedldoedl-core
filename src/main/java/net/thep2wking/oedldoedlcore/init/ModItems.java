@@ -3,6 +3,7 @@ package net.thep2wking.oedldoedlcore.init;
 import net.minecraft.item.Item;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.api.item.ModItemIconBase;
+import net.thep2wking.oedldoedlcore.content.ItemDebugStick;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 
@@ -25,4 +26,7 @@ public class ModItems {
 			ModReferences.MODID_MUSIC, ModRarities.YELLOW, false, 0, 4);
 	public static final Item INTEGRATION_ICON = new ModItemIconBase(OedldoedlCore.MODID, "integration_icon",
 			OedldoedlCore.TAB, ModReferences.MODID_INTEGRATION, ModRarities.YELLOW, false, 0, 4);
+
+	public static final Item DEBUG_STICK = new ItemDebugStick(OedldoedlCore.MODID, "debug_stick", OedldoedlCore.TAB,
+			ModRarities.LIGHT_PURPLE, true, 1, 1);
 }
