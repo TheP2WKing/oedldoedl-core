@@ -15,13 +15,13 @@ public class ModPotions {
 	public static final Potion FLIGHT = new PotionFlight(OedldoedlCore.MODID, "flight", false, 0xffffff , 2, 0);
 
 	public static final PotionType SLOW_FALLING_NORMAL = ModPotionTypeBase.addPotionType(SLOW_FALLING, 1800, 1, ModPotionTypes.NORMAL);
-	public static final PotionType SLOW_FALLING_LONG = ModPotionTypeBase.addPotionType(SLOW_FALLING, 4800, 1, ModPotionTypes.LONG);
+	public static final PotionType SLOW_FALLING_LONG = ModPotionTypeBase.addPotionType(SLOW_FALLING, 3600, 1, ModPotionTypes.LONG);
 
 	public static final PotionType DOLPHIN_GRACE_NORMAL = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 900, 1, ModPotionTypes.NORMAL);
 	public static final PotionType DOLPHIN_GRACE_LONG = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 1800, 1, ModPotionTypes.LONG);
 	public static final PotionType DOLPHIN_GRACE_STRONG = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 450, 2, ModPotionTypes.STRONG);
 
-	public static final PotionType FLIGHT_NORMAL = ModPotionTypeBase.addPotionType(FLIGHT, 1800, 1, ModPotionTypes.NORMAL);
-	public static final PotionType FLIGHT_LONG = ModPotionTypeBase.addPotionType(FLIGHT, 3600, 1, ModPotionTypes.LONG);
+	public static final PotionType FLIGHT_NORMAL = ModPotionTypeBase.addPotionType(FLIGHT, 3600, 1, ModPotionTypes.NORMAL);
+	public static final PotionType FLIGHT_LONG = ModPotionTypeBase.addPotionType(FLIGHT, 9600, 1, ModPotionTypes.LONG);
 
 }
