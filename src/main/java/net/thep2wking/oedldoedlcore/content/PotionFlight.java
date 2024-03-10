@@ -23,9 +23,11 @@ public class PotionFlight extends ModPotionBase {
 			AbstractAttributeMap attributeMapIn, int amplifier) {
 		if (entityLivingBaseIn instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) entityLivingBaseIn;
-			player.capabilities.allowFlying = false;
-			player.capabilities.isFlying = false;
-			player.sendPlayerAbilities();
+			if (!player.capabilities.isCreativeMode || player.isSpectator()) {
+				player.capabilities.allowFlying = false;
+				player.capabilities.isFlying = false;
+				player.sendPlayerAbilities();
+			}
 		}
 	}
 }
