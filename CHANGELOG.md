@@ -43,4 +43,4 @@ This version is not compatible with older versions and will not work. Back up yo
 - removed origin tooltips
 - removed IHasModel Interface
 - removed redundant registering of mod icons
-- removed now deprecateed config options
+- removed now deprecated config options
