@@ -18,6 +18,9 @@ public class Properties {
 	@Config.Name("Ores Drop Experience")
 	public boolean ORES_DROP_EXPERIENCE = true;
 
+	@Config.Name("Blocks Emit Light")
+	public boolean BLOCKS_EMIT_LIGHT = true;
+
 	@Config.Name("Paxel Durability Multiplier")
 	@Config.RangeDouble(min = 0.0, max = 10.0)
 	public double PAXEL_DURABILITY_MULTIPLIER = 3.0;

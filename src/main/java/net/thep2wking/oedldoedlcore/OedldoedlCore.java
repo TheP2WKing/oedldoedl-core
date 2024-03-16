@@ -22,6 +22,7 @@ import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.registry.ModRecipes;
 import net.thep2wking.oedldoedlcore.registry.ModRegistry;
+import net.thep2wking.oedldoedlcore.util.ModLogInUtil;
 import net.thep2wking.oedldoedlcore.util.ModLogger;
 import net.thep2wking.oedldoedlcore.util.ModNBTUtil;
 import net.thep2wking.oedldoedlcore.util.ModPotionUtil;
@@ -156,9 +157,7 @@ public class OedldoedlCore {
     public static class ModJoinMessage {
         @SubscribeEvent
         public static void addJoinMessage(PlayerLoggedInEvent event) {
-            if (CoreConfig.LOGGING.JOIN_MESSAGES) {
-                event.player.sendMessage(ModReferences.defaultJoinMessage(NAME, MODID, VERSION));
-            }
+            ModLogInUtil.addJoinMessage(event, NAME, MODID, VERSION);
         }
     }
 }

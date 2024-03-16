@@ -1,11 +1,7 @@
 package net.thep2wking.oedldoedlcore.util;
 
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
-import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 /**
  * @author TheP2WKing
@@ -66,13 +62,4 @@ public class ModReferences {
 	public static final String ATTRIBUTE_NAMETAG_DISTANCE = "Oedldoedl Nametag Distance Attribute";
 	public static final String ATTRIBUTE_ENTITY_GRAVITY = "Oedldoedl Entity Gravity Attribute";
 	public static final String ATTRIBUTE_REACH_DISTANCE = "Oedldoedl Reach Distance Attribute";
-
-	// join message
-	public static ITextComponent defaultJoinMessage(String name, String modid, String version) {
-		return new TextComponentString("[")
-				.appendSibling(new TextComponentString(
-						TextFormatting.GREEN + name + " v" + version))
-				.appendSibling(new TextComponentString("] "))
-				.appendSibling(new TextComponentString(CoreConfig.LOGGING.JOIN_MESSAGE_TEXT));
-	}
 }
