@@ -40,8 +40,9 @@ public class ModBlockBase extends Block {
      * @param resistance   float
      * @param lightLevel   int
      */
-    public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound, MapColor mapColor,
-            int harvestLevel, ModToolTypes toolType, float hardness, float resistance, int lightLevel) {
+    public ModBlockBase(String modid, String name, CreativeTabs tab, Material material, SoundType sound,
+            MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
+            int lightLevel) {
         super(material);
         this.modid = modid;
         this.name = name;
@@ -69,7 +70,10 @@ public class ModBlockBase extends Block {
 
     @Override
     public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return lightLevel;
+        if (CoreConfig.PROPERTIES.BLOCKS_EMIT_LIGHT) {
+            return lightLevel;
+        }
+        return 0;
     }
 
     private boolean isBeaconBase;

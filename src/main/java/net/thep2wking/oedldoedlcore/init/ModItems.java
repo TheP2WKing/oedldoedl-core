@@ -3,7 +3,7 @@ package net.thep2wking.oedldoedlcore.init;
 import net.minecraft.item.Item;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.api.item.ModItemIconBase;
-import net.thep2wking.oedldoedlcore.content.ItemDebugStick;
+import net.thep2wking.oedldoedlcore.content.item.ItemDebugStick;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 

@@ -8,6 +8,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 /**
@@ -73,7 +74,10 @@ public class ModBlockCropBase extends BlockCrops {
 
 	@Override
 	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-		return lightLevel;
+		if (CoreConfig.PROPERTIES.BLOCKS_EMIT_LIGHT) {
+			return lightLevel;
+		}
+		return 0;
 	}
 
 	@Override

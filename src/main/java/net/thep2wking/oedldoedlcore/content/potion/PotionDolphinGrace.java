@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.content;
+package net.thep2wking.oedldoedlcore.content.potion;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;

@@ -49,9 +49,9 @@ public class ModBlockOreBase extends BlockOre {
 	 * @param resistance   float
 	 * @param lightLevel   int
 	 */
-	public ModBlockOreBase(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material, SoundType sound,
-			MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness, float resistance,
-			int lightLevel) {
+	public ModBlockOreBase(String modid, String name, CreativeTabs tab, int minXp, int maxXp, Material material,
+			SoundType sound, MapColor mapColor, int harvestLevel, ModToolTypes toolType, float hardness,
+			float resistance, int lightLevel) {
 		super();
 		this.modid = modid;
 		this.name = name;
@@ -75,14 +75,17 @@ public class ModBlockOreBase extends BlockOre {
 	}
 
 	@Override
-    public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-        return mapColor;
-    }
+	public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+		return mapColor;
+	}
 
 	@Override
-    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return lightLevel;
-    }
+	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+		if (CoreConfig.PROPERTIES.BLOCKS_EMIT_LIGHT) {
+			return lightLevel;
+		}
+		return 0;
+	}
 
 	public int getExperience(Random rand) {
 		if (CoreConfig.PROPERTIES.ORES_DROP_EXPERIENCE) {

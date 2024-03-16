@@ -1,4 +1,4 @@
-package net.thep2wking.oedldoedlcore.content;
+package net.thep2wking.oedldoedlcore.content.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
