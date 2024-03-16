@@ -55,7 +55,6 @@ public class ModRegistry {
 
 		event.getRegistry().register(ModPotions.SLOW_FALLING);
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE);
-		event.getRegistry().register(ModPotions.FLIGHT);
 	}
 
 	@SubscribeEvent
@@ -68,9 +67,6 @@ public class ModRegistry {
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_NORMAL);
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_LONG);
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_STRONG);
-
-		event.getRegistry().register(ModPotions.FLIGHT_NORMAL);
-		event.getRegistry().register(ModPotions.FLIGHT_LONG);
 	}
 
 	public static void registerSpawnEggs() {

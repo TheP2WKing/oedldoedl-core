@@ -5,8 +5,8 @@ import net.thep2wking.oedldoedlcore.api.potion.ModPotionBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
 public class PotionSlowFalling extends ModPotionBase {
-	public PotionSlowFalling(String modid, String name, boolean isBad, int color, int posX, int posY) {
-		super(modid, name, isBad, color, posX, posY);
+	public PotionSlowFalling(String modid, String name, boolean isBad, boolean isInstant, int color, int posX, int posY) {
+		super(modid, name, isBad, isInstant, color, posX, posY);
 	}
 
 	@Override

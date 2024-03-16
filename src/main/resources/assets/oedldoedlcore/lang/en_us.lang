@@ -95,12 +95,6 @@ splash_potion.effect.oedldoedlcore.dolphin_grace=Splash Potion of Dolphin Grace
 lingering_potion.effect.oedldoedlcore.dolphin_grace=Lingering Potion of Dolphin Grace
 tipped_arrow.effect.oedldoedlcore.dolphin_grace=Arrow of Dolphin Grace
 
-oedldoedlcore.flight=Flight
-potion.effect.oedldoedlcore.flight=Potion of Flight
-splash_potion.effect.oedldoedlcore.flight=Splash Potion of Flight
-lingering_potion.effect.oedldoedlcore.flight=Lingering Potion of Flight
-tipped_arrow.effect.oedldoedlcore.flight=Arrow of Flight
-
 # jei
 item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye
 item.oedldoedlcore.firework_star.jei2=Up to 8 Dyes can be added. A Head, a Gold Nugget, a Feather, or a Fire Charge can be added. Diamond and the Glowstone Dust can be added optional with any of the other ingredients. Any additional Dye adds a fade to color effect to the Firework Star, overwriting any existing fades. Up to 8 Dyes can be added.
