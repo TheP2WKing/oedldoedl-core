@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
@@ -58,11 +57,6 @@ public class ModItemArmorBase extends ItemArmor {
 		setRegistryName(this.modid + ":" + this.name);
 		setCreativeTab(this.tab);
 		BlockDispenser.DISPENSE_BEHAVIOR_REGISTRY.putObject(this, ItemArmor.DISPENSER_BEHAVIOR);
-	}
-
-	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return true;
 	}
 	
 	private boolean hasRGBBar;
