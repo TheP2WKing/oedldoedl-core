@@ -16,7 +16,16 @@ public class ModEntityRenderBase<T extends EntityLiving> extends RenderLiving<T>
 	public final String modid;
 	public final String name;
 
-	public ModEntityRenderBase(String modid, String name, RenderManager renderManager, ModelBase model, float shadowSize) {
+	/**
+	 * @author TheP2WKing
+	 * @param modid         String
+	 * @param name          String
+	 * @param renderManager {@link RenderManager}
+	 * @param model         {@link ModelBase}
+	 * @param shadowSize    float
+	 */
+	public ModEntityRenderBase(String modid, String name, RenderManager renderManager, ModelBase model,
+			float shadowSize) {
 		super(renderManager, model, shadowSize);
 		this.modid = modid;
 		this.name = name;

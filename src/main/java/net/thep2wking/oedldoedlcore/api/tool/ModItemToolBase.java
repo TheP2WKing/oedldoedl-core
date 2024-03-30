@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
@@ -64,7 +65,8 @@ public class ModItemToolBase extends ItemTool {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return true;
+		return enchantment.type.canEnchantItem(stack.getItem())
+				|| enchantment.canApply(new ItemStack(Items.FLINT_AND_STEEL));
 	}
 
 	private boolean hasRGBBar;

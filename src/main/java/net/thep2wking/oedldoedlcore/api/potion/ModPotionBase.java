@@ -4,6 +4,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModPotionBase extends Potion {
 	public final String modid;
 	public final String name;
@@ -12,6 +15,16 @@ public class ModPotionBase extends Potion {
 	public final int posX;
 	public final int posY;
 
+	/**
+	 * @author TheP2WKing
+	 * @param modid     String
+	 * @param name      String
+	 * @param isBad     boolean
+	 * @param isInstant boolean
+	 * @param color     int
+	 * @param posX      int
+	 * @param posY      int
+	 */
 	public ModPotionBase(String modid, String name, boolean isBad, boolean isInstant, int color, int posX, int posY) {
 		super(isBad, color);
 		this.modid = modid;

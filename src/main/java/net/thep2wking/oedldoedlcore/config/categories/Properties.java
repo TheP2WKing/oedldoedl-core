@@ -36,6 +36,17 @@ public class Properties {
 		public boolean BEACON_BASES = true;
 	}
 
+	@Config.Name("bows")
+	public final Bows BOWS = new Bows();
+
+	public static class Bows {
+		@Config.Name("Extra Arrow Damage")
+		public boolean EXTRA_ARROW_DAMAGE = true;
+
+		@Config.Name("Modified Draw Time")
+		public boolean MODIFIED_DRAW_TIME = true;
+	}
+
 	@Config.Name("creative")
 	public final Creative CREATIVE = new Creative();
 

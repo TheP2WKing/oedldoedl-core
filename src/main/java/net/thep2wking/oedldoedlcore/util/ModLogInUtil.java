@@ -10,6 +10,9 @@ import net.minecraft.util.text.event.HoverEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModLogInUtil {
 	// join message component
 	public static ITextComponent joinMessageTextComponent(String name, String modid, String version) {

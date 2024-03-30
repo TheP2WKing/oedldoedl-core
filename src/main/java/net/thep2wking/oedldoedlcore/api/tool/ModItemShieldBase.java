@@ -161,7 +161,7 @@ public class ModItemShieldBase extends ItemShield {
 			if (slot == EntityEquipmentSlot.MAINHAND) {
 				attributes.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
 						new AttributeModifier(UUID.fromString(SHIELD_UUID), ModReferences.ATTRIBUTE_ATTACK_DAMAGE,
-								attackDamage, AttributeModifierOperation.ADD));
+								this.attackDamage, AttributeModifierOperation.ADD));
 				return attributes;
 			}
 		}
@@ -179,7 +179,7 @@ public class ModItemShieldBase extends ItemShield {
 	}
 
 	public ItemStack getRepairStackFromMaterial() {
-		return material.getRepairItemStack();
+		return this.material.getRepairItemStack();
 	}
 
 	@Override

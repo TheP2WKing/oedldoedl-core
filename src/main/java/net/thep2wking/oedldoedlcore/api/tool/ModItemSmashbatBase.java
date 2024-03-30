@@ -3,11 +3,9 @@ package net.thep2wking.oedldoedlcore.api.tool;
 import java.util.HashSet;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
@@ -50,11 +48,6 @@ public class ModItemSmashbatBase extends ModItemToolBase {
 		this.verticalMotion = verticalMotion;
 		this.horizontalMotion = horizontalMotion;
 		this.hitSound = hitSound;
-	}
-
-	@Override
-	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return enchantment.canApply(new ItemStack(Items.FLINT_AND_STEEL));
 	}
 
 	private boolean hasRGBBar;

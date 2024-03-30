@@ -10,6 +10,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModEntityUtil {
 	// spawn eggs in creative tab
 	@SideOnly(Side.CLIENT)

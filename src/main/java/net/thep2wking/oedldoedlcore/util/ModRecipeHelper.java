@@ -113,7 +113,8 @@ public class ModRecipeHelper {
 	}
 
 	public static void addHorseArmorRecipe(String modid, String name, ItemStack horseArmor, String material) {
-		addShapedRecipe(modid, "armor/" + name + "_horse_armor", horseArmor, "A A", "BCB", "A A", 'A', material, 'B', "leather", 'C', "wool");
+		addShapedRecipe(modid, "armor/" + name + "_horse_armor", horseArmor, "A A", "BCB", "A A", 'A', material, 'B',
+				"leather", 'C', "wool");
 	}
 
 	public static void addFullArmorRecipe(String modid, String name, ItemStack helmet,
@@ -132,7 +133,7 @@ public class ModRecipeHelper {
 
 	public static void addShovelRecipe(String modid, String name, ItemStack shovel, String stick,
 			String material) {
-		addShapedRecipe(modid, "tool/" + name+ "_shovel", shovel, "A", "B", "B", 'A', material, 'B', stick);
+		addShapedRecipe(modid, "tool/" + name + "_shovel", shovel, "A", "B", "B", 'A', material, 'B', stick);
 	}
 
 	public static void addPickaxeRecipe(String modid, String name, ItemStack pickaxe, String stick,
@@ -150,7 +151,8 @@ public class ModRecipeHelper {
 
 	public static void addPaxelRecipe(String modid, String name, ItemStack paxel, String stick, ItemStack axe,
 			ItemStack shovel, ItemStack pickaxe) {
-		addShapedRecipe(modid, "tool/" + name + "_paxel", paxel, "ABC", " D ", " D ", 'A', axe, 'B', shovel, 'C', pickaxe, 'D',
+		addShapedRecipe(modid, "tool/" + name + "_paxel", paxel, "ABC", " D ", " D ", 'A', axe, 'B', shovel, 'C',
+				pickaxe, 'D',
 				stick);
 	}
 
@@ -162,15 +164,19 @@ public class ModRecipeHelper {
 		addShapedRecipe(modid, "tool/" + name + "_shears", shears, " A", "A ", 'A', material);
 	}
 
+	public static void addBowRecipe(String modid, String name, ItemStack bow, String stick, String material) {
+		addShapedRecipe(modid, "tool/" + name + "_bow", bow, " AB", "C B", " AB", 'A', material, 'B', "string", 'C',
+				stick);
+	}
+
 	public static void addShieldRecipe(String modid, String name, ItemStack shield, String material) {
 		addShapedRecipe(modid, "tool/" + name + "_shield", shield, "AAA", "ABA", " A ", 'A', material, 'B',
 				new ItemStack(Items.SHIELD, 1));
 	}
 
 	public static void addFullToolRecipe(String modid, String name, ItemStack sword, ItemStack shovel,
-			ItemStack pickaxe, ItemStack axe, ItemStack hoe, ItemStack paxel,
-			ItemStack smashbat, ItemStack shears, ItemStack shield, String stick,
-			String material) {
+			ItemStack pickaxe, ItemStack axe, ItemStack hoe, ItemStack paxel, ItemStack smashbat, ItemStack shears,
+			ItemStack bow, ItemStack shield, String stick, String material) {
 		addSwordRecipe(modid, name, sword, stick, material);
 		addShovelRecipe(modid, name, shovel, stick, material);
 		addPickaxeRecipe(modid, name, pickaxe, stick, material);
@@ -179,6 +185,7 @@ public class ModRecipeHelper {
 		addPaxelRecipe(modid, name, paxel, stick, axe, shovel, pickaxe);
 		addSmashbatRecipe(modid, name, smashbat, material);
 		addShearsRecipe(modid, name, shears, material);
+		addBowRecipe(modid, name, bow, stick, material);
 		addShieldRecipe(modid, name, shield, material);
 	}
 }
