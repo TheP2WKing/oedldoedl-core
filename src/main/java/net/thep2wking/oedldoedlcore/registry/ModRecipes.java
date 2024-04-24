@@ -51,7 +51,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("bricks", Blocks.BRICK_BLOCK, 0);
 
 			ModRecipeHelper.addOreDict("bricksNether", Blocks.NETHER_BRICK, 0);
-			ModRecipeHelper.addOreDict("bricksNether", Blocks.RED_NETHER_BRICK, 0);
+			ModRecipeHelper.addOreDict("bricksNetherRed", Blocks.RED_NETHER_BRICK, 0);
 
 			ModRecipeHelper.addOreDict("endstone", Blocks.END_BRICKS, 0);
 
@@ -65,9 +65,9 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("stoneBrick", Blocks.STONEBRICK, 3);
 
 			ModRecipeHelper.addOreDict("ice", Blocks.ICE, 0);
-			ModRecipeHelper.addOreDict("ice", Blocks.PACKED_ICE, 0);
 			ModRecipeHelper.addOreDict("blockIce", Blocks.ICE, 0);
-			ModRecipeHelper.addOreDict("blockIce", Blocks.PACKED_ICE, 0);
+			ModRecipeHelper.addOreDict("icePacked", Blocks.PACKED_ICE, 0);
+			ModRecipeHelper.addOreDict("blockIcePacked", Blocks.PACKED_ICE, 0);
 
 			ModRecipeHelper.addOreDict("bed", Items.BED, 0);
 			ModRecipeHelper.addOreDict("bed", Items.BED, 1);
@@ -321,6 +321,8 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("fireworkRocket", Items.FIREWORKS, 0);
 			ModRecipeHelper.addOreDict("fireworkCharge", Items.FIREWORK_CHARGE, 0);
+
+			ModRecipeHelper.addOreDict("bow", Items.BOW, 0);
 		}
 	}
 
@@ -330,137 +332,100 @@ public class ModRecipes {
 		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {
 			ModRecipeHelper.addOreDictSmeltingRecipe(new ItemStack(Blocks.DEADBUSH, 1, 0), "treeSapling", 0.1f);
 
-			ModRecipeHelper.add4xCompressRecipe(OedldoedlCore.MODID, "additional/brown_mushroom_block",
-					new ItemStack(Blocks.BROWN_MUSHROOM_BLOCK, 1, 0), new ItemStack(Blocks.BROWN_MUSHROOM, 1, 0));
-
-			ModRecipeHelper.add4xCompressRecipe(OedldoedlCore.MODID, "additional/red_mushroom_block",
-					new ItemStack(Blocks.RED_MUSHROOM_BLOCK, 1, 0), new ItemStack(Blocks.RED_MUSHROOM, 1, 0));
-
-			ModRecipeHelper.add9xCompressRecipe(OedldoedlCore.MODID, "additional/packed_ice",
-					new ItemStack(Blocks.PACKED_ICE, 1, 0), new ItemStack(Blocks.ICE, 1, 0));
-
+			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/brown_mushroom_block",
+					new ItemStack(Blocks.BROWN_MUSHROOM_BLOCK, 1, 0), "AA", "AA", 'A',
+					new ItemStack(Blocks.BROWN_MUSHROOM, 1, 0));
+			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/red_mushroom_block",
+					new ItemStack(Blocks.RED_MUSHROOM_BLOCK, 1, 0), "AA", "AA", 'A',
+					new ItemStack(Blocks.RED_MUSHROOM, 1, 0));
+			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/packed_ice",
+					new ItemStack(Blocks.PACKED_ICE, 1, 0), "AAA", "AAA", "AAA", 'A', "blockIce");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/chest", new ItemStack(Blocks.CHEST, 4, 0),
-					"AAA",
-					"A A", "AAA", 'A', "plankWood");
-
+					"AAA", "A A", "AAA", 'A', "plankWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/stick", new ItemStack(Items.STICK, 16, 0),
-					"A", "A",
-					'A', "logWood");
-
+					"A", "A", 'A', "logWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/hopper",
-					new ItemStack(Blocks.HOPPER, 1, 0), "ABA",
-					"ABA", " A ", 'A', "ingotIron", 'B', "logWood");
-
+					new ItemStack(Blocks.HOPPER, 1, 0), "ABA", "ABA", " A ", 'A', "ingotIron", 'B', "logWood");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/cobweb", new ItemStack(Blocks.WEB, 1, 0),
-					"A A",
-					" A ", "A A", 'A', "string");
-
+					"A A", " A ", "A A", 'A', "string");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/name_tag",
-					new ItemStack(Items.NAME_TAG, 1, 0), "  A",
-					" B ", "B  ", 'A', "string", 'B', "ingotIron");
-
+					new ItemStack(Items.NAME_TAG, 1, 0), "  A", " B ", "B  ", 'A', "string", 'B', "ingotIron");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/sponge",
-					new ItemStack(Blocks.SPONGE, 1, 0), " A ",
-					"ABA", " A ", 'A', "slimeball", 'B', "wool");
-
+					new ItemStack(Blocks.SPONGE, 1, 0), " A ", "ABA", " A ", 'A', "slimeball", 'B', "wool");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/command_block_minecart",
-					new ItemStack(Items.COMMAND_BLOCK_MINECART, 1, 0), "A", "B", 'A',
-					new ItemStack(Blocks.COMMAND_BLOCK, 1, 0), 'B', new ItemStack(Items.MINECART, 1, 0));
-
+					new ItemStack(Items.COMMAND_BLOCK_MINECART, 1, 0), "A", "B", 'A', "commandBlock", 'B',
+					new ItemStack(Items.MINECART, 1, 0));
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/enchanted_golden_apple",
-					new ItemStack(Items.GOLDEN_APPLE, 1, 1), "AAA", "ABA", "AAA", 'A', "blockGold", 'B',
-					new ItemStack(Items.APPLE, 1, 0));
-
+					new ItemStack(Items.GOLDEN_APPLE, 1, 1), "AAA", "ABA", "AAA", 'A', "blockGold", 'B', "cropApple");
 			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/saddle", new ItemStack(Items.SADDLE, 1, 0),
-					"AAA",
-					"ABA", " C ", 'A', "leather", 'B', "string", 'C', "ingotIron");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/paper",
-					new ItemStack(Items.PAPER, 3, 0), "AA", "A ", 'A', "sugarcane");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "additional/flint",
-					new ItemStack(Items.FLINT, 1, 0), "AA", "A ", 'A', "gravel");
+					"AAA", "ABA", " C ", 'A', "leather", 'B', "string", 'C', "ingotIron");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "additional/paper",
+					new ItemStack(Items.PAPER, 3, 0), "sugarcane", "sugarcane", "sugarcane");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "additional/flint",
+					new ItemStack(Items.FLINT, 1, 0), "gravel", "gravel", "gravel");
 		}
 
 		if (CoreConfig.RECIPES.REVERSE_RECIPES) {
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/bed", new ItemStack(Items.BED, 1, 0), "A",
-					'A', "bed");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/book", new ItemStack(Items.BOOK, 1, 0), "A",
-					'A', "book");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/arrow", new ItemStack(Items.ARROW, 1, 0), "A",
-					'A', "arrow");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/glass_block",
-					new ItemStack(Blocks.GLASS, 1, 0),
-					"A", 'A', "blockGlass");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/glass_pane",
-					new ItemStack(Blocks.GLASS_PANE, 1, 0), "A", 'A', "paneGlass");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/shulker_box",
-					new ItemStack(Blocks.PURPLE_SHULKER_BOX, 1, 0), "A", 'A', "chestShulker");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/terracotta",
-					new ItemStack(Blocks.HARDENED_CLAY, 1, 0), "A", 'A', "terracotta");
-
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/bookshelf",
-					new ItemStack(Items.BOOK, 3, 0), "A", 'A', "bookshelf");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/bricks", new ItemStack(Items.BRICK, 1, 0),
-					"A", 'A', "bricks");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/brown_mushroom_block",
-					new ItemStack(Blocks.BROWN_MUSHROOM, 4, 0),
-					"A", 'A', new ItemStack(Blocks.BROWN_MUSHROOM_BLOCK, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/red_mushroom_block",
-					new ItemStack(Blocks.RED_MUSHROOM, 4, 0),
-					"A", 'A', new ItemStack(Blocks.RED_MUSHROOM_BLOCK, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/clay", new ItemStack(Items.CLAY_BALL, 4, 0),
-					"A", 'A', "blockClay");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/glowstone",
-					new ItemStack(Items.GLOWSTONE_DUST, 4, 0),
-					"A", 'A', "glowstone");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/ice", new ItemStack(Blocks.ICE, 9, 0),
-					"A", 'A', new ItemStack(Blocks.PACKED_ICE, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/magma_block",
-					new ItemStack(Items.MAGMA_CREAM, 4, 0), "A", 'A', "blockMagma");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/melon_block",
-					new ItemStack(Items.MELON, 9, 0), "A", 'A', "blockMelon");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/nether_brick",
-					new ItemStack(Items.NETHERBRICK, 4, 0),
-					"A", 'A', new ItemStack(Blocks.NETHER_BRICK, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/red_nether_brick",
-					new ItemStack(Items.NETHERBRICK, 2, 0),
-					"A", 'A', new ItemStack(Blocks.RED_NETHER_BRICK, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/purpur_block",
-					new ItemStack(Items.CHORUS_FRUIT_POPPED, 4, 0),
-					"A", 'A', "blockPurpur");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/nether_wart_block",
-					new ItemStack(Items.NETHER_WART, 9, 0),
-					"A", 'A', new ItemStack(Blocks.NETHER_WART_BLOCK, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/quartz_block",
-					new ItemStack(Items.QUARTZ, 4, 0),
-					"A", 'A', "blockQuartz");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/leather",
-					new ItemStack(Items.RABBIT_HIDE, 4, 0),
-					"A", 'A', "leather");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/sandstone",
-					new ItemStack(Blocks.SAND, 4, 0),
-					"A", 'A', "sandstone");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/prismarine",
-					new ItemStack(Items.PRISMARINE_SHARD, 4, 0),
-					"A", 'A', "blockPrismarine");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/prismarine_bricks",
-					new ItemStack(Items.PRISMARINE_SHARD, 9, 0),
-					"A", 'A', "blockPrismarineBrick");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/dark_prismarine",
-					new ItemStack(Items.PRISMARINE_SHARD, 8, 0),
-					"A", 'A', "blockPrismarineDark");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/snow_layer",
-					new ItemStack(Items.SNOWBALL, 2, 0),
-					"A", 'A', new ItemStack(Blocks.SNOW_LAYER, 1, 0));
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/snow",
-					new ItemStack(Items.SNOWBALL, 4, 0),
-					"A", 'A', "blockSnow");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/wool",
-					new ItemStack(Items.STRING, 4, 0),
-					"A", 'A', "wool");
-			ModRecipeHelper.addShapedRecipe(OedldoedlCore.MODID, "reverse/web",
-					new ItemStack(Items.STRING, 5, 0), "A", 'A', "cobweb");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/bed", new ItemStack(Items.BED, 1, 0),
+					"bed");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/book", new ItemStack(Items.BOOK, 1, 0),
+					"book");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/arrow", new ItemStack(Items.ARROW, 1, 0),
+					"arrow");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/glass_block",
+					new ItemStack(Blocks.GLASS, 1, 0), "blockGlass");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/glass_pane",
+					new ItemStack(Blocks.GLASS_PANE, 1, 0), "paneGlass");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/shulker_box",
+					new ItemStack(Blocks.PURPLE_SHULKER_BOX, 1, 0), "chestShulker");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/terracotta",
+					new ItemStack(Blocks.HARDENED_CLAY, 1, 0), "terracotta");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/bookshelf",
+					new ItemStack(Items.BOOK, 3, 0), "bookshelf");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/bricks", new ItemStack(Items.BRICK, 1, 0),
+					"bricks");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/brown_mushroom_block",
+					new ItemStack(Blocks.BROWN_MUSHROOM, 4, 0), new ItemStack(Blocks.BROWN_MUSHROOM_BLOCK, 1, 0));
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/red_mushroom_block",
+					new ItemStack(Blocks.RED_MUSHROOM, 4, 0), new ItemStack(Blocks.RED_MUSHROOM_BLOCK, 1, 0));
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/clay",
+					new ItemStack(Items.CLAY_BALL, 4, 0), "blockClay");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/glowstone",
+					new ItemStack(Items.GLOWSTONE_DUST, 4, 0), "glowstone");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/ice", new ItemStack(Blocks.ICE, 9, 0),
+					"blockIcePacked");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/magma_block",
+					new ItemStack(Items.MAGMA_CREAM, 4, 0), "blockMagma");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/melon_block",
+					new ItemStack(Items.MELON, 9, 0), "blockMelon");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/nether_brick",
+					new ItemStack(Items.NETHERBRICK, 4, 0), "bricksNether");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/red_nether_brick",
+					new ItemStack(Items.NETHERBRICK, 2, 0), "bricksNetherRed");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/purpur_block",
+					new ItemStack(Items.CHORUS_FRUIT_POPPED, 4, 0), "blockPurpur");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/nether_wart_block",
+					new ItemStack(Items.NETHER_WART, 9, 0), "blockNetherWart");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/quartz_block",
+					new ItemStack(Items.QUARTZ, 4, 0), "blockQuartz");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/leather",
+					new ItemStack(Items.RABBIT_HIDE, 4, 0), "leather");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/sandstone",
+					new ItemStack(Blocks.SAND, 4, 0), "sandstone");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/prismarine",
+					new ItemStack(Items.PRISMARINE_SHARD, 4, 0), "blockPrismarine");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/prismarine_bricks",
+					new ItemStack(Items.PRISMARINE_SHARD, 9, 0), "blockPrismarineBrick");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/dark_prismarine",
+					new ItemStack(Items.PRISMARINE_SHARD, 8, 0), "blockPrismarineDark");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/snow_layer",
+					new ItemStack(Items.SNOWBALL, 2, 0), new ItemStack(Blocks.SNOW_LAYER, 1, 0));
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/snow", new ItemStack(Items.SNOWBALL, 4, 0),
+					"blockSnow");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/wool", new ItemStack(Items.STRING, 4, 0),
+					"wool");
+			ModRecipeHelper.addShapelessRecipe(OedldoedlCore.MODID, "reverse/web", new ItemStack(Items.STRING, 5, 0),
+					"cobweb");
 		}
 
 		if (CoreConfig.RECIPES.ADDITIONAL_RECIPES) {

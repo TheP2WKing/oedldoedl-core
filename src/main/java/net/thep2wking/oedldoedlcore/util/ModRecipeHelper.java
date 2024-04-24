@@ -10,8 +10,10 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 /**
  * @author TheP2WKing
@@ -24,6 +26,12 @@ public class ModRecipeHelper {
 
 	public static void addShapelessRecipe(String modid, String name, ItemStack output, Ingredient... inputs) {
 		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null, output, inputs);
+	}
+
+	public static void addShapelessRecipe(String modid, String name, ItemStack output, Object... inputs) {
+		ShapelessOreRecipe oreRecipe = new ShapelessOreRecipe(new ResourceLocation(modid, name), output, inputs);
+		oreRecipe.setRegistryName(new ResourceLocation(modid, name));
+		ForgeRegistries.RECIPES.register(oreRecipe);
 	}
 
 	// recipe removal (quick and dirty)
@@ -49,43 +57,6 @@ public class ModRecipeHelper {
 		PotionHelper.addMix(inputType, inputStack.getItem(), outputType);
 	}
 
-	// compressing recipes
-	public static void add9xCompressRecipe(String modid, String name, ItemStack output,
-			ItemStack input) {
-		GameRegistry.addShapedRecipe(new ResourceLocation(modid, name), null, output, "AAA", "AAA",
-				"AAA", 'A', input);
-	}
-
-	public static void add4xCompressRecipe(String modid, String name, ItemStack output,
-			ItemStack input) {
-		GameRegistry.addShapedRecipe(new ResourceLocation(modid, name), null, output, "AA", "AA", 'A',
-				input);
-	}
-
-	public static void add9xUncompressRecipe(String modid, String name, Item output, int meta,
-			ItemStack input) {
-		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null,
-				new ItemStack(output, 9, meta), Ingredient.fromStacks(input));
-	}
-
-	public static void add9xUncompressRecipe(String modid, String name, Block output, int meta,
-			ItemStack input) {
-		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null,
-				new ItemStack(output, 9, meta), Ingredient.fromStacks(input));
-	}
-
-	public static void add4xUncompressRecipe(String modid, String name, Item output, int meta,
-			ItemStack input) {
-		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null,
-				new ItemStack(output, 4, meta), Ingredient.fromStacks(input));
-	}
-
-	public static void add4xUncompressRecipe(String modid, String name, Block output, int meta,
-			ItemStack input) {
-		GameRegistry.addShapelessRecipe(new ResourceLocation(modid, name), null,
-				new ItemStack(output, 4, meta), Ingredient.fromStacks(input));
-	}
-
 	// oredict
 	public static void addOreDict(String name, Item input, int meta) {
 		OreDictionary.registerOre(name, new ItemStack(input, 1, meta));
@@ -93,6 +64,10 @@ public class ModRecipeHelper {
 
 	public static void addOreDict(String name, Block input, int meta) {
 		OreDictionary.registerOre(name, new ItemStack(input, 1, meta));
+	}
+
+	public static void addOreDict(String name, ItemStack input) {
+		OreDictionary.registerOre(name, input);
 	}
 
 	// armor

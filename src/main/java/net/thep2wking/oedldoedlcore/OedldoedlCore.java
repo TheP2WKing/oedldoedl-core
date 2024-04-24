@@ -114,12 +114,6 @@ public class OedldoedlCore {
                 list.add(ModNBTUtil.addSpawnEgg("minecraft:snowman"));
                 list.add(ModNBTUtil.addSpawnEgg("minecraft:villager_golem"));
                 list.add(ModNBTUtil.addSpawnEgg("minecraft:wither"));
-                list.add(ModNBTUtil.addSpawnEgg("minecraft:creeper", "powered", true)
-                        .setTranslatableName("item." + MODID + ".charged_screeper_spawn_egg.name"));
-                list.add(ModNBTUtil.addSpawnEgg("minecraft:sheep", "CustomName", "jeb_")
-                        .setTranslatableName("item." + MODID + ".rainbow_sheep_spawn_egg.name"));
-                list.add(ModNBTUtil.addSpawnEgg("minecraft:rabbit", "RabbitType", 99)
-                        .setTranslatableName("item." + MODID + ".the_killer_bunny_spawn_egg.name"));
             }
             ModPotionUtil.displayPotions(list, MODID);
         }
