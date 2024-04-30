@@ -67,6 +67,9 @@ public class ModRegistry {
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_NORMAL);
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_LONG);
 		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_STRONG);
+
+		event.getRegistry().register(ModPotions.GLOWING_NORMAL);
+		event.getRegistry().register(ModPotions.GLOWING_LONG);
 	}
 
 	public static void registerSpawnEggs() {

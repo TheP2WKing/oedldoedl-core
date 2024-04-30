@@ -446,6 +446,11 @@ public class ModRecipes {
 					new ItemStack(Items.REDSTONE, 1, 0));
 			ModRecipeHelper.addBrewingRecipe(ModPotions.DOLPHIN_GRACE_STRONG, ModPotions.DOLPHIN_GRACE_NORMAL,
 					new ItemStack(Items.GLOWSTONE_DUST, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(ModPotions.GLOWING_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Blocks.GLOWSTONE, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.GLOWING_LONG, ModPotions.GLOWING_NORMAL,
+					new ItemStack(Items.REDSTONE, 1, 0));
 		}
 	}
 }

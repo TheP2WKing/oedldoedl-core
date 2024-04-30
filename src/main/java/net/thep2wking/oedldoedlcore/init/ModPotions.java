@@ -1,5 +1,6 @@
 package net.thep2wking.oedldoedlcore.init;
 
+import net.minecraft.init.MobEffects;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
@@ -18,4 +19,7 @@ public class ModPotions {
 	public static final PotionType DOLPHIN_GRACE_NORMAL = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 900, 1, ModPotionTypes.NORMAL);
 	public static final PotionType DOLPHIN_GRACE_LONG = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 1800, 1, ModPotionTypes.LONG);
 	public static final PotionType DOLPHIN_GRACE_STRONG = ModPotionTypeBase.addPotionType(DOLPHIN_GRACE, 450, 2, ModPotionTypes.STRONG);
+
+	public static final PotionType GLOWING_NORMAL = ModPotionTypeBase.addPotionType(MobEffects.GLOWING, 3600, 1, ModPotionTypes.NORMAL);
+	public static final PotionType GLOWING_LONG = ModPotionTypeBase.addPotionType(MobEffects.GLOWING, 9600, 1, ModPotionTypes.LONG);
 }
