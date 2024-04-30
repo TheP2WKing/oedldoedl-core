@@ -10,6 +10,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -52,9 +53,13 @@ public class ModRecipeHelper {
 		}
 	}
 
-	// potion recipes
+	// brewing recipes
 	public static void addBrewingRecipe(PotionType outputType, PotionType inputType, ItemStack inputStack) {
 		PotionHelper.addMix(inputType, inputStack.getItem(), outputType);
+	}
+
+	public static void addForgBucketBrewingRecipe(PotionType outputType, PotionType inputType, Fluid inputFluid) {
+		ModForgeBucketBrewingRecipe.addCustomBrewingRecipe(outputType, inputType, inputFluid);
 	}
 
 	// oredict
