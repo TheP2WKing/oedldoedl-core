@@ -1,5 +1,33 @@
 # Changelog
 
+## [4.1.0] - 2024-06-02
+
+### Added
+
+- added dolphin grace potion from Minecraft 1.13+
+- added slow falling potion from Minecraft 1.13+
+- added glowing potion
+- added spawn eggs for missing mobs to creative tab
+- added helper to add brewing recipes with forge buckets
+- added config options to configure the new potions
+- added config option to disable block lighting
+- added missing parameters
+- added shapeless ore recipe base
+
+### Changed
+
+- renamed ModBiomeUtils to ModBiomeUtil to follow class naming conventions
+- added spawn eggs for missing mobs to creative tab
+- minimized implementation of TheOneProbe integration
+- updated shapeless recipes to actually be shapeless recipes and be able to use oredict
+- updated join messages across the mod series
+- fixed ModItemArmorBase items can be enchanted with every enchantment
+
+### Removed
+
+- removed beacon base properties from ModCropBase
+- removed ModLogger.info because it was broken from the beginning on
+
 ## [4.0.0] - 2024-03-03
 
 ### 1.12.2 isn't dead, it just took some time
