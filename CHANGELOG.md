@@ -1,12 +1,13 @@
 # Changelog
 
-## [4.1.0] - 2024-06-02
+## [4.1.0] - 2024-06-09
 
 ### Added
 
 - added dolphin grace potion from Minecraft 1.13+
 - added slow falling potion from Minecraft 1.13+
 - added glowing potion
+- added debuf stick (inspired from 1.13)
 - added spawn eggs for missing mobs to creative tab
 - added helper to add brewing recipes with forge buckets
 - added config options to configure the new potions
