@@ -75,7 +75,7 @@ public class ModRegistry {
 	}
 
 	public static void registerSpawnEggs() {
-		ModEntityUtil.addSpawnEgg("minecraft", "ender_dragon", 0x1c1c1c, 0xe079fa);
+		// ModEntityUtil.addSpawnEgg("minecraft", "ender_dragon", 0x1c1c1c, 0xe079fa);
         ModEntityUtil.addSpawnEgg("minecraft", "giant", 0x00afaf, 0x799c65);
         ModEntityUtil.addSpawnEgg("minecraft", "illusion_illager", 0x959b9b, 0x0e406c);
         ModEntityUtil.addSpawnEgg("minecraft", "snowman", 0xd9f2f2, 0x81a4a4);
