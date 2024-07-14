@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.tab.ModOedldoedlTabBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
@@ -46,6 +48,7 @@ public class OedldoedlCore {
     public static final CreativeTabs CREATIVE = ModCreativeTabHelper.addUnobtainableCreativeTab();
     public static final CreativeTabs TAB = new ModOedldoedlTabBase(MODID) {
         @Override
+        @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem() {
             return new ItemStack(ModItems.CORE_ICON);
         }
