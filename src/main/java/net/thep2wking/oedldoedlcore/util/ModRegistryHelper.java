@@ -6,6 +6,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biome;
@@ -48,6 +50,16 @@ public class ModRegistryHelper {
         event.getRegistry().register(soundEvent);
     }
 
+    // register potions
+    public static void registerPotion(RegistryEvent.Register<Potion> event, Potion potion) {
+        event.getRegistry().register(potion);
+    }
+
+    // register potion types
+    public static void registerPotionType(RegistryEvent.Register<PotionType> event, PotionType potion) {
+        event.getRegistry().register(potion);
+    }
+
     // register entities
     public static void registerEntity(String modid, String name, Object instance, int id,
             Class<? extends Entity> entity, int trackingRange, int updateFrequency, boolean velocityUpdates) {
@@ -75,7 +87,18 @@ public class ModRegistryHelper {
         for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
             if (item.getRegistryName().getResourceDomain().equals(modId)) {
                 ModelLoader.setCustomModelResourceLocation(item, 0,
-                        new ModelResourceLocation(item.getRegistryName(), "normal"));
+                        new ModelResourceLocation(item.getRegistryName(), "inventory"));
+            }
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    public static void registerModels(ModelRegistryEvent event, String modId, String varint) {
+        ModLogger.registeredModelsLogger(modId);
+        for (Item item : ForgeRegistries.ITEMS.getValuesCollection()) {
+            if (item.getRegistryName().getResourceDomain().equals(modId)) {
+                ModelLoader.setCustomModelResourceLocation(item, 0,
+                        new ModelResourceLocation(item.getRegistryName(), varint));
             }
         }
     }
