@@ -6,7 +6,7 @@ itemGroup.creative.name=Creative
 item.oedldoedlcore.core_icon.name=Oedldoedl Core Icon
 item.oedldoedlcore.core_icon.annotation1=Mod: §eOedldoedl Core
 item.oedldoedlcore.core_icon.annotation2=Installed: §aTrue
-item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-4.1.0
+item.oedldoedlcore.core_icon.annotation3=Version: §e1.12.2-4.2.0
 item.oedldoedlcore.core_icon.annotation4=Author: §eTheP2WKing
 
 item.oedldoedlcore.resources_icon.name=Oedldoedl Resources Icon
@@ -99,6 +99,11 @@ potion.effect.effect.glowing=Potion of Glowing
 splash_potion.effect.effect.glowing=Splash Potion of Glowing
 lingering_potion.effect.effect.glowing=Lingering Potion of Glowing
 tipped_arrow.effect.effect.glowing=Arrow of Glowing
+
+potion.effect.effect.unluck=Potion of Bad Luck
+splash_potion.effect.effect.unluck=Splash Potion of Bad Luck
+lingering_potion.effect.effect.unluck=Lingering Potion of Bad Luck
+tipped_arrow.effect.effect.unluck=Arrow of Bad Luck
 
 # jei
 item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye
