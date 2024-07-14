@@ -22,4 +22,6 @@ public class ModPotions {
 
 	public static final PotionType GLOWING_NORMAL = ModPotionTypeBase.addPotionType(MobEffects.GLOWING, 3600, 1, ModPotionTypes.NORMAL);
 	public static final PotionType GLOWING_LONG = ModPotionTypeBase.addPotionType(MobEffects.GLOWING, 9600, 1, ModPotionTypes.LONG);
+
+	public static final PotionType BAD_LUCK_NORMAL = ModPotionTypeBase.addPotionType(MobEffects.UNLUCK, 6000, 1, ModPotionTypes.NORMAL);
 }

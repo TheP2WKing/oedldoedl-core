@@ -10,7 +10,7 @@ public class Content {
 	public boolean DEBUG_STICK_USEABLE_IN_SURVIVAL = false;
 
 	@Config.Name("Missing Spawn Eggs")
-	public boolean MISSING_SPAWN_EGGS = false;
+	public boolean MISSING_SPAWN_EGGS = true;
 
 	@Config.Name("Slow Falling Motion Multiplier")
 	@Config.RangeDouble(min = 0, max = 1)

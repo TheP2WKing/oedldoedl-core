@@ -53,23 +53,25 @@ public class ModRegistry {
 	public static void onPotionRegister(RegistryEvent.Register<Potion> event) {
 		ModLogger.registeredPotionsLogger(OedldoedlCore.MODID);
 
-		event.getRegistry().register(ModPotions.SLOW_FALLING);
-		event.getRegistry().register(ModPotions.DOLPHIN_GRACE);
+		ModRegistryHelper.registerPotion(event, ModPotions.SLOW_FALLING);
+		ModRegistryHelper.registerPotion(event, ModPotions.DOLPHIN_GRACE);
 	}
 
 	@SubscribeEvent
 	public static void onPotionTypeRegister(RegistryEvent.Register<PotionType> event) {
 		ModLogger.registeredPotionTypesLogger(OedldoedlCore.MODID);
 
-		event.getRegistry().register(ModPotions.SLOW_FALLING_NORMAL);
-		event.getRegistry().register(ModPotions.SLOW_FALLING_LONG);
+		ModRegistryHelper.registerPotionType(event, ModPotions.SLOW_FALLING_NORMAL);
+		ModRegistryHelper.registerPotionType(event, ModPotions.SLOW_FALLING_LONG);
 
-		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_NORMAL);
-		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_LONG);
-		event.getRegistry().register(ModPotions.DOLPHIN_GRACE_STRONG);
+		ModRegistryHelper.registerPotionType(event, ModPotions.DOLPHIN_GRACE_NORMAL);
+		ModRegistryHelper.registerPotionType(event, ModPotions.DOLPHIN_GRACE_LONG);
+		ModRegistryHelper.registerPotionType(event, ModPotions.DOLPHIN_GRACE_STRONG);
 
-		event.getRegistry().register(ModPotions.GLOWING_NORMAL);
-		event.getRegistry().register(ModPotions.GLOWING_LONG);
+		ModRegistryHelper.registerPotionType(event, ModPotions.GLOWING_NORMAL);
+		ModRegistryHelper.registerPotionType(event, ModPotions.GLOWING_LONG);
+
+		ModRegistryHelper.registerPotionType(event, ModPotions.BAD_LUCK_NORMAL);
 	}
 
 	public static void registerSpawnEggs() {

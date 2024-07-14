@@ -4,6 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionType;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
@@ -451,6 +452,11 @@ public class ModRecipes {
 					new ItemStack(Blocks.GLOWSTONE, 1, 0));
 			ModRecipeHelper.addBrewingRecipe(ModPotions.GLOWING_LONG, ModPotions.GLOWING_NORMAL,
 					new ItemStack(Items.REDSTONE, 1, 0));
+
+			ModRecipeHelper.addBrewingRecipe(PotionType.getPotionTypeForName("minecraft:luck"), PotionTypes.AWKWARD,
+					new ItemStack(Items.EMERALD, 1, 0));
+			ModRecipeHelper.addBrewingRecipe(ModPotions.BAD_LUCK_NORMAL, PotionTypes.AWKWARD,
+					new ItemStack(Items.COAL, 1, 1));
 		}
 	}
 }
