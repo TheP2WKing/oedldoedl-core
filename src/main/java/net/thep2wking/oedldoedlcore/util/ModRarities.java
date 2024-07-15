@@ -10,7 +10,7 @@ import net.minecraftforge.common.util.EnumHelper;
 @SuppressWarnings("deprecation")
 public class ModRarities {
     // colors
-    public static EnumRarity AQUA = EnumHelper.addRarity("AQUA", TextFormatting.AQUA, "Aqua");
+    public static EnumRarity AQUA = EnumRarity.RARE;
     public static EnumRarity BLACK = EnumHelper.addRarity("BLACK", TextFormatting.BLACK, "Black");
     public static EnumRarity BLUE = EnumHelper.addRarity("BLUE", TextFormatting.BLUE, "Blue");
     public static EnumRarity DARK_AQUA = EnumHelper.addRarity("DARK_AQUA", TextFormatting.DARK_AQUA, "Dark Aqua");
@@ -22,10 +22,10 @@ public class ModRarities {
     public static EnumRarity GOLD = EnumHelper.addRarity("GOLD", TextFormatting.GOLD, "Gold");
     public static EnumRarity GRAY = EnumHelper.addRarity("GRAY", TextFormatting.GRAY, "Gray");
     public static EnumRarity GREEN = EnumHelper.addRarity("GREEN", TextFormatting.GREEN, "Green");
-    public static EnumRarity LIGHT_PURPLE = EnumHelper.addRarity("LIGHT_PURPLE", TextFormatting.LIGHT_PURPLE, "Light Purple");
+    public static EnumRarity LIGHT_PURPLE = EnumRarity.EPIC;
     public static EnumRarity RED = EnumHelper.addRarity("RED", TextFormatting.RED, "Red");
-    public static EnumRarity WHITE = EnumHelper.addRarity("WHITE", TextFormatting.WHITE, "White");
-    public static EnumRarity YELLOW = EnumHelper.addRarity("YELLOW", TextFormatting.YELLOW, "Yellow");
+    public static EnumRarity WHITE = EnumRarity.COMMON;
+    public static EnumRarity YELLOW = EnumRarity.UNCOMMON;
 
     // formatting
     public static EnumRarity BOLD = EnumHelper.addRarity("BOLD", TextFormatting.BOLD, "Bold");
