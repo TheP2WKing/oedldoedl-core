@@ -312,6 +312,7 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("cobweb", Blocks.WEB, 0);
 
 			ModRecipeHelper.addOreDict("blockMagma", Blocks.MAGMA, 0);
+			ModRecipeHelper.addOreDict("blockWheat", Blocks.HAY_BLOCK, 0);
 
 			ModRecipeHelper.addOreDict("torchRedstone", Blocks.REDSTONE_TORCH, 0);
 
