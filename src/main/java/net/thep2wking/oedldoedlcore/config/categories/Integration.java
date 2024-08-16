@@ -24,6 +24,9 @@ public class Integration {
 
 		@Config.Name("Hide BuildCraft Facades")
 		public boolean HIDE_BUILDCRAFT_FACADES = true;
+
+		@Config.Name("Hide Oedldoedl Logo Icons")
+		public boolean HIDE_OEDLDOEDL_LOGO_ICONS = true;
 	}
 
 	@Config.Name("theoneprobe")

@@ -55,7 +55,7 @@ public class Properties {
 		public boolean ADD_FORGE_BUCKETS_TO_CREATIVE_TABS = true;
 
 		@Config.Name("Add Spawn Eggs To Creative Tabs")
-		public boolean ADD_SPAWN_EGGS_TO_CREATIVE_TABS = false;
+		public boolean ADD_SPAWN_EGGS_TO_CREATIVE_TABS = true;
 
 		@Config.Name("Add Potions To Creative Tabs")
 		public boolean ADD_POTIONS_TO_CREATIVE_TABS = true;

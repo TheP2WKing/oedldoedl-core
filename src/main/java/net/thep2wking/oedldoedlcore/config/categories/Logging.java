@@ -8,4 +8,7 @@ public class Logging {
 
 	@Config.Name("Enable Join Messages")
 	public boolean JOIN_MESSAGES = true;
+
+	@Config.Name("Enable Join Messages Version Info")
+	public boolean JOIN_MESSAGES_VERSION_INFO = false;
 }
