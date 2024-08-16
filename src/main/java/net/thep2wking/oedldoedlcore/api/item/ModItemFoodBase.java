@@ -35,15 +35,15 @@ public class ModItemFoodBase extends ItemFood {
 	 * @param tab             {@link CreativeTabs}
 	 * @param amount          int
 	 * @param saturation      float
-	 * @param wolfFood        boolean
+	 * @param isWolfFood        boolean
 	 * @param rarity          {@link EnumRarity}
 	 * @param hasEffect       boolean
 	 * @param tooltipLines    int
 	 * @param annotationLines int
 	 */
-	public ModItemFoodBase(String modid, String name, CreativeTabs tab, int amount, float saturation, boolean wolfFood,
+	public ModItemFoodBase(String modid, String name, CreativeTabs tab, int amount, float saturation, boolean isWolfFood,
 			EnumRarity rarity, boolean hasEffect, int tooltipLines, int annotationLines) {
-		super(amount, saturation, wolfFood);
+		super(amount, saturation, isWolfFood);
 		this.modid = modid;
 		this.name = name;
 		this.tab = tab;
