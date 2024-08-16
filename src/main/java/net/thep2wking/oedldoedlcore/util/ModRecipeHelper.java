@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
@@ -35,11 +36,56 @@ public class ModRecipeHelper {
 		ForgeRegistries.RECIPES.register(oreRecipe);
 	}
 
-	// recipe removal (quick and dirty)
-	public static void removeRecipe(String modid, String name) {
-		GameRegistry.addShapedRecipe(new ResourceLocation(name), null,
-				new ItemStack(Item.getByNameOrId("null")), "A", 'A', "null");
+	// compress and decompress
+	public static void add9xCompressRecipe(String modid, String name, ItemStack output, Object input) {
+		addShapedRecipe(modid, name, output, "AAA", "AAA", "AAA", 'A', input);
 	}
+
+	public static void add9xCompressRecipe(String modid, String name, Item output, Object input) {
+		addShapedRecipe(modid, name, new ItemStack(output, 1, 0), "AAA", "AAA", "AAA", 'A', input);
+	}
+
+	public static void add9xCompressRecipe(String modid, String name, Block output, Object input) {
+		addShapedRecipe(modid, name, new ItemStack(output, 1, 0), "AAA", "AAA", "AAA", 'A', input);
+	}
+
+	public static void add4xCompressRecipe(String modid, String name, ItemStack output, Object input) {
+		addShapedRecipe(modid, name, output, "AA", "AA", 'A', input);
+	}
+
+	public static void add4xCompressRecipe(String modid, String name, Block output, Object input) {
+		addShapedRecipe(modid, name, new ItemStack(output, 1, 0), "AA", "AA", 'A', input);
+	}
+
+	public static void addDecompressRecipe(String modid, String name, ItemStack output, Object input) {
+		addShapelessRecipe(modid, name, output, input);
+	}
+
+	public static void add9xDecompressRecipe(String modid, String name, Item output, Object input) {
+		addShapelessRecipe(modid, name, new ItemStack(output, 9, 0), input);
+	}
+
+	public static void add9xDecompressRecipe(String modid, String name, Block output, Object input) {
+		addShapelessRecipe(modid, name, new ItemStack(output, 9, 0), input);
+	}
+
+	public static void add4xDecompressRecipe(String modid, String name, Item output, Object input) {
+		addShapelessRecipe(modid, name, new ItemStack(output, 4, 0), input);
+	}
+
+	public static void add4xDecompressRecipe(String modid, String name, Block output, Object input) {
+		addShapelessRecipe(modid, name, new ItemStack(output, 4, 0), input);
+	}
+
+	// remove crafting recipe
+    public static void removeRecipe(String modid, String name) {
+        ResourceLocation recipeResourceLocation = new ResourceLocation(modid, name);
+        IRecipe recipeToModify = ForgeRegistries.RECIPES.getValue(recipeResourceLocation);
+        if (recipeToModify != null) {
+            IRecipe modifiedRecipe = new ModEmptyRecipe(recipeToModify);
+            ForgeRegistries.RECIPES.register(modifiedRecipe);
+        }
+    }
 
 	// smelting recipes
 	public static void addSmeltingRecipe(ItemStack output, ItemStack input, float xp) {
@@ -154,14 +200,18 @@ public class ModRecipeHelper {
 				new ItemStack(Items.SHIELD, 1));
 	}
 
-	public static void addFullToolRecipe(String modid, String name, ItemStack sword, ItemStack shovel,
-			ItemStack pickaxe, ItemStack axe, ItemStack hoe, ItemStack paxel, ItemStack smashbat, ItemStack shears,
-			ItemStack bow, ItemStack shield, String stick, String material) {
+	public static void addDefaultToolRecipe(String modid, String name, ItemStack sword, ItemStack shovel, ItemStack pickaxe, ItemStack axe, ItemStack hoe, String stick, String material) {
 		addSwordRecipe(modid, name, sword, stick, material);
 		addShovelRecipe(modid, name, shovel, stick, material);
 		addPickaxeRecipe(modid, name, pickaxe, stick, material);
 		addAxeRecipe(modid, name, axe, stick, material);
 		addHoeRecipe(modid, name, hoe, stick, material);
+	}
+
+	public static void addFullToolRecipe(String modid, String name, ItemStack sword, ItemStack shovel,
+			ItemStack pickaxe, ItemStack axe, ItemStack hoe, ItemStack paxel, ItemStack smashbat, ItemStack shears,
+			ItemStack bow, ItemStack shield, String stick, String material) {
+		addDefaultToolRecipe(modid, name, sword, shovel, pickaxe, axe, hoe, stick, material);
 		addPaxelRecipe(modid, name, paxel, stick, axe, shovel, pickaxe);
 		addSmashbatRecipe(modid, name, smashbat, material);
 		addShearsRecipe(modid, name, shears, material);

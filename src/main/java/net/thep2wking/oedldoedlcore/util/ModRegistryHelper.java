@@ -5,12 +5,14 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -60,6 +62,11 @@ public class ModRegistryHelper {
         event.getRegistry().register(potion);
     }
 
+    // register loot tables
+    public static void registerLootTable(ResourceLocation lootTable) {
+        LootTableList.register(lootTable);
+    }
+
     // register entities
     public static void registerEntity(String modid, String name, Object instance, int id,
             Class<? extends Entity> entity, int trackingRange, int updateFrequency, boolean velocityUpdates) {
@@ -78,6 +85,18 @@ public class ModRegistryHelper {
     public static void registerEntitySpawn(Class<? extends EntityLiving> entity, EnumCreatureType creatureType,
             int weight, int min, int max, Biome... biomes) {
         EntityRegistry.addSpawn(entity, weight, min, max, creatureType, biomes);
+    }
+
+    public static void registerEntitySpawn(Class<? extends EntityLiving> entity, EnumCreatureType creatureType,
+            int weight, int min, int max, boolean condition, Biome... biomes) {
+        if (condition) {
+            EntityRegistry.addSpawn(entity, weight, min, max, creatureType, biomes);
+        }
+    }
+
+    // register flammable blocks
+    public static void registerFlameableBlock(Block block, int encouragement, int flammability) {
+        Blocks.FIRE.setFireInfo(block, encouragement, flammability);
     }
 
     // register models
