@@ -1,11 +1,23 @@
 package net.thep2wking.oedldoedlcore.registry;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.PotionTypes;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionType;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.oredict.OreDictionary;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockLeavesBase;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockLogBase;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockPlantBase;
+import net.thep2wking.oedldoedlcore.api.block.ModBlockSaplingBase;
+import net.thep2wking.oedldoedlcore.api.item.ModItemIconBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModItemBowBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModItemHoeBase;
+import net.thep2wking.oedldoedlcore.api.tool.ModItemShearsBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.init.ModItems;
 import net.thep2wking.oedldoedlcore.init.ModPotions;
@@ -16,16 +28,6 @@ public class ModRecipes {
 	public static void registerOreDict() {
 		if (CoreConfig.RECIPES.DEFAULT_OREDICT) {
 			ModLogger.registeredOreDictLogger(OedldoedlCore.MODID);
-
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CORE_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.RESOURCES_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.GEAR_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CURIOSITY_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.CONSTRUCT_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.EXPLOSIVES_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.TECHNOLOGY_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.MUSIC_ICON, 0);
-			ModRecipeHelper.addOreDict("iconOedldoedl", ModItems.INTEGRATION_ICON, 0);
 
 			ModRecipeHelper.addOreDict("stickDebug", ModItems.DEBUG_STICK, 0);
 
@@ -183,8 +185,6 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("listAllwater", Items.WATER_BUCKET, 0);
 			ModRecipeHelper.addOreDict("listAlllava", Items.LAVA_BUCKET, 0);
 
-			ModRecipeHelper.addOreDict("toolShears", Items.SHEARS, 0);
-
 			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 1);
 			ModRecipeHelper.addOreDict("blockQuartz", Blocks.QUARTZ_BLOCK, 2);
 
@@ -246,12 +246,6 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("blockSnow", Blocks.SNOW, 0);
 
-			ModRecipeHelper.addOreDict("toolHoe", Items.WOODEN_HOE, 0);
-			ModRecipeHelper.addOreDict("toolHoe", Items.STONE_HOE, 0);
-			ModRecipeHelper.addOreDict("toolHoe", Items.IRON_HOE, 0);
-			ModRecipeHelper.addOreDict("toolHoe", Items.GOLDEN_HOE, 0);
-			ModRecipeHelper.addOreDict("toolHoe", Items.DIAMOND_HOE, 0);
-
 			ModRecipeHelper.addOreDict("skull", Items.SKULL, 0);
 			ModRecipeHelper.addOreDict("skull", Items.SKULL, 1);
 			ModRecipeHelper.addOreDict("skull", Items.SKULL, 2);
@@ -283,6 +277,11 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("cropCactus", Blocks.CACTUS, 0);
 
 			ModRecipeHelper.addOreDict("cropChorusFruit", Items.CHORUS_FRUIT, 0);
+
+			ModRecipeHelper.addOreDict("cropMushroom", Blocks.BROWN_MUSHROOM, 0);
+			ModRecipeHelper.addOreDict("cropMushroom", Blocks.RED_MUSHROOM, 0);
+			ModRecipeHelper.addOreDict("itemMushroom", Blocks.BROWN_MUSHROOM, 0);
+			ModRecipeHelper.addOreDict("itemMushroom", Blocks.RED_MUSHROOM, 0);
 
 			ModRecipeHelper.addOreDict("anvil", Blocks.ANVIL, 0);
 			ModRecipeHelper.addOreDict("anvil", Blocks.ANVIL, 1);
@@ -323,7 +322,85 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("fireworkRocket", Items.FIREWORKS, 0);
 			ModRecipeHelper.addOreDict("fireworkCharge", Items.FIREWORK_CHARGE, 0);
 
-			ModRecipeHelper.addOreDict("bow", Items.BOW, 0);
+			addIconOreDict();
+			addBowOreDict();
+			addShearsOreDict();
+			addHoeOreDict();
+			addLogOreDict();
+			addLeavesOreDict();
+			addSaplingOreDict();
+			addPlantOreDict();
+		}
+	}
+
+	public static void addIconOreDict() {
+		for (Item item : ForgeRegistries.ITEMS) {
+			if (item instanceof ModItemIconBase) {
+				ModRecipeHelper.addOreDict("iconOedldoedl", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addBowOreDict() {
+		ModRecipeHelper.addOreDict("bow", new ItemStack(Items.BOW, 1, OreDictionary.WILDCARD_VALUE));
+		for (Item item : ForgeRegistries.ITEMS) {
+			if (item instanceof ModItemBowBase) {
+				ModRecipeHelper.addOreDict("bow", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addShearsOreDict() {
+		ModRecipeHelper.addOreDict("toolShears", new ItemStack(Items.SHEARS, 1, OreDictionary.WILDCARD_VALUE));
+		for (Item item : ForgeRegistries.ITEMS) {
+			if (item instanceof ModItemShearsBase) {
+				ModRecipeHelper.addOreDict("toolShears", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addHoeOreDict() {
+		ModRecipeHelper.addOreDict("toolHoe", new ItemStack(Items.WOODEN_HOE, 1, OreDictionary.WILDCARD_VALUE));
+		ModRecipeHelper.addOreDict("toolHoe", new ItemStack(Items.STONE_HOE, 1, OreDictionary.WILDCARD_VALUE));
+		ModRecipeHelper.addOreDict("toolHoe", new ItemStack(Items.IRON_HOE, 1, OreDictionary.WILDCARD_VALUE));
+		ModRecipeHelper.addOreDict("toolHoe", new ItemStack(Items.GOLDEN_HOE, 1, OreDictionary.WILDCARD_VALUE));
+		ModRecipeHelper.addOreDict("toolHoe", new ItemStack(Items.DIAMOND_HOE, 1, OreDictionary.WILDCARD_VALUE));
+		for (Item item : ForgeRegistries.ITEMS) {
+			if (item instanceof ModItemHoeBase) {
+				ModRecipeHelper.addOreDict("toolHoe", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addLogOreDict() {
+		for (Block block : ForgeRegistries.BLOCKS) {
+			if (block instanceof ModBlockLogBase) {
+				ModRecipeHelper.addOreDict("logWood", new ItemStack(block, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addLeavesOreDict() {
+		for (Block block : ForgeRegistries.BLOCKS) {
+			if (block instanceof ModBlockLeavesBase) {
+				ModRecipeHelper.addOreDict("treeLeaves", new ItemStack(block, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addSaplingOreDict() {
+		for (Block block : ForgeRegistries.BLOCKS) {
+			if (block instanceof ModBlockSaplingBase) {
+				ModRecipeHelper.addOreDict("treeSapling", new ItemStack(block, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addPlantOreDict() {
+		for (Block block : ForgeRegistries.BLOCKS) {
+			if (block instanceof ModBlockPlantBase) {
+				ModRecipeHelper.addOreDict("plant", new ItemStack(block, 1, OreDictionary.WILDCARD_VALUE));
+			}
 		}
 	}
 
