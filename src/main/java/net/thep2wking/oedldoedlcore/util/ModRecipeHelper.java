@@ -53,12 +53,12 @@ public class ModRecipeHelper {
 		addShapedRecipe(modid, name, output, "AA", "AA", 'A', input);
 	}
 
-	public static void add4xCompressRecipe(String modid, String name, Block output, Object input) {
+	public static void add4xCompressRecipe(String modid, String name, Item output, Object input) {
 		addShapedRecipe(modid, name, new ItemStack(output, 1, 0), "AA", "AA", 'A', input);
 	}
 
-	public static void addDecompressRecipe(String modid, String name, ItemStack output, Object input) {
-		addShapelessRecipe(modid, name, output, input);
+	public static void add4xCompressRecipe(String modid, String name, Block output, Object input) {
+		addShapedRecipe(modid, name, new ItemStack(output, 1, 0), "AA", "AA", 'A', input);
 	}
 
 	public static void add9xDecompressRecipe(String modid, String name, Item output, Object input) {
