@@ -306,14 +306,19 @@ public class ModRecipes {
 
 			ModRecipeHelper.addOreDict("pressurePlateWood", Blocks.WOODEN_PRESSURE_PLATE, 0);
 			ModRecipeHelper.addOreDict("pressurePlateStone", Blocks.STONE_PRESSURE_PLATE, 0);
-			ModRecipeHelper.addOreDict("pressurePlateIron", Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, 0);
-			ModRecipeHelper.addOreDict("pressurePlateGold", Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE, 0);
+			ModRecipeHelper.addOreDict("pressurePlateIron", Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE, 0);
+			ModRecipeHelper.addOreDict("pressurePlateGold", Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE, 0);
 
 			ModRecipeHelper.addOreDict("cobweb", Blocks.WEB, 0);
 
 			ModRecipeHelper.addOreDict("blockMagma", Blocks.MAGMA, 0);
 
 			ModRecipeHelper.addOreDict("torchRedstone", Blocks.REDSTONE_TORCH, 0);
+
+			ModRecipeHelper.addOreDict("bowl", Items.BOWL, 0);
+
+			ModRecipeHelper.addOreDict("glassBottle", Items.GLASS_BOTTLE, 0);
+			ModRecipeHelper.addOreDict("bottleGlass", Items.GLASS_BOTTLE, 0);
 
 			ModRecipeHelper.addOreDict("fireworkRocket", Items.FIREWORKS, 0);
 			ModRecipeHelper.addOreDict("fireworkCharge", Items.FIREWORK_CHARGE, 0);
