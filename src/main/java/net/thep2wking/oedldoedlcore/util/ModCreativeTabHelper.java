@@ -3,12 +3,15 @@ package net.thep2wking.oedldoedlcore.util;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.thep2wking.oedldoedlcore.api.tab.ModCreativeTabBase;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
+import net.thep2wking.oedldoedlcore.content.itemblock.ItemBlockMobSpawner;
 
 /**
  * @author TheP2WKing
@@ -25,7 +28,7 @@ public class ModCreativeTabHelper {
 			@Override
 			@SideOnly(Side.CLIENT)
 			public void displayAllRelevantItems(NonNullList<ItemStack> list) {
-				if (CoreConfig.CONTENT.UNIBTAINABLE_CREATIVE_TAB) {
+				if (CoreConfig.CONTENT.UNOBTAINABLE_CREATIVE_TAB) {
 					super.displayAllRelevantItems(list);
 					list.add(new ItemStack(Blocks.MOB_SPAWNER, 1, 0));
 					list.add(new ItemStack(Blocks.FARMLAND, 1, 0));
@@ -45,11 +48,32 @@ public class ModCreativeTabHelper {
 					list.add(new ItemStack(Items.COMMAND_BLOCK_MINECART, 1, 0));
 					list.add(new ItemStack(Items.KNOWLEDGE_BOOK, 1, 0));
 					list.add(new ItemStack(Items.SPAWN_EGG, 1, 0));
-					list.add(ModNBTUtil.addSpawnEgg("minecraft:giant"));
-					list.add(ModNBTUtil.addSpawnEgg("minecraft:illusion_illager"));
-					list.add(ModNBTUtil.addSpawnEgg("minecraft:snowman"));
-					list.add(ModNBTUtil.addSpawnEgg("minecraft:villager_golem"));
-					list.add(ModNBTUtil.addSpawnEgg("minecraft:wither"));
+					if (CoreConfig.CONTENT.MISSING_SPAWN_EGGS) {
+						list.add(ModNBTUtil.addSpawnEgg("minecraft:giant"));
+						list.add(ModNBTUtil.addSpawnEgg("minecraft:illusion_illager"));
+						list.add(ModNBTUtil.addSpawnEgg("minecraft:snowman"));
+						list.add(ModNBTUtil.addSpawnEgg("minecraft:villager_golem"));
+						list.add(ModNBTUtil.addSpawnEgg("minecraft:wither"));
+					}
+				}
+			}
+		};
+	}
+
+	// creative tab with items that are not obtainable in the normal creative tab
+	public static CreativeTabs addSpawnerCreativeTab() {
+		return new ModCreativeTabBase("spawner", ModReferences.CREATIVE_TAB_LIGHT, false, false) {
+			@Override
+			public ItemStack getTabIconItem() {
+				return new ItemStack(Blocks.MOB_SPAWNER);
+			}
+
+			@Override
+			@SideOnly(Side.CLIENT)
+			public void displayAllRelevantItems(NonNullList<ItemStack> list) {
+				if (CoreConfig.CONTENT.SPAWNER.ENTITY_RENDERER && Loader.isModLoaded("codechickenlib")) {
+					super.displayAllRelevantItems(list);
+					ItemBlockMobSpawner.displaySpawners(list, Item.getItemFromBlock(Blocks.MOB_SPAWNER));
 				}
 			}
 		};
