@@ -1,13 +1,17 @@
 package net.thep2wking.oedldoedlcore.init;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.api.item.ModItemIconBase;
 import net.thep2wking.oedldoedlcore.content.item.ItemDebugStick;
+import net.thep2wking.oedldoedlcore.content.itemblock.ItemBlockMobSpawner;
 import net.thep2wking.oedldoedlcore.util.ModRarities;
 import net.thep2wking.oedldoedlcore.util.ModReferences;
 
 public class ModItems {
+	public static final Item MOB_SPAWNER = new ItemBlockMobSpawner(Blocks.MOB_SPAWNER, ModRarities.WHITE, false, 0, 0);
+
 	public static final Item CORE_ICON = new ModItemIconBase(OedldoedlCore.MODID, "core_icon", OedldoedlCore.TAB,
 			ModReferences.MODID_CORE, ModRarities.YELLOW, false, 0, 4);
 	public static final Item RESOURCES_ICON = new ModItemIconBase(OedldoedlCore.MODID, "resources_icon",
@@ -29,4 +33,5 @@ public class ModItems {
 
 	public static final Item DEBUG_STICK = new ItemDebugStick(OedldoedlCore.MODID, "debug_stick", OedldoedlCore.TAB,
 			ModRarities.LIGHT_PURPLE, true, 1, 1);
+
 }
