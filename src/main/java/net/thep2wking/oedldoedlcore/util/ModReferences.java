@@ -35,6 +35,11 @@ public class ModReferences {
 	public static final String NAME_MUSIC = BASE_NAME + " " + "Music";
 	public static final String NAME_INTEGRATION = BASE_NAME + " " + "Integration";
 
+	// oedldoedl loading first to retain mod order
+	public static final String OEDLDOEDL_MODS_FIRST = "after:" + MODID_RESOURCES + ";after:" + MODID_GEAR + ";after:"
+			+ MODID_CURIOSITY + ";after:" + MODID_CONSTRUCT + ";after:" + MODID_EXPLOSIVES + ";after:"
+			+ MODID_TECHNOLOGY + ";after:" + MODID_MUSIC + ";after:" + MODID_INTEGRATION + ";";
+
 	// creative tab resource locations
 	public static final ResourceLocation CREATIVE_TAB_LIGHT = new ResourceLocation(MINECRAFT_MODID,
 			"textures/gui/container/creative_inventory/tab_items.png");
@@ -59,7 +64,8 @@ public class ModReferences {
 	public static final String ATTRIBUTE_LUCK = BASE_NAME + "Luck Attribute";
 	public static final String ATTRIBUTE_MAX_HEALTH = BASE_NAME + "Max Health Attribute";
 	public static final String ATTRIBUTE_MOVEMENT_SPEED = BASE_NAME + "Movement Speed Attribute";
-	public static final String ATTRIBUTE_ZOMBIE_SPAWN_REINFORCEMENTS = BASE_NAME + "Zombie Spawn Reinforcements Attribute";
+	public static final String ATTRIBUTE_ZOMBIE_SPAWN_REINFORCEMENTS = BASE_NAME
+			+ "Zombie Spawn Reinforcements Attribute";
 	public static final String ATTRIBUTE_SWIN_SPEED = BASE_NAME + "Swim Speed Attribute";
 	public static final String ATTRIBUTE_NAMETAG_DISTANCE = BASE_NAME + "Nametag Distance Attribute";
 	public static final String ATTRIBUTE_ENTITY_GRAVITY = "Oedldoedl Entity Gravity Attribute";
