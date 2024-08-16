@@ -36,6 +36,18 @@ public class ModFluidUtil {
 	public static final ResourceLocation MOLTEN_FLOW_BASE = new ResourceLocation(OedldoedlCore.MODID,
 			"blocks/molten_flow");
 
+	// custom fluid texture resource locations
+	public static ResourceLocation addStillTexture(String modid, String name) {
+		return new ResourceLocation(modid, "blocks/" + name + "_still");
+	}
+
+	public static ResourceLocation addFlowTexture(String modid, String name) {
+		return new ResourceLocation(modid, "blocks/" + name + "_flow");
+	}
+
+	// base fluid color/ no coloring
+	public static final int NO_COLOR = 0xFFFFFFFF;
+
 	// fluid render
 	@SideOnly(Side.CLIENT)
 	public static void addRenderForFluid(String modid, String name, Block block) {
