@@ -1,6 +1,10 @@
 # creative tabs
 itemGroup.oedldoedlcore.name=§dOedldoedl Core
 itemGroup.creative.name=Creative
+itemGroup.spawner.name=Mob Spawner
+
+# join message
+join.oedldoedlcore.message=The libary the world needed! 
 
 # icons
 item.oedldoedlcore.core_icon.name=Oedldoedl Core Icon
@@ -106,9 +110,9 @@ lingering_potion.effect.effect.unluck=Lingering Potion of Bad Luck
 tipped_arrow.effect.effect.unluck=Arrow of Bad Luck
 
 # jei
-item.oedldoedlcore.firework_star.jei=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye
+item.oedldoedlcore.firework_star.jei1=Recipe:\nGunpowder + Matching Dye + Extra Ingredients (optional)\n\nOr:\nMatching Firework Star + Any Dye
 item.oedldoedlcore.firework_star.jei2=Up to 8 Dyes can be added. A Head, a Gold Nugget, a Feather, or a Fire Charge can be added. Diamond and the Glowstone Dust can be added optional with any of the other ingredients. Any additional Dye adds a fade to color effect to the Firework Star, overwriting any existing fades. Up to 8 Dyes can be added.
-item.oedldoedlcore.firework_rocket.jei=Recipe:\nAny Firework Star + Paper + Gunpowder
+item.oedldoedlcore.firework_rocket.jei1=Recipe:\nAny Firework Star + Paper + Gunpowder
 item.oedldoedlcore.firework_rocket.jei2=Adding more Gunpowder increases the duration of the Firework Rocket. Up to 3 Gunpowder can be used. Up to 5 Firework Stars can also be used with three Gunpowder. Up to 7 Firework Stars can be used by using Firework Stars instead of additional Gunpowder. All Firework Stars explode almost simultaneously when the Firework Rocket detonates.
 
 # effect tooltips
@@ -126,6 +130,12 @@ effect.oedldoedlcore.chestplate.tip=Given Effects when worn as Chestplate:
 effect.oedldoedlcore.leggings.tip=Given Effects when worn as Leggings:
 effect.oedldoedlcore.boots.tip=Given Effects when worn as Boots:
 effect.oedldoedlcore.full.tip=Given Effects when worn as full Armor Set:
+
+# join messages
+join.oedldoedlcore.default=installed successfully!
+join.oedldoedlcore.visit=Click to visit the
+join.oedldoedlcore.curseforge=CurseForge page...
+join.oedldoedlcore.url=https://www.curseforge.com/minecraft/mc-mods/
 
 # tooltips
 key.oedldoedlcore.info=§7Hold §e§oShift§r§7 for Info
