@@ -18,6 +18,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.IShearable;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModPlantAABB;
+import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 /**
@@ -79,6 +80,7 @@ public class ModBlockPlantBase extends BlockBush implements IShearable {
 		setHarvestLevel(this.toolType.getToolType(), this.harvestLevel);
 		setHardness(this.hardness);
 		setResistance(this.resistance);
+		ModRegistryHelper.registerFlameableBlock(this, 60, 100);
 	}
 
 	@Override
