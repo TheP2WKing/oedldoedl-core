@@ -17,9 +17,20 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModOreGenHelper {
 	public static void addOreGen(World world, Random random, int chunkX, int chunkZ, Block oreBlock,
 			int veinSize, int chance, Block blockToReplace, int minHeight, int maxHeight, int dimension) {
-		ModOreGenMinable generator = new ModOreGenMinable(oreBlock, veinSize, chance, blockToReplace, dimension);
+		ModOreGenMinableBase generator = new ModOreGenMinableBase(oreBlock, veinSize, chance, blockToReplace, dimension);
 		if (world.provider.getDimension() == dimension) {
 			runOreGenerator(generator, world, random, chunkX, chunkZ, generator.chance, minHeight, maxHeight);
+		}
+	}
+
+	public static void addOreGen(World world, Random random, int chunkX, int chunkZ, Block oreBlock,
+			int veinSize, int chance, Block blockToReplace, int minHeight, int maxHeight, int dimension,
+			boolean condition) {
+		if (condition) {
+			ModOreGenMinableBase generator = new ModOreGenMinableBase(oreBlock, veinSize, chance, blockToReplace, dimension);
+			if (world.provider.getDimension() == dimension) {
+				runOreGenerator(generator, world, random, chunkX, chunkZ, generator.chance, minHeight, maxHeight);
+			}
 		}
 	}
 

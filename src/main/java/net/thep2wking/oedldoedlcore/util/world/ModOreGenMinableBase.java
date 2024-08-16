@@ -7,7 +7,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 /**
  * @author TheP2WKing
  */
-public class ModOreGenMinable extends WorldGenMinable {
+public class ModOreGenMinableBase extends WorldGenMinable {
 	public final Block oreBlock;
 	public final int veinSize;
 	public final int chance;
@@ -22,7 +22,7 @@ public class ModOreGenMinable extends WorldGenMinable {
 	 * @param blockToReplace {@link Block}
 	 * @param dimension      int
 	 */
-	public ModOreGenMinable(Block oreBlock, int veinSize, int chance, Block blockToReplace, int dimension) {
+	public ModOreGenMinableBase(Block oreBlock, int veinSize, int chance, Block blockToReplace, int dimension) {
 		super(oreBlock.getDefaultState(), veinSize, BlockMatcher.forBlock(blockToReplace));
 		this.oreBlock = oreBlock;
 		this.veinSize = veinSize;

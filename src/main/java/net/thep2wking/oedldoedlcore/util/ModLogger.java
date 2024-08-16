@@ -104,6 +104,12 @@ public class ModLogger {
 		}
 	}
 
+	public static void registeredBiomesLogger(String mod) {
+		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
+			ModLogger.LOGGER.info("Registered biomes for " + mod);
+		}
+	}
+
 	public static void registeredRendererLogger(String mod) {
 		if (CoreConfig.LOGGING.CONSOLE_LOGGING) {
 			ModLogger.LOGGER.info("Registered renderer for " + mod);

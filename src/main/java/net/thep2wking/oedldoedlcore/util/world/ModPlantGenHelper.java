@@ -12,6 +12,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.thep2wking.oedldoedlcore.api.block.ModBlockPlantBase;
 
+/**
+ * @author TheP2WKing
+ */
 public class ModPlantGenHelper {
 	public static void addFlowerGen(DecorateBiomeEvent.Decorate event, Block plantBlock, double chance, int dimension) {
 		if (event.getType() != DecorateBiomeEvent.Decorate.EventType.FLOWERS)
