@@ -45,7 +45,8 @@ public class OedldoedlCore {
         FluidRegistry.enableUniversalBucket();
     }
 
-    public static final CreativeTabs CREATIVE = ModCreativeTabHelper.addUnobtainableCreativeTab();
+    public static final CreativeTabs UNOBTAINABLE = ModCreativeTabHelper.addUnobtainableCreativeTab();
+    public static final CreativeTabs SPAWNER = ModCreativeTabHelper.addSpawnerCreativeTab();
     public static final CreativeTabs TAB = new ModOedldoedlTabBase(MODID) {
         @Override
         @SideOnly(Side.CLIENT)
@@ -86,7 +87,7 @@ public class OedldoedlCore {
     public static class ModJoinMessage {
         @SubscribeEvent
         public static void addJoinMessage(PlayerLoggedInEvent event) {
-            ModLogInUtil.addJoinMessage(event, NAME, MODID, VERSION);
+            ModLogInUtil.addJoinMessage(event, NAME, MODID, VERSION, true);
         }
     }
 }
