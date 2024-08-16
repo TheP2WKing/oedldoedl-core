@@ -20,6 +20,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.thep2wking.oedldoedlcore.OedldoedlCore;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
@@ -126,13 +127,13 @@ public abstract class ModBlockContainerBase extends BlockContainer {
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
 			EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
-			if (!player.isSneaking()) {
+			if (!player.isSneaking() && this.hasGui()) {
 				player.openGui(this.getModInstance(), this.getGuiId(), world, pos.getX(),
 						pos.getY(),
 						pos.getZ());
 			}
 		}
-		return true;
+		return false;
 	}
 
 	@Override
@@ -151,7 +152,15 @@ public abstract class ModBlockContainerBase extends BlockContainer {
 		return super.removedByPlayer(state, world, pos, player, willHarvest);
 	}
 
-	protected abstract int getGuiId();
+	public boolean hasGui() {
+		return false;
+	};
 
-	protected abstract Object getModInstance();
+	public int getGuiId() {
+		return hasGui() ? 0 : null;
+	};
+
+	public Object getModInstance() {
+		return OedldoedlCore.INSTANCE;
+	};
 }
