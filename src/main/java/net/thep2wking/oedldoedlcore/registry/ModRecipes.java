@@ -15,6 +15,7 @@ import net.thep2wking.oedldoedlcore.api.block.ModBlockLogBase;
 import net.thep2wking.oedldoedlcore.api.block.ModBlockPlantBase;
 import net.thep2wking.oedldoedlcore.api.block.ModBlockSaplingBase;
 import net.thep2wking.oedldoedlcore.api.item.ModItemIconBase;
+import net.thep2wking.oedldoedlcore.api.item.ModItemSeedBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemBowBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemHoeBase;
 import net.thep2wking.oedldoedlcore.api.tool.ModItemShearsBase;
@@ -160,11 +161,6 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("snowball", Items.SNOWBALL, 0);
 
 			ModRecipeHelper.addOreDict("dustGunpowder", Items.GUNPOWDER, 0);
-
-			ModRecipeHelper.addOreDict("listAllseed", Items.WHEAT_SEEDS, 0);
-			ModRecipeHelper.addOreDict("listAllseed", Items.PUMPKIN_SEEDS, 0);
-			ModRecipeHelper.addOreDict("listAllseed", Items.MELON_SEEDS, 0);
-			ModRecipeHelper.addOreDict("listAllseed", Items.BEETROOT_SEEDS, 0);
 
 			ModRecipeHelper.addOreDict("book", Items.BOOK, 0);
 			ModRecipeHelper.addOreDict("book", Items.ENCHANTED_BOOK, 0);
@@ -326,6 +322,7 @@ public class ModRecipes {
 			addBowOreDict();
 			addShearsOreDict();
 			addHoeOreDict();
+			addSeedOreDict();
 			addLogOreDict();
 			addLeavesOreDict();
 			addSaplingOreDict();
@@ -368,6 +365,18 @@ public class ModRecipes {
 		for (Item item : ForgeRegistries.ITEMS) {
 			if (item instanceof ModItemHoeBase) {
 				ModRecipeHelper.addOreDict("toolHoe", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
+			}
+		}
+	}
+
+	public static void addSeedOreDict() {
+		ModRecipeHelper.addOreDict("listAllseed", Items.WHEAT_SEEDS, 0);
+		ModRecipeHelper.addOreDict("listAllseed", Items.PUMPKIN_SEEDS, 0);
+		ModRecipeHelper.addOreDict("listAllseed", Items.MELON_SEEDS, 0);
+		ModRecipeHelper.addOreDict("listAllseed", Items.BEETROOT_SEEDS, 0);
+		for (Item item : ForgeRegistries.ITEMS) {
+			if (item instanceof ModItemSeedBase) {
+				ModRecipeHelper.addOreDict("listAllseed", new ItemStack(item, 1, OreDictionary.WILDCARD_VALUE));
 			}
 		}
 	}
