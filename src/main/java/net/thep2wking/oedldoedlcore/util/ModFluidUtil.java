@@ -36,6 +36,16 @@ public class ModFluidUtil {
 	public static final ResourceLocation MOLTEN_FLOW_BASE = new ResourceLocation(OedldoedlCore.MODID,
 			"blocks/molten_flow");
 
+	// vanilla fluid resource locations
+	public static final ResourceLocation WATER_STILL = new ResourceLocation(ModReferences.MINECRAFT_MODID,
+			"blocks/water_still");
+	public static final ResourceLocation WATER_FLOW = new ResourceLocation(ModReferences.MINECRAFT_MODID,
+			"blocks/water_flow");
+	public static final ResourceLocation LAVA_STILL = new ResourceLocation(ModReferences.MINECRAFT_MODID,
+			"blocks/lava_still");
+	public static final ResourceLocation LAVA_FLOW = new ResourceLocation(ModReferences.MINECRAFT_MODID,
+			"blocks/lava_flow");
+
 	// custom fluid texture resource locations
 	public static ResourceLocation addStillTexture(String modid, String name) {
 		return new ResourceLocation(modid, "blocks/" + name + "_still");
