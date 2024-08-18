@@ -2,6 +2,10 @@ package net.thep2wking.oedldoedlcore.api.fluid;
 
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLiving.SpawnPlacementType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
@@ -25,5 +29,11 @@ public class ModBlockFluidBase extends BlockFluidClassic {
 		this.name = name;
 		setUnlocalizedName(this.modid + "." + this.name);
 		setRegistryName(this.modid + ":" + this.name);
+		setHardness(2000f);
+	}
+
+	@Override
+	public boolean canCreatureSpawn(IBlockState state, IBlockAccess world, BlockPos pos, SpawnPlacementType type) {
+		return false;
 	}
 }
