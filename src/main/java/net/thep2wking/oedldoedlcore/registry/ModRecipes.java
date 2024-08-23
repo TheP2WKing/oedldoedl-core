@@ -324,6 +324,8 @@ public class ModRecipes {
 			ModRecipeHelper.addOreDict("fireworkRocket", Items.FIREWORKS, 0);
 			ModRecipeHelper.addOreDict("fireworkCharge", Items.FIREWORK_CHARGE, 0);
 
+			ModRecipeHelper.addOreDict("toolFlintAndSteel", Items.FLINT_AND_STEEL, OreDictionary.WILDCARD_VALUE);
+
 			addIconOreDict();
 			addBowOreDict();
 			addShearsOreDict();
