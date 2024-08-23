@@ -1,6 +1,8 @@
 package net.thep2wking.oedldoedlcore.util;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -18,13 +20,42 @@ import net.thep2wking.oedldoedlcore.config.CoreConfig;
  */
 public class ModPotionUtil {
 	// add potion effect
-	public static void addEffect(EntityLivingBase entity, Potion effect, int duration, int amplifier) {
-		entity.addPotionEffect(new PotionEffect(effect, duration, amplifier, false, false));
+	public static void addEffect(Entity entity, Potion effect, int duration, int amplifier) {
+		if (entity instanceof EntityLivingBase) {
+			EntityLivingBase living = (EntityLivingBase) entity;
+			living.addPotionEffect(new PotionEffect(effect, duration, amplifier, false, false));
+		}
 	}
 
-	public static void addEffect(EntityLivingBase entity, Potion effect, int duration, int amplifier, boolean ambient,
+	public static void addEffect(Entity entity, Potion effect, int duration, int amplifier, boolean ambient,
 			boolean particles) {
-		entity.addPotionEffect(new PotionEffect(effect, duration, amplifier, ambient, particles));
+		if (entity instanceof EntityLivingBase) {
+			EntityLivingBase living = (EntityLivingBase) entity;
+			living.addPotionEffect(new PotionEffect(effect, duration, amplifier, ambient, particles));
+		}
+	}
+
+	public static void addEffectNotInCreativeMode(Entity entity, Potion effect, int duration, int amplifier) {
+		if (entity instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) entity;
+			if (!player.capabilities.isCreativeMode) {
+				addEffect(entity, effect, duration, amplifier, false, false);
+			}
+		} else {
+			addEffect(entity, effect, duration, amplifier, false, false);
+		}
+	}
+
+	public static void addEffectNotInCreativeMode(Entity entity, Potion effect, int duration, int amplifier,
+			boolean ambient, boolean particles) {
+		if (entity instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) entity;
+			if (!player.capabilities.isCreativeMode) {
+				addEffect(entity, effect, duration, amplifier, ambient, particles);
+			}
+		} else {
+			addEffect(entity, effect, duration, amplifier, ambient, particles);
+		}
 	}
 
 	// remove potion effect
