@@ -47,6 +47,10 @@ public class ModRegistryHelper {
         FluidRegistry.addBucketForFluid(fluid);
     }
 
+    public static void registerFluidWithoutBucket(Fluid fluid) {
+        FluidRegistry.registerFluid(fluid);
+    }
+
     // register sounds
     public static void registerSoundEvent(RegistryEvent.Register<SoundEvent> event, SoundEvent soundEvent) {
         event.getRegistry().register(soundEvent);
