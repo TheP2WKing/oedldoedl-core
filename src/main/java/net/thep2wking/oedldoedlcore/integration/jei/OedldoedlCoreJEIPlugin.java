@@ -32,7 +32,8 @@ public class OedldoedlCoreJEIPlugin extends ModJEIPluginBase {
 		}
 
 		if (!CoreConfig.INTEGRATION.JEI.HIDE_PLAYER_HEAD) {
-			hideItem(registry, new ItemStack(Items.SKULL, 1, 3));
+			unhideItem(registry, new ItemStack(Items.SKULL, 1, 3));
+
 		}
 
 		if (CoreConfig.INTEGRATION.JEI.ANVIL_RECIPE_CATALYSTS) {
