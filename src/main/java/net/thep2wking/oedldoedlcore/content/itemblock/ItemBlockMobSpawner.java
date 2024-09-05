@@ -20,7 +20,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAreaEffectCloud;
@@ -61,6 +60,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -111,17 +113,21 @@ public class ItemBlockMobSpawner extends ModItemBlockBase {
 
     public String displayEntityName(ItemStack stack, Entity entityDisplay) {
         Entity entity = entityDisplay;
-        String entityName = "entity." + EntityList.getTranslationName(getCachedRegName(getEntityString(stack)))
+        String entityNameKey = "entity." + EntityList.getTranslationName(getCachedRegName(getEntityString(stack)))
                 + ".name";
-        String entityColor = "\u00A7" + (entity instanceof IMob ? "4" : "3");
-        return I18n.format(entityColor + I18n.format(entityName));
+        TextFormatting entityColor = (entity instanceof IMob) ? TextFormatting.DARK_RED : TextFormatting.DARK_AQUA;
+        TextComponentTranslation entityNameTranslation = new TextComponentTranslation(entityNameKey);
+        entityNameTranslation.getStyle().setColor(entityColor);
+        return entityNameTranslation.getFormattedText();
     }
 
     public String displayEntityID(ItemStack stack, Entity entityDisplay) {
         Entity entity = entityDisplay;
         String entityName = stack.getTagCompound().getString("EntityName");
-        String entityColor = "\u00A7" + (entity instanceof IMob ? "4" : "3");
-        return entityColor + (entityName);
+        TextFormatting entityColor = (entity instanceof IMob) ? TextFormatting.DARK_RED : TextFormatting.DARK_AQUA;
+        TextComponentString entityNameComponent = new TextComponentString(entityName);
+        entityNameComponent.getStyle().setColor(entityColor);
+        return entityNameComponent.getFormattedText();
     }
 
     public Entity getRenderEntity(ItemStack stack) {

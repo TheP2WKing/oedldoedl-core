@@ -4,15 +4,12 @@ import java.util.UUID;
 
 import com.google.common.collect.Multimap;
 
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 
 /**
  * @author TheP2WKing
@@ -48,70 +45,54 @@ public class ModArmorHelper {
 		return (!slot.isEmpty()) && (slot.getItem() == boots);
 	}
 
-	public static Multimap<String, AttributeModifier> addKnockbackResistanceModifier(
-			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
-			UUID helmetUUID, UUID chestplateUUID, UUID leggingsUUID, UUID bootsUUID, double ammount) {
-		if (slot == armor.getEquipmentSlot()) {
-			addHelmetModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
-					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD, helmetUUID);
-			addChestplateModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
-					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD,
-					chestplateUUID);
-			addLeggingsModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
-					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD,
-					leggingsUUID);
-			addBootsModifier(attributeMap, armor, slot, SharedMonsterAttributes.KNOCKBACK_RESISTANCE,
-					ModReferences.ATTRIBUTE_KNOCKBACK_RESISTANCE, ammount, AttributeModifierOperation.ADD, bootsUUID);
-			return attributeMap;
-		}
-		return attributeMap;
+	public static UUID createUUIDFromArmorStack(ItemStack stack, EntityEquipmentSlot slot) {
+		return new UUID((stack.getUnlocalizedName() + slot.toString()).hashCode(), 0);
 	}
 
-	public static Multimap<String, AttributeModifier> addHelmetModifier(
-			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
-			IAttribute attribute, String name, double value, int operation, UUID UUID) {
-		if (slot == armor.getEquipmentSlot()) {
-			if (slot == EntityEquipmentSlot.HEAD) {
-				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
-			}
-			return attributeMap;
+	public static Multimap<String, AttributeModifier> addFullArmorModifier(
+			Multimap<String, AttributeModifier> multimap, ItemStack armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation) {
+		addHelmetModifier(multimap, armor, slot, attribute, name, value, operation);
+		addChestplateModifier(multimap, armor, slot, attribute, name, value, operation);
+		addLeggingsModifier(multimap, armor, slot, attribute, name, value, operation);
+		addBootsModifier(multimap, armor, slot, attribute, name, value, operation);
+		return multimap;
+	}
+
+	public static Multimap<String, AttributeModifier> addHelmetModifier(Multimap<String, AttributeModifier> multimap,
+			ItemStack armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation) {
+		if (slot == EntityEquipmentSlot.HEAD) {
+			multimap.put(attribute.getName(), new AttributeModifier(
+					createUUIDFromArmorStack(armor, slot), name, value, operation));
 		}
-		return attributeMap;
+		return multimap;
 	}
 
 	public static Multimap<String, AttributeModifier> addChestplateModifier(
-			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
-			IAttribute attribute, String name, double value, int operation, UUID UUID) {
-		if (slot == armor.getEquipmentSlot()) {
-			if (slot == EntityEquipmentSlot.CHEST) {
-				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
-			}
-			return attributeMap;
+			Multimap<String, AttributeModifier> multimap, ItemStack armor, EntityEquipmentSlot slot,
+			IAttribute attribute, String name, double value, int operation) {
+		if (slot == EntityEquipmentSlot.CHEST) {
+			multimap.put(attribute.getName(), new AttributeModifier(
+					createUUIDFromArmorStack(armor, slot), name, value, operation));
 		}
-		return attributeMap;
+		return multimap;
 	}
 
-	public static Multimap<String, AttributeModifier> addLeggingsModifier(
-			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
-			IAttribute attribute, String name, double value, int operation, UUID UUID) {
-		if (slot == armor.getEquipmentSlot()) {
-			if (slot == EntityEquipmentSlot.LEGS) {
-				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
-			}
-			return attributeMap;
+	public static Multimap<String, AttributeModifier> addLeggingsModifier(Multimap<String, AttributeModifier> multimap,
+			ItemStack armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation) {
+		if (slot == EntityEquipmentSlot.LEGS) {
+			multimap.put(attribute.getName(), new AttributeModifier(
+					createUUIDFromArmorStack(armor, slot), name, value, operation));
 		}
-		return attributeMap;
+		return multimap;
 	}
 
-	public static Multimap<String, AttributeModifier> addBootsModifier(
-			Multimap<String, AttributeModifier> attributeMap, ItemArmor armor, EntityEquipmentSlot slot,
-			IAttribute attribute, String name, double value, int operation, UUID UUID) {
-		if (slot == armor.getEquipmentSlot()) {
-			if (slot == EntityEquipmentSlot.FEET) {
-				attributeMap.put(attribute.getName(), new AttributeModifier(UUID, name, value, operation));
-			}
-			return attributeMap;
+	public static Multimap<String, AttributeModifier> addBootsModifier(Multimap<String, AttributeModifier> multimap,
+			ItemStack armor, EntityEquipmentSlot slot, IAttribute attribute, String name, double value, int operation) {
+		if (slot == EntityEquipmentSlot.FEET) {
+			multimap.put(attribute.getName(), new AttributeModifier(
+					createUUIDFromArmorStack(armor, slot), name, value, operation));
 		}
-		return attributeMap;
+		return multimap;
 	}
 }

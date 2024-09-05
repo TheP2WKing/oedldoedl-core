@@ -9,7 +9,6 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.minecraft.block.BlockDispenser;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
@@ -24,6 +23,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants.AttributeModifierOperation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -126,7 +126,9 @@ public class ModItemShieldBase extends ItemShield {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public String getItemStackDisplayName(ItemStack stack) {
-		return I18n.format("item." + this.modid + "." + this.name + ".name");
+		TextComponentTranslation translation = new TextComponentTranslation(
+				"item." + this.modid + "." + this.name + ".name");
+		return translation.getFormattedText();
 	}
 
 	@Override

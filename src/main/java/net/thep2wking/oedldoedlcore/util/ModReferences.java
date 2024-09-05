@@ -52,22 +52,22 @@ public class ModReferences {
 			"textures/gui/container/tab_oedldoedl_search.png");
 
 	// attribute names
-	public static final String ATTRIBUTE_ARMOR = BASE_NAME + "Armor Attribute";
-	public static final String ATTRIBUTE_ARMOR_TOUGHNESS = BASE_NAME + "Armor Toughness Attribute";
-	public static final String ATTRIBUTE_ATTACK_DAMAGE = BASE_NAME + "Attack Damage Attribute";
-	public static final String ATTRIBUTE_ATTACK_KNOCKBACK = BASE_NAME + "Attack Knockback Attribute";
-	public static final String ATTRIBUTE_ATTACK_SPEED = BASE_NAME + "Attack Speed Attribute";
-	public static final String ATTRIBUTE_FLYING_SPEED = BASE_NAME + "Flying Speed Attribute";
-	public static final String ATTRIBUTE_FOLLOW_RANGE = BASE_NAME + "Follow Range Attribute";
-	public static final String ATTRIBUTE_HORSE_JUMP_STRENGTH = BASE_NAME + "Horse Jump Strength Attribute";
-	public static final String ATTRIBUTE_KNOCKBACK_RESISTANCE = BASE_NAME + "Knockback Resistance Attribute";
-	public static final String ATTRIBUTE_LUCK = BASE_NAME + "Luck Attribute";
-	public static final String ATTRIBUTE_MAX_HEALTH = BASE_NAME + "Max Health Attribute";
-	public static final String ATTRIBUTE_MOVEMENT_SPEED = BASE_NAME + "Movement Speed Attribute";
+	public static final String ATTRIBUTE_ARMOR = BASE_NAME + " Armor Attribute";
+	public static final String ATTRIBUTE_ARMOR_TOUGHNESS = BASE_NAME + " Armor Toughness Attribute";
+	public static final String ATTRIBUTE_ATTACK_DAMAGE = BASE_NAME + " Attack Damage Attribute";
+	public static final String ATTRIBUTE_ATTACK_KNOCKBACK = BASE_NAME + " Attack Knockback Attribute";
+	public static final String ATTRIBUTE_ATTACK_SPEED = BASE_NAME + " Attack Speed Attribute";
+	public static final String ATTRIBUTE_FLYING_SPEED = BASE_NAME + " Flying Speed Attribute";
+	public static final String ATTRIBUTE_FOLLOW_RANGE = BASE_NAME + " Follow Range Attribute";
+	public static final String ATTRIBUTE_HORSE_JUMP_STRENGTH = BASE_NAME + " Horse Jump Strength Attribute";
+	public static final String ATTRIBUTE_KNOCKBACK_RESISTANCE = BASE_NAME + " Knockback Resistance Attribute";
+	public static final String ATTRIBUTE_LUCK = BASE_NAME + " Luck Attribute";
+	public static final String ATTRIBUTE_MAX_HEALTH = BASE_NAME + " Max Health Attribute";
+	public static final String ATTRIBUTE_MOVEMENT_SPEED = BASE_NAME + " Movement Speed Attribute";
 	public static final String ATTRIBUTE_ZOMBIE_SPAWN_REINFORCEMENTS = BASE_NAME
-			+ "Zombie Spawn Reinforcements Attribute";
-	public static final String ATTRIBUTE_SWIN_SPEED = BASE_NAME + "Swim Speed Attribute";
-	public static final String ATTRIBUTE_NAMETAG_DISTANCE = BASE_NAME + "Nametag Distance Attribute";
-	public static final String ATTRIBUTE_ENTITY_GRAVITY = "Oedldoedl Entity Gravity Attribute";
-	public static final String ATTRIBUTE_REACH_DISTANCE = BASE_NAME + "Reach Distance Attribute";
+			+ " Zombie Spawn Reinforcements Attribute";
+	public static final String ATTRIBUTE_SWIN_SPEED = BASE_NAME + " Swim Speed Attribute";
+	public static final String ATTRIBUTE_NAMETAG_DISTANCE = BASE_NAME + " Nametag Distance Attribute";
+	public static final String ATTRIBUTE_ENTITY_GRAVITY = " Entity Gravity Attribute";
+	public static final String ATTRIBUTE_REACH_DISTANCE = BASE_NAME + " Reach Distance Attribute";
 }
