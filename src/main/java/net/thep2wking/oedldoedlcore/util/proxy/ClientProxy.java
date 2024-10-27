@@ -16,15 +16,15 @@ public class ClientProxy extends CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
 		asmDataTable = event.getAsmData();
-	}
-	
 
-	public void init(FMLInitializationEvent event) {
-		super.init(event);
 		if (Loader.isModLoaded("codechickenlib")) {
 			ModMobSpawnerRenderer.registerMobSpawnerRenderer();
-			ModLogger.registeredIntegration("codechickenlib", OedldoedlCore.MODID);
+			ModLogger.registeredIntegration("CodeChicken Lib", OedldoedlCore.MODID);
 		}
+	}
+	
+	public void init(FMLInitializationEvent event) {
+		super.init(event);
 
 		if (Loader.isModLoaded("jeresources")) {
 			ModJERPluginLoader.loadJERPlugins(asmDataTable);
