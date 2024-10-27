@@ -29,6 +29,14 @@ public class Integration {
 		public boolean HIDE_OEDLDOEDL_LOGO_ICONS = true;
 	}
 
+	@Config.Name("jer")
+	public final JER JER = new JER();
+
+	public static class JER {
+		@Config.Name("Enable JER Plugin Loader")
+		public boolean JER_PLUGIN_LOADER = true;
+	}
+
 	@Config.Name("theoneprobe")
 	public final TheOneProbe THEONEPROBE = new TheOneProbe();
 

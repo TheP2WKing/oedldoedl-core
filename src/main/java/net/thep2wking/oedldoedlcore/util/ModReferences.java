@@ -70,4 +70,7 @@ public class ModReferences {
 	public static final String ATTRIBUTE_NAMETAG_DISTANCE = BASE_NAME + " Nametag Distance Attribute";
 	public static final String ATTRIBUTE_ENTITY_GRAVITY = " Entity Gravity Attribute";
 	public static final String ATTRIBUTE_REACH_DISTANCE = BASE_NAME + " Reach Distance Attribute";
+
+	// packet sizes
+	public static final int MAX_PACKET_SIZE = 174762;
 }
