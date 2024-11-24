@@ -145,6 +145,9 @@ key.oedldoedlcore.effect=§7Hold §b§oCtrl§r§7 for Effects
 top.oedldoedlcore.info=§7Hold §e§oSneak§r§7 for Info
 top.oedldoedlcore.effect=§7Hold §b§oSneak§r§7 for Effects
 
+# baubles tooltips
+baubles.oedldoedlcore.attribute=When worn as bauble:
+
 # overrides
 tile.melon.name=Melon Block
 tile.blockLapis.name=Block of Lapis Lazuli
