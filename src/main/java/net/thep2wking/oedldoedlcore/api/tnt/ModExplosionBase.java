@@ -281,4 +281,20 @@ public class ModExplosionBase extends Explosion {
 	public float getExplosionStrength() {
 		return this.explosionStrength;
 	}
+
+	public boolean doBlockDamage() {
+		return this.blockDamage;
+	}
+
+	public boolean doDropBlocks() {
+		return this.dropBlocks;
+	}
+
+	public boolean doSpawnFire() {
+		return this.spawnFire;
+	}
+
+	public int getSmoothness() {
+		return this.smoothness;
+	}
 }

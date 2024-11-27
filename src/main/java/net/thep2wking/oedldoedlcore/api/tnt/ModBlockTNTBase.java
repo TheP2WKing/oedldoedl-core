@@ -20,7 +20,6 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.thep2wking.oedldoedlcore.config.CoreConfig;
-import net.thep2wking.oedldoedlcore.util.ModRegistryHelper;
 import net.thep2wking.oedldoedlcore.util.ModToolTypes;
 
 /**
@@ -76,7 +75,6 @@ public class ModBlockTNTBase extends BlockTNT {
 		setHardness(this.hardness);
 		setResistance(this.resistance);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
-		ModRegistryHelper.registerFlameableBlock(this, 15, 100);
 	}
 
 	@Override
@@ -113,61 +111,61 @@ public class ModBlockTNTBase extends BlockTNT {
 		return new ModEntityTNTBase(world, x, y, z, ignitor);
 	}
 
-	@Override
-	public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
-		if (!worldIn.isRemote) {
-			ModEntityTNTBase entitytntprimed = createTNTEntity(worldIn, (double) ((float) pos.getX() + 0.5F),
-					(double) pos.getY(), (double) ((float) pos.getZ() + 0.5F), explosionIn.getExplosivePlacedBy());
-			entitytntprimed.setFuse(
-					(short) (worldIn.rand.nextInt(entitytntprimed.getFuse() / 4) + entitytntprimed.getFuse() / 8));
-			worldIn.spawnEntity(entitytntprimed);
-		}
-	}
+    @Override
+    public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
+        if (!worldIn.isRemote) {
+            ModEntityTNTBase entitytntprimed = createTNTEntity(worldIn, (double) ((float) pos.getX() + 0.5F),
+                    (double) pos.getY(), (double) ((float) pos.getZ() + 0.5F), explosionIn.getExplosivePlacedBy());
+            entitytntprimed.setFuse(
+                    (short) (worldIn.rand.nextInt(entitytntprimed.getFuse() / 4) + entitytntprimed.getFuse() / 8));
+            worldIn.spawnEntity(entitytntprimed);
+        }
+    }
 
-	@Override
-	public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter) {
-		if (!worldIn.isRemote) {
-			if (((Boolean) state.getValue(EXPLODE)).booleanValue()) {
-				ModEntityTNTBase entitytntprimed = createTNTEntity(worldIn, (double) ((float) pos.getX() + 0.5F),
-						(double) pos.getY(), (double) ((float) pos.getZ() + 0.5F), igniter);
-				worldIn.spawnEntity(entitytntprimed);
-				worldIn.playSound((EntityPlayer) null, pos.getX(), pos.getY(), pos.getZ(),
-						SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
-			}
-		}
-	}
+    @Override
+    public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter) {
+        if (!worldIn.isRemote) {
+            if (((Boolean) state.getValue(EXPLODE)).booleanValue()) {
+                ModEntityTNTBase entitytntprimed = createTNTEntity(worldIn, (double) ((float) pos.getX() + 0.5F),
+                        (double) pos.getY(), (double) ((float) pos.getZ() + 0.5F), igniter);
+                worldIn.spawnEntity(entitytntprimed);
+                worldIn.playSound((EntityPlayer) null, pos.getX(), pos.getY(), pos.getZ(),
+                        SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            }
+        }
+    }
 
-	@Override
-	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-		if (!worldIn.isRemote && entityIn instanceof EntityArrow) {
-			EntityArrow entityarrow = (EntityArrow) entityIn;
-			if (entityarrow.isBurning()) {
-				this.explode(worldIn, pos, worldIn.getBlockState(pos).withProperty(EXPLODE, Boolean.valueOf(true)),
-						entityarrow.shootingEntity instanceof EntityLivingBase
-								? (EntityLivingBase) entityarrow.shootingEntity
-								: null);
-				worldIn.setBlockToAir(pos);
-			}
-		}
-	}
+    @Override
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+        if (!worldIn.isRemote && entityIn instanceof EntityArrow) {
+            EntityArrow entityarrow = (EntityArrow) entityIn;
+            if (entityarrow.isBurning()) {
+                this.explode(worldIn, pos, worldIn.getBlockState(pos).withProperty(EXPLODE, Boolean.valueOf(true)),
+                        entityarrow.shootingEntity instanceof EntityLivingBase
+                                ? (EntityLivingBase) entityarrow.shootingEntity
+                                : null);
+                worldIn.setBlockToAir(pos);
+            }
+        }
+    }
 
-	@Override
-	public boolean canDropFromExplosion(Explosion explosionIn) {
-		return false;
-	}
+    @Override
+    public boolean canDropFromExplosion(Explosion explosionIn) {
+        return false;
+    }
 
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(EXPLODE, Boolean.valueOf((meta & 1) > 0));
-	}
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(EXPLODE, Boolean.valueOf((meta & 1) > 0));
+    }
 
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		return ((Boolean) state.getValue(EXPLODE)).booleanValue() ? 1 : 0;
-	}
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return ((Boolean) state.getValue(EXPLODE)).booleanValue() ? 1 : 0;
+    }
 
-	@Override
-	public BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { EXPLODE });
-	}
+    @Override
+    public BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[] { EXPLODE });
+    }
 }
