@@ -69,6 +69,6 @@ public class Content {
 		public SpawnerEntitySize ENTITY_SIZE = SpawnerEntitySize.CALCULATED;
 
 		@Config.Name("Blacklisted Mods Or Entities")
-		public String[] BLACKLIST = new String[]{"minecraft:ender_dragon","thaumcraft", "iceandfire", "cfm"};
+		public String[] BLACKLIST = new String[]{"minecraft:ender_dragon","thaumcraft", "iceandfire", "cfm", "cqrepoured"};
 	}
 }
