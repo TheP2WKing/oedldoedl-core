@@ -1,5 +1,61 @@
 # Changelog
 
+## [4.2.0] - 2024-11-27
+
+### Added
+
+- added support for registering jer plugins like jei plugins
+- added jei and jer plugins bases
+- added old not enough items spawner renderer (required codechickenlib)
+- added world gen helpers for registering world gen for ores and plants
+- added automatic registering of oredict for various tool and items like bows, saplings and wood
+- added loggers for world gen
+- added helper class for flower bounding boxes
+- added registry helper for potions and potion types
+- added biome util for getting all biomes a specific mob can spawn in
+- added bad luck potion
+- added bases fore tiles and containers
+- added bases for logs. planks, leaves, saplings and plants
+- added texture references for vanilla fluids
+- added helper to register flammability
+- added falling block base
+- added more default config options
+- added a helper for injecting loot into loot tables
+- added alternative tnt render and tnt base from oedldoedl explosives
+- added alternative bauble base from oedldoedl curiosity
+- added block compression and decompression recipe helper
+- added helper for registering fluids without buckets
+- added entity provider fro the one probe
+- added even more oredict to vanilla items
+
+### Changed
+
+- changed the system how welcome messages are constructed
+- almost all instances of I18n translation was replaced by text translation components
+- welcome messages now use regular translation rather be hard coded
+- updated creative tab implementation
+- made item model registry more flexible
+- oedldoedl icons are now hidden by default in jei as well as debug stick if disabled 
+- attributes constants now use mod name constants too  
+- updated default dark creative tab with search texture
+- fluid fog is now able to be added to fluids that use regular texture rather than auto colored
+- updated some inconsistent parameters
+- made random util null safety
+
+### Fixed
+
+- fixed crashes related to ender dragon spawn eggs
+- fixed crashes related to text translation when playing on servers
+- fixed not applying oredict for items that have metadata or damage
+- fixed armor that has custom attributes crashes on servers when equipping
+- fixed fluids can be affected by explosions and being destroyed
+- fixed jei unhiding of player head
+- fixed the one probe not displaying custom text on servers
+
+### Removed
+
+- removed ender dragon spawn egg
+
 ## [4.1.0] - 2024-06-09
 
 ### Added
@@ -7,7 +63,7 @@
 - added dolphin grace potion from Minecraft 1.13+
 - added slow falling potion from Minecraft 1.13+
 - added glowing potion
-- added debuf stick (inspired from 1.13)
+- added debug stick (inspired from 1.13)
 - added spawn eggs for missing mobs to creative tab
 - added helper to add brewing recipes with forge buckets
 - added config options to configure the new potions
