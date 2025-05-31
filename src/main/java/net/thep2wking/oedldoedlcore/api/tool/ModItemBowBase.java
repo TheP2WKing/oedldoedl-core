@@ -152,7 +152,7 @@ public class ModItemBowBase extends ItemBow {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.SHIELD));
+		return enchantment.type.canEnchantItem(stack.getItem()) || enchantment.canApply(new ItemStack(Items.BOW));
 	}
 
 	private boolean hasRGBBar;
